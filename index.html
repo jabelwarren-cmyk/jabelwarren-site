@@ -956,6 +956,8 @@
         --section-py: 100px;
       }
 
+      #neighborhoods > div:nth-child(2) { grid-template-columns: repeat(2,1fr) !important; }
+
       .nav-links {
         display: none;
       }
@@ -1005,6 +1007,8 @@
         --px: 24px;
         --section-py: 80px;
       }
+
+      #neighborhoods > div:nth-child(2) { grid-template-columns: 1fr !important; }
 
       .hero-name {
         font-size: clamp(38px, 10vw, 72px);
@@ -1267,6 +1271,72 @@
     </div>
     <div class="fade-up" style="margin-top:48px;">
       <a href="https://serhant.com" target="_blank" style="font:700 11px/1 var(--font); letter-spacing:4px; color:var(--muted); text-transform:uppercase; border-bottom:1px solid rgba(255,255,255,0.2); padding-bottom:4px;">Visit SERHANT.com →</a>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════ NEIGHBORHOODS ══ -->
+  <section id="neighborhoods" style="padding:var(--section-py) var(--px); border-top:1px solid rgba(255,255,255,0.08);">
+    <div style="text-align:center; margin-bottom:64px;">
+      <div class="section-eyebrow fade-up">Fort Lauderdale</div>
+      <h2 class="fade-up" style="font:900 48px/1.1 var(--font); letter-spacing:4px; text-transform:uppercase; margin-top:16px;">Featured Neighborhoods</h2>
+    </div>
+    <div class="fade-up" style="display:grid; grid-template-columns:repeat(4,1fr); gap:2px;">
+
+      <!-- Las Olas -->
+      <div style="position:relative; overflow:hidden; cursor:pointer; aspect-ratio:3/4; background:linear-gradient(180deg,#0d0800 0%,#1a1000 50%,#000 100%);" onmouseover="this.querySelector('.nh-overlay').style.opacity='1'" onmouseout="this.querySelector('.nh-overlay').style.opacity='0'">
+        <div style="position:absolute;inset:0;background:linear-gradient(160deg,#1a1000,#000);"></div>
+        <div style="position:absolute;inset:0;display:flex;flex-direction:column;justify-content:flex-end;padding:32px 24px;">
+          <div style="font:300 10px/1 var(--font);letter-spacing:4px;color:rgba(255,255,255,0.5);text-transform:uppercase;margin-bottom:10px;">Fort Lauderdale</div>
+          <div style="font:900 22px/1.1 var(--font);letter-spacing:3px;color:#fff;text-transform:uppercase;">Las Olas</div>
+          <div style="font:300 12px/1.6 var(--font);color:rgba(255,255,255,0.5);margin-top:8px;letter-spacing:1px;">Upscale dining, boutiques & waterfront living at its finest.</div>
+        </div>
+        <div class="nh-overlay" style="position:absolute;inset:0;background:rgba(0,0,0,0.5);display:flex;align-items:center;justify-content:center;opacity:0;transition:opacity 0.5s ease;">
+          <a href="search.html" style="font:700 11px/1 var(--font);letter-spacing:4px;color:#fff;text-transform:uppercase;border-bottom:1px solid rgba(255,255,255,0.4);padding-bottom:4px;">EXPLORE →</a>
+        </div>
+      </div>
+
+      <!-- Victoria Park -->
+      <div style="position:relative; overflow:hidden; cursor:pointer; aspect-ratio:3/4; background:linear-gradient(180deg,#000a12 0%,#001020 50%,#000 100%);" onmouseover="this.querySelector('.nh-overlay').style.opacity='1'" onmouseout="this.querySelector('.nh-overlay').style.opacity='0'">
+        <div style="position:absolute;inset:0;background:linear-gradient(160deg,#001018,#000);"></div>
+        <div style="position:absolute;inset:0;display:flex;flex-direction:column;justify-content:flex-end;padding:32px 24px;">
+          <div style="font:300 10px/1 var(--font);letter-spacing:4px;color:rgba(255,255,255,0.5);text-transform:uppercase;margin-bottom:10px;">Fort Lauderdale</div>
+          <div style="font:900 22px/1.1 var(--font);letter-spacing:3px;color:#fff;text-transform:uppercase;">Victoria Park</div>
+          <div style="font:300 12px/1.6 var(--font);color:rgba(255,255,255,0.5);margin-top:8px;letter-spacing:1px;">Tree-lined streets, charming estates & a vibrant community.</div>
+        </div>
+        <div class="nh-overlay" style="position:absolute;inset:0;background:rgba(0,0,0,0.5);display:flex;align-items:center;justify-content:center;opacity:0;transition:opacity 0.5s ease;">
+          <a href="search.html" style="font:700 11px/1 var(--font);letter-spacing:4px;color:#fff;text-transform:uppercase;border-bottom:1px solid rgba(255,255,255,0.4);padding-bottom:4px;">EXPLORE →</a>
+        </div>
+      </div>
+
+      <!-- Rio Vista -->
+      <div style="position:relative; overflow:hidden; cursor:pointer; aspect-ratio:3/4; background:linear-gradient(180deg,#100800 0%,#1a0c00 50%,#000 100%);" onmouseover="this.querySelector('.nh-overlay').style.opacity='1'" onmouseout="this.querySelector('.nh-overlay').style.opacity='0'">
+        <div style="position:absolute;inset:0;background:linear-gradient(160deg,#140800,#000);"></div>
+        <div style="position:absolute;inset:0;display:flex;flex-direction:column;justify-content:flex-end;padding:32px 24px;">
+          <div style="font:300 10px/1 var(--font);letter-spacing:4px;color:rgba(255,255,255,0.5);text-transform:uppercase;margin-bottom:10px;">Fort Lauderdale</div>
+          <div style="font:900 22px/1.1 var(--font);letter-spacing:3px;color:#fff;text-transform:uppercase;">Rio Vista</div>
+          <div style="font:300 12px/1.6 var(--font);color:rgba(255,255,255,0.5);margin-top:8px;letter-spacing:1px;">Waterfront estates & deep-water dockage on the New River.</div>
+        </div>
+        <div class="nh-overlay" style="position:absolute;inset:0;background:rgba(0,0,0,0.5);display:flex;align-items:center;justify-content:center;opacity:0;transition:opacity 0.5s ease;">
+          <a href="search.html" style="font:700 11px/1 var(--font);letter-spacing:4px;color:#fff;text-transform:uppercase;border-bottom:1px solid rgba(255,255,255,0.4);padding-bottom:4px;">EXPLORE →</a>
+        </div>
+      </div>
+
+      <!-- Harbor Beach -->
+      <div style="position:relative; overflow:hidden; cursor:pointer; aspect-ratio:3/4; background:linear-gradient(180deg,#060c10 0%,#0a1418 50%,#000 100%);" onmouseover="this.querySelector('.nh-overlay').style.opacity='1'" onmouseout="this.querySelector('.nh-overlay').style.opacity='0'">
+        <div style="position:absolute;inset:0;background:linear-gradient(160deg,#080e14,#000);"></div>
+        <div style="position:absolute;inset:0;display:flex;flex-direction:column;justify-content:flex-end;padding:32px 24px;">
+          <div style="font:300 10px/1 var(--font);letter-spacing:4px;color:rgba(255,255,255,0.5);text-transform:uppercase;margin-bottom:10px;">Fort Lauderdale</div>
+          <div style="font:900 22px/1.1 var(--font);letter-spacing:3px;color:#fff;text-transform:uppercase;">Harbor Beach</div>
+          <div style="font:300 12px/1.6 var(--font);color:rgba(255,255,255,0.5);margin-top:8px;letter-spacing:1px;">Gated oceanfront community — the pinnacle of South Florida luxury.</div>
+        </div>
+        <div class="nh-overlay" style="position:absolute;inset:0;background:rgba(0,0,0,0.5);display:flex;align-items:center;justify-content:center;opacity:0;transition:opacity 0.5s ease;">
+          <a href="search.html" style="font:700 11px/1 var(--font);letter-spacing:4px;color:#fff;text-transform:uppercase;border-bottom:1px solid rgba(255,255,255,0.4);padding-bottom:4px;">EXPLORE →</a>
+        </div>
+      </div>
+
+    </div>
+    <div class="fade-up" style="text-align:center; margin-top:48px;">
+      <a href="search.html" style="font:700 11px/1 var(--font);letter-spacing:4px;color:var(--muted);text-transform:uppercase;border-bottom:1px solid rgba(255,255,255,0.2);padding-bottom:4px;">EXPLORE ALL NEIGHBORHOODS →</a>
     </div>
   </section>
 
