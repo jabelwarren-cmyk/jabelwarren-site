@@ -36,7 +36,7 @@
     }
     .nav-brand { font-size: 11px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: rgba(255,255,255,0.9); }
     .nav-links { display: flex; align-items: center; gap: 36px; list-style: none; }
-    .nav-links a { font-size: 10px; font-weight: 700; letter-spacing: 2.5px; text-transform: uppercase; color: rgba(255,255,255,0.75); transition: color 0.3s ease; }
+    .nav-links a { font-size: 13px; font-weight: 700; letter-spacing: 2.5px; text-transform: uppercase; color: rgba(255,255,255,0.85); transition: color 0.3s ease; }
     .nav-links a:hover { color: #fff; }
     .nav-links a.active { color: #fff; border-bottom: 1px solid rgba(255,255,255,0.6); padding-bottom: 2px; }
     .nav-links .nav-text-jabel { color: #fff; border-bottom: 1px solid rgba(255,255,255,0.4); padding-bottom: 2px; }
@@ -77,9 +77,9 @@
       background-size: 28px 28px; pointer-events: none;
     }
     .page-hero-inner { position: relative; z-index: 1; }
-    .page-eyebrow { font-size: 10px; font-weight: 700; letter-spacing: 5px; text-transform: uppercase; color: rgba(255,255,255,0.4); margin-bottom: 20px; }
+    .page-eyebrow { font-size: 12px; font-weight: 700; letter-spacing: 5px; text-transform: uppercase; color: rgba(255,255,255,0.65); margin-bottom: 20px; }
     .page-heading { font-size: clamp(52px, 8vw, 90px); font-weight: 900; letter-spacing: 8px; text-transform: uppercase; color: #fff; line-height: 1; margin-bottom: 24px; }
-    .page-subtitle { font-size: 13px; font-weight: 400; letter-spacing: 5px; text-transform: uppercase; color: rgba(255,255,255,0.45); }
+    .page-subtitle { font-size: 13px; font-weight: 400; letter-spacing: 5px; text-transform: uppercase; color: rgba(255,255,255,0.7); }
 
     /* ─── BIO SECTION ─── */
     .bio-section {
@@ -93,9 +93,9 @@
     }
     .portrait-jw { font-size: 180px; font-weight: 900; letter-spacing: -6px; color: rgba(255,255,255,0.04); user-select: none; line-height: 1; }
     .bio-right { display: flex; flex-direction: column; gap: 28px; }
-    .bio-eyebrow { font-size: 10px; font-weight: 700; letter-spacing: 4px; text-transform: uppercase; color: var(--muted); }
+    .bio-eyebrow { font-size: 12px; font-weight: 700; letter-spacing: 4px; text-transform: uppercase; color: var(--muted); }
     .bio-heading { font-size: clamp(32px, 3.5vw, 48px); font-weight: 900; letter-spacing: 3px; text-transform: uppercase; color: #fff; line-height: 1.1; }
-    .bio-body { font-size: 15px; font-weight: 400; line-height: 1.9; color: var(--muted); }
+    .bio-body { font-size: 16px; font-weight: 400; line-height: 1.9; color: var(--muted); max-width: 680px; }
 
     /* ─── STATS ROW ─── */
     .stats-row {
@@ -105,7 +105,7 @@
     .about-stat { flex: 1; text-align: center; padding: 0 32px; }
     .about-stat + .about-stat { border-left: 1px solid rgba(255,255,255,0.08); }
     .about-stat-value { font-size: 13px; font-weight: 700; letter-spacing: 4px; text-transform: uppercase; color: #fff; margin-bottom: 10px; }
-    .about-stat-label { font-size: 9px; font-weight: 400; letter-spacing: 3px; text-transform: uppercase; color: var(--muted); }
+    .about-stat-label { font-size: 12px; font-weight: 500; letter-spacing: 3px; text-transform: uppercase; color: rgba(255,255,255,0.65); }
 
     /* ─── PHILOSOPHY ─── */
     .philosophy { padding: var(--section-py) var(--px); text-align: center; }
@@ -113,19 +113,19 @@
     .pillars { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; }
     .pillar { padding: 56px 40px; border: 1px solid rgba(255,255,255,0.08); text-align: center; }
     .pillar-icon { font-size: 28px; font-weight: 900; letter-spacing: 2px; color: rgba(255,255,255,0.08); margin-bottom: 20px; }
-    .pillar-title { font-size: 11px; font-weight: 700; letter-spacing: 4px; text-transform: uppercase; color: #fff; margin-bottom: 16px; }
-    .pillar-body { font-size: 13px; font-weight: 400; line-height: 1.8; color: var(--muted); }
+    .pillar-title { font-size: 13px; font-weight: 700; letter-spacing: 4px; text-transform: uppercase; color: #fff; margin-bottom: 16px; }
+    .pillar-body { font-size: 15px; font-weight: 400; line-height: 1.8; color: var(--muted); }
 
     /* ─── SERHANT STRIP ─── */
     .serhant-strip { padding: var(--section-py) var(--px); background: #050505; text-align: center; }
     .serhant-name { font-size: clamp(52px, 10vw, 120px); font-weight: 900; letter-spacing: 12px; color: #fff; margin-bottom: 20px; }
-    .serhant-body { font-size: 14px; font-weight: 300; line-height: 1.9; color: var(--muted); max-width: 600px; margin: 0 auto 64px; letter-spacing: 0.5px; }
+    .serhant-body { font-size: 16px; font-weight: 300; line-height: 1.9; color: var(--muted); max-width: 600px; margin: 0 auto 64px; letter-spacing: 0.5px; }
     .serhant-stats { display: flex; justify-content: center; border-top: 1px solid rgba(255,255,255,0.08); border-bottom: 1px solid rgba(255,255,255,0.08); margin-bottom: 56px; flex-wrap: wrap; }
     .serhant-stat { padding: 36px 56px; text-align: center; }
     .serhant-stat + .serhant-stat { border-left: 1px solid rgba(255,255,255,0.08); }
     .serhant-stat-val { font-size: 36px; font-weight: 900; color: #fff; letter-spacing: 2px; margin-bottom: 10px; }
-    .serhant-stat-lbl { font-size: 9px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: var(--muted); }
-    .text-cta { font-size: 11px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: #fff; border-bottom: 1px solid rgba(255,255,255,0.3); padding-bottom: 3px; display: inline-block; transition: border-color 0.3s ease, letter-spacing 0.3s ease; }
+    .serhant-stat-lbl { font-size: 12px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: rgba(255,255,255,0.65); }
+    .text-cta { font-size: 13px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: #fff; border-bottom: 1px solid rgba(255,255,255,0.3); padding-bottom: 3px; display: inline-block; transition: border-color 0.3s ease, letter-spacing 0.3s ease; }
     .text-cta:hover { border-color: #fff; letter-spacing: 4px; }
 
     /* ─── FOOTER ─── */
@@ -133,7 +133,7 @@
     .footer-monogram { font-size: 48px; font-weight: 900; letter-spacing: 2px; color: rgba(255,255,255,0.12); }
     .footer-hashtag { font-size: 13px; font-weight: 700; letter-spacing: 6px; text-transform: uppercase; color: rgba(255,255,255,0.5); }
     .footer-icons { display: flex; gap: 12px; }
-    .footer-copyright { font-size: 9px; font-weight: 400; letter-spacing: 3px; text-transform: uppercase; color: rgba(255,255,255,0.2); }
+    .footer-copyright { font-size: 12px; font-weight: 400; letter-spacing: 3px; text-transform: uppercase; color: rgba(255,255,255,0.5); }
 
     /* ─── RESPONSIVE ─── */
     @media (max-width: 900px) {
@@ -218,7 +218,7 @@
       <div class="portrait-jw" style="color: rgba(0,0,0,0.06);">JW</div>
     </div>
     <div class="bio-right">
-      <div class="bio-eyebrow fade-up" style="color:#555555;">The Agent</div>
+      <div class="bio-eyebrow fade-up" style="color:#555555; font-size:13px;">The Agent</div>
       <h2 class="bio-heading fade-up" style="color:#000;">Fort Lauderdale's<br />Luxury Specialist</h2>
       <p class="bio-body fade-up" style="color:#333333;">
         Jabel Warren is one of Fort Lauderdale's most respected luxury real estate professionals, operating under SERHANT. — the world's most innovative brokerage. With years of experience in Broward County's most coveted neighborhoods, Jabel combines hyperlocal market knowledge with the global reach and media power of SERHANT. to deliver extraordinary results for every client. From record-breaking sales in the Mexican War Streets to ultra-luxury waterfront transactions, Jabel's reputation is built on trust, precision, and an unwavering commitment to excellence.
@@ -258,17 +258,17 @@
       <div class="pillar fade-up" style="border-color:rgba(0,0,0,0.08); background:#fff;">
         <div class="pillar-icon" style="color:rgba(0,0,0,0.1);">01</div>
         <div class="pillar-title" style="color:#000;">Market Precision</div>
-        <p class="pillar-body" style="color:#333333;">Deep, hyperlocal knowledge of every neighborhood, price trend, and off-market opportunity in Broward County. Data-driven decisions backed by years of transactional experience.</p>
+        <p class="pillar-body" style="color:#444444;">Deep, hyperlocal knowledge of every neighborhood, price trend, and off-market opportunity in Broward County. Data-driven decisions backed by years of transactional experience.</p>
       </div>
       <div class="pillar fade-up" style="transition-delay:0.15s; border-color:rgba(0,0,0,0.08); background:#fff;">
         <div class="pillar-icon" style="color:rgba(0,0,0,0.1);">02</div>
         <div class="pillar-title" style="color:#000;">Client Discretion</div>
-        <p class="pillar-body" style="color:#333333;">Every client relationship is built on trust and confidentiality. Ultra-high-net-worth clients demand a partner who protects their privacy as fiercely as their assets.</p>
+        <p class="pillar-body" style="color:#444444;">Every client relationship is built on trust and confidentiality. Ultra-high-net-worth clients demand a partner who protects their privacy as fiercely as their assets.</p>
       </div>
       <div class="pillar fade-up" style="transition-delay:0.3s; border-color:rgba(0,0,0,0.08); background:#fff;">
         <div class="pillar-icon" style="color:rgba(0,0,0,0.1);">03</div>
         <div class="pillar-title" style="color:#000;">Relentless Results</div>
-        <p class="pillar-body" style="color:#333333;">Record-breaking sales. Above-asking offers. Below-market acquisitions. A commitment to excellence that doesn't stop at closing — it defines every step of the journey.</p>
+        <p class="pillar-body" style="color:#444444;">Record-breaking sales. Above-asking offers. Below-market acquisitions. A commitment to excellence that doesn't stop at closing — it defines every step of the journey.</p>
       </div>
     </div>
   </section>

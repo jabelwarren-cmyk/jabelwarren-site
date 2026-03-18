@@ -23,7 +23,7 @@
     .nav-monogram { width: 42px; height: 42px; display: flex; align-items: center; justify-content: center; border: 1px solid rgba(255,255,255,0.4); font-size: 14px; font-weight: 700; letter-spacing: 1px; }
     .nav-brand { font-size: 11px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: rgba(255,255,255,0.9); }
     .nav-links { display: flex; align-items: center; gap: 36px; list-style: none; }
-    .nav-links a { font-size: 10px; font-weight: 700; letter-spacing: 2.5px; text-transform: uppercase; color: rgba(255,255,255,0.75); transition: color 0.3s; }
+    .nav-links a { font-size: 13px; font-weight: 700; letter-spacing: 2.5px; text-transform: uppercase; color: rgba(255,255,255,0.85); transition: color 0.3s; }
     .nav-links a:hover { color: #fff; }
     .nav-links a.active { color: #fff; border-bottom: 1px solid rgba(255,255,255,0.6); padding-bottom: 2px; }
     .nav-links .nav-text-jabel { color: #fff; border-bottom: 1px solid rgba(255,255,255,0.4); padding-bottom: 2px; }
@@ -49,9 +49,9 @@
     .page-hero { position: relative; width: 100%; padding: calc(var(--nav-h) + 100px) var(--px) 120px; background: linear-gradient(160deg, #0a0800 0%, #000000 50%, #00080a 100%); overflow: hidden; }
     .page-hero::after { content: ''; position: absolute; inset: 0; background-image: radial-gradient(circle, rgba(255,255,255,0.02) 1px, transparent 1px); background-size: 28px 28px; pointer-events: none; }
     .page-hero-inner { position: relative; z-index: 1; }
-    .page-eyebrow { font-size: 10px; font-weight: 700; letter-spacing: 5px; text-transform: uppercase; color: rgba(255,255,255,0.4); margin-bottom: 20px; }
+    .page-eyebrow { font-size: 12px; font-weight: 700; letter-spacing: 5px; text-transform: uppercase; color: rgba(255,255,255,0.65); margin-bottom: 20px; }
     .page-heading { font-size: clamp(52px, 8vw, 100px); font-weight: 900; letter-spacing: 12px; text-transform: uppercase; color: #fff; line-height: 1; margin-bottom: 24px; }
-    .page-subtitle { font-size: 13px; font-weight: 400; letter-spacing: 5px; text-transform: uppercase; color: rgba(255,255,255,0.45); }
+    .page-subtitle { font-size: 13px; font-weight: 400; letter-spacing: 5px; text-transform: uppercase; color: rgba(255,255,255,0.7); }
 
     /* TWO-COLUMN CONTACT */
     .contact-main { padding: var(--section-py) var(--px); display: grid; grid-template-columns: 1fr 1fr; gap: 100px; }
@@ -61,8 +61,8 @@
     .contact-heading { font-size: clamp(44px, 6vw, 80px); font-weight: 900; letter-spacing: 6px; text-transform: uppercase; line-height: 1; color: #fff; margin-bottom: 56px; }
     .contact-info { display: flex; flex-direction: column; gap: 28px; margin-bottom: 56px; }
     .contact-item { display: flex; flex-direction: column; gap: 5px; }
-    .contact-item-label { font-size: 9px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: rgba(255,255,255,0.3); }
-    .contact-item-value { font-size: 15px; font-weight: 400; letter-spacing: 1px; color: rgba(255,255,255,0.75); border-bottom: 1px solid rgba(255,255,255,0.12); padding-bottom: 6px; display: inline-block; transition: color 0.3s, border-color 0.3s; }
+    .contact-item-label { font-size: 12px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: rgba(255,255,255,0.6); }
+    .contact-item-value { font-size: 16px; font-weight: 400; letter-spacing: 1px; color: rgba(255,255,255,0.85); border-bottom: 1px solid rgba(255,255,255,0.12); padding-bottom: 6px; display: inline-block; transition: color 0.3s, border-color 0.3s; }
     .contact-item-value:hover { color: #fff; border-color: rgba(255,255,255,0.4); }
     .map-placeholder { width: 100%; aspect-ratio: 4/3; background: #050505; border: 1px solid rgba(255,255,255,0.08); display: flex; align-items: center; justify-content: center; }
     .map-label { font-size: 10px; font-weight: 700; letter-spacing: 4px; text-transform: uppercase; color: rgba(255,255,255,0.2); }
@@ -72,19 +72,19 @@
     .contact-form { display: flex; flex-direction: column; gap: 32px; }
     .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; }
     .form-field { display: flex; flex-direction: column; gap: 0; }
-    .form-field label { font-size: 9px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: rgba(255,255,255,0.3); margin-bottom: 10px; }
+    .form-field label { font-size: 12px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: rgba(255,255,255,0.6); margin-bottom: 10px; }
     .form-field input, .form-field select, .form-field textarea {
       background: transparent; border: none; border-bottom: 1px solid rgba(255,255,255,0.2);
-      color: #fff; font-family: var(--font); font-size: 14px; font-weight: 400; letter-spacing: 1px;
+      color: #fff; font-family: var(--font); font-size: 15px; font-weight: 400; letter-spacing: 1px;
       padding: 8px 0; outline: none; resize: none; transition: border-color 0.3s; width: 100%;
       -webkit-appearance: none; appearance: none;
     }
     .form-field select option { background: #111; color: #fff; }
-    .form-field input::placeholder, .form-field textarea::placeholder { color: rgba(255,255,255,0.2); }
+    .form-field input::placeholder, .form-field textarea::placeholder { color: rgba(255,255,255,0.4); }
     .form-field input:focus, .form-field select:focus, .form-field textarea:focus { border-color: rgba(255,255,255,0.6); }
     .form-field textarea { min-height: 80px; }
     .form-submit { display: flex; align-items: center; justify-content: flex-end; padding-top: 8px; }
-    .form-submit-btn { background: none; border: none; font-family: var(--font); font-size: 11px; font-weight: 700; letter-spacing: 4px; text-transform: uppercase; color: #fff; cursor: pointer; border-bottom: 1px solid rgba(255,255,255,0.3); padding-bottom: 3px; transition: letter-spacing 0.3s, border-color 0.3s; }
+    .form-submit-btn { background: none; border: none; font-family: var(--font); font-size: 13px; font-weight: 700; letter-spacing: 4px; text-transform: uppercase; color: #fff; cursor: pointer; border-bottom: 1px solid rgba(255,255,255,0.3); padding-bottom: 3px; transition: letter-spacing 0.3s, border-color 0.3s; }
     .form-submit-btn:hover { letter-spacing: 5px; border-color: #fff; }
     .form-success { display: none; font-size: 13px; font-weight: 700; letter-spacing: 4px; text-transform: uppercase; color: #fff; text-align: center; padding: 60px 0; line-height: 2; }
 

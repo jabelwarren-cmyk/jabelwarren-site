@@ -23,7 +23,7 @@
     .nav-monogram { width: 42px; height: 42px; display: flex; align-items: center; justify-content: center; border: 1px solid rgba(255,255,255,0.4); font-size: 14px; font-weight: 700; letter-spacing: 1px; }
     .nav-brand { font-size: 11px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: rgba(255,255,255,0.9); }
     .nav-links { display: flex; align-items: center; gap: 36px; list-style: none; }
-    .nav-links a { font-size: 10px; font-weight: 700; letter-spacing: 2.5px; text-transform: uppercase; color: rgba(255,255,255,0.75); transition: color 0.3s; }
+    .nav-links a { font-size: 13px; font-weight: 700; letter-spacing: 2.5px; text-transform: uppercase; color: rgba(255,255,255,0.85); transition: color 0.3s; }
     .nav-links a:hover { color: #fff; }
     .nav-links a.active { color: #fff; border-bottom: 1px solid rgba(255,255,255,0.6); padding-bottom: 2px; }
     .nav-links .nav-text-jabel { color: #fff; border-bottom: 1px solid rgba(255,255,255,0.4); padding-bottom: 2px; }
@@ -49,29 +49,29 @@
     .page-hero { position: relative; width: 100%; padding: calc(var(--nav-h) + 100px) var(--px) 120px; background: linear-gradient(160deg, #000814 0%, #000000 50%, #080400 100%); overflow: hidden; }
     .page-hero::after { content: ''; position: absolute; inset: 0; background-image: radial-gradient(circle, rgba(255,255,255,0.02) 1px, transparent 1px); background-size: 28px 28px; pointer-events: none; }
     .page-hero-inner { position: relative; z-index: 1; }
-    .page-eyebrow { font-size: 10px; font-weight: 700; letter-spacing: 5px; text-transform: uppercase; color: rgba(255,255,255,0.4); margin-bottom: 20px; }
+    .page-eyebrow { font-size: 12px; font-weight: 700; letter-spacing: 5px; text-transform: uppercase; color: rgba(255,255,255,0.65); margin-bottom: 20px; }
     .page-heading { font-size: clamp(52px, 8vw, 100px); font-weight: 900; letter-spacing: 12px; text-transform: uppercase; color: #fff; line-height: 1; margin-bottom: 24px; }
-    .page-subtitle { font-size: 13px; font-weight: 400; letter-spacing: 5px; text-transform: uppercase; color: rgba(255,255,255,0.45); }
+    .page-subtitle { font-size: 13px; font-weight: 400; letter-spacing: 5px; text-transform: uppercase; color: rgba(255,255,255,0.7); }
 
     /* SEARCH FORM */
     .search-section { padding: var(--section-py) var(--px); }
     .search-form-wrapper { max-width: 860px; margin: 0 auto; }
-    .section-eyebrow { font-size: 10px; font-weight: 700; letter-spacing: 4px; text-transform: uppercase; color: var(--muted); margin-bottom: 56px; }
+    .section-eyebrow { font-size: 12px; font-weight: 700; letter-spacing: 4px; text-transform: uppercase; color: var(--muted); margin-bottom: 56px; }
     .search-form { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
     .form-field { display: flex; flex-direction: column; gap: 0; }
     .form-field.full { grid-column: 1 / -1; }
-    .form-field label { font-size: 9px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: rgba(255,255,255,0.3); margin-bottom: 10px; }
+    .form-field label { font-size: 12px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: rgba(255,255,255,0.6); margin-bottom: 10px; }
     .form-field input, .form-field select, .form-field textarea {
       background: transparent; border: none; border-bottom: 1px solid rgba(255,255,255,0.2);
-      color: #fff; font-family: var(--font); font-size: 14px; font-weight: 400; letter-spacing: 1px;
+      color: #fff; font-family: var(--font); font-size: 15px; font-weight: 400; letter-spacing: 1px;
       padding: 8px 0; outline: none; transition: border-color 0.3s; width: 100%;
       -webkit-appearance: none; appearance: none;
     }
     .form-field select option { background: #111; color: #fff; }
-    .form-field input::placeholder { color: rgba(255,255,255,0.2); }
+    .form-field input::placeholder { color: rgba(255,255,255,0.4); }
     .form-field input:focus, .form-field select:focus { border-color: rgba(255,255,255,0.6); }
     .search-submit { margin-top: 24px; grid-column: 1 / -1; display: flex; justify-content: flex-end; }
-    .search-btn { background: none; border: none; font-family: var(--font); font-size: 11px; font-weight: 700; letter-spacing: 4px; text-transform: uppercase; color: #fff; cursor: pointer; border-bottom: 1px solid rgba(255,255,255,0.3); padding-bottom: 3px; transition: letter-spacing 0.3s, border-color 0.3s; }
+    .search-btn { background: none; border: none; font-family: var(--font); font-size: 13px; font-weight: 700; letter-spacing: 4px; text-transform: uppercase; color: #fff; cursor: pointer; border-bottom: 1px solid rgba(255,255,255,0.3); padding-bottom: 3px; transition: letter-spacing 0.3s, border-color 0.3s; }
     .search-btn:hover { letter-spacing: 5px; border-color: #fff; }
     .search-success { display: none; text-align: center; padding: 60px 0; font-size: 13px; font-weight: 700; letter-spacing: 4px; text-transform: uppercase; color: #fff; line-height: 2; }
 
@@ -87,19 +87,19 @@
     .nb-3 { background: linear-gradient(165deg, #080004 0%, #050003 60%, #000 100%); }
     .nb-4 { background: linear-gradient(145deg, #000610 0%, #00040c 60%, #000 100%); }
     .nb-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, transparent 60%); display: flex; flex-direction: column; justify-content: flex-end; padding: 28px 24px; }
-    .nb-name { font-size: 14px; font-weight: 900; letter-spacing: 4px; text-transform: uppercase; color: #fff; margin-bottom: 8px; }
-    .nb-tagline { font-size: 10px; font-weight: 400; letter-spacing: 2px; text-transform: uppercase; color: rgba(255,255,255,0.5); }
+    .nb-name { font-size: 20px; font-weight: 900; letter-spacing: 4px; text-transform: uppercase; color: #fff; margin-bottom: 8px; }
+    .nb-tagline { font-size: 13px; font-weight: 400; letter-spacing: 2px; text-transform: uppercase; color: rgba(255,255,255,0.65); }
 
     /* IDX STRIP */
     .idx-strip { padding: 32px var(--px); border-top: 1px solid rgba(255,255,255,0.05); text-align: center; }
-    .idx-text { font-size: 9px; font-weight: 700; letter-spacing: 4px; text-transform: uppercase; color: rgba(255,255,255,0.2); }
+    .idx-text { font-size: 12px; font-weight: 700; letter-spacing: 4px; text-transform: uppercase; color: rgba(255,255,255,0.4); }
 
     /* FOOTER */
     #footer { border-top: 1px solid rgba(255,255,255,0.07); padding: 80px var(--px) 60px; display: flex; flex-direction: column; align-items: center; gap: 28px; text-align: center; }
     .footer-monogram { font-size: 48px; font-weight: 900; letter-spacing: 2px; color: rgba(255,255,255,0.12); }
     .footer-hashtag { font-size: 13px; font-weight: 700; letter-spacing: 6px; text-transform: uppercase; color: rgba(255,255,255,0.5); }
     .footer-icons { display: flex; gap: 12px; }
-    .footer-copyright { font-size: 9px; font-weight: 400; letter-spacing: 3px; text-transform: uppercase; color: rgba(255,255,255,0.2); }
+    .footer-copyright { font-size: 12px; font-weight: 400; letter-spacing: 3px; text-transform: uppercase; color: rgba(255,255,255,0.5); }
 
     @media (max-width: 900px) {
       :root { --px: 36px; --section-py: 100px; }
@@ -176,11 +176,11 @@
       <div class="section-eyebrow fade-up" style="color:#555555;">Tell Us What You're Looking For</div>
       <form class="search-form fade-up" id="search-form">
         <div class="form-field full">
-          <label for="location" style="color:rgba(0,0,0,0.4);">Location / Neighborhood</label>
+          <label for="location" style="color:rgba(0,0,0,0.6);">Location / Neighborhood</label>
           <input type="text" id="location" name="location" placeholder="Fort Lauderdale, Las Olas, Victoria Park..." style="border-bottom-color:rgba(0,0,0,0.3); color:#000;" />
         </div>
         <div class="form-field">
-          <label for="min-price" style="color:rgba(0,0,0,0.4);">Min Price</label>
+          <label for="min-price" style="color:rgba(0,0,0,0.6);">Min Price</label>
           <select id="min-price" name="min-price" style="border-bottom-color:rgba(0,0,0,0.3); color:#000;">
             <option value="">Any</option>
             <option>$500,000</option>
@@ -191,7 +191,7 @@
           </select>
         </div>
         <div class="form-field">
-          <label for="max-price" style="color:rgba(0,0,0,0.4);">Max Price</label>
+          <label for="max-price" style="color:rgba(0,0,0,0.6);">Max Price</label>
           <select id="max-price" name="max-price" style="border-bottom-color:rgba(0,0,0,0.3); color:#000;">
             <option value="">Any</option>
             <option>$500,000</option>
@@ -202,7 +202,7 @@
           </select>
         </div>
         <div class="form-field">
-          <label for="beds" style="color:rgba(0,0,0,0.4);">Bedrooms</label>
+          <label for="beds" style="color:rgba(0,0,0,0.6);">Bedrooms</label>
           <select id="beds" name="beds" style="border-bottom-color:rgba(0,0,0,0.3); color:#000;">
             <option value="">Any</option>
             <option>1+</option>
@@ -213,7 +213,7 @@
           </select>
         </div>
         <div class="form-field">
-          <label for="baths" style="color:rgba(0,0,0,0.4);">Bathrooms</label>
+          <label for="baths" style="color:rgba(0,0,0,0.6);">Bathrooms</label>
           <select id="baths" name="baths" style="border-bottom-color:rgba(0,0,0,0.3); color:#000;">
             <option value="">Any</option>
             <option>1+</option>
@@ -222,7 +222,7 @@
           </select>
         </div>
         <div class="form-field full">
-          <label for="type" style="color:rgba(0,0,0,0.4);">Property Type</label>
+          <label for="type" style="color:rgba(0,0,0,0.6);">Property Type</label>
           <select id="type" name="type" style="border-bottom-color:rgba(0,0,0,0.3); color:#000;">
             <option>All</option>
             <option>Single Family</option>
@@ -277,7 +277,7 @@
 
   <!-- IDX STRIP -->
   <div class="idx-strip" style="background:#f5f5f5; border-top-color:rgba(0,0,0,0.05);">
-    <div class="idx-text" style="color:rgba(0,0,0,0.3);">Live MLS Integration Coming Soon · Powered By SERHANT.</div>
+    <div class="idx-text" style="color:rgba(0,0,0,0.5);">Live MLS Integration Coming Soon · Powered By SERHANT.</div>
   </div>
 
   <!-- FOOTER -->

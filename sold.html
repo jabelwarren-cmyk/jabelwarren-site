@@ -23,7 +23,7 @@
     .nav-monogram { width: 42px; height: 42px; display: flex; align-items: center; justify-content: center; border: 1px solid rgba(255,255,255,0.4); font-size: 14px; font-weight: 700; letter-spacing: 1px; }
     .nav-brand { font-size: 11px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: rgba(255,255,255,0.9); }
     .nav-links { display: flex; align-items: center; gap: 36px; list-style: none; }
-    .nav-links a { font-size: 10px; font-weight: 700; letter-spacing: 2.5px; text-transform: uppercase; color: rgba(255,255,255,0.75); transition: color 0.3s; }
+    .nav-links a { font-size: 13px; font-weight: 700; letter-spacing: 2.5px; text-transform: uppercase; color: rgba(255,255,255,0.85); transition: color 0.3s; }
     .nav-links a:hover { color: #fff; }
     .nav-links a.active { color: #fff; border-bottom: 1px solid rgba(255,255,255,0.6); padding-bottom: 2px; }
     .nav-links .nav-text-jabel { color: #fff; border-bottom: 1px solid rgba(255,255,255,0.4); padding-bottom: 2px; }
@@ -49,16 +49,16 @@
     .page-hero { position: relative; width: 100%; padding: calc(var(--nav-h) + 100px) var(--px) 120px; background: linear-gradient(160deg, #080808 0%, #000000 50%, #050010 100%); overflow: hidden; }
     .page-hero::after { content: ''; position: absolute; inset: 0; background-image: radial-gradient(circle, rgba(255,255,255,0.02) 1px, transparent 1px); background-size: 28px 28px; pointer-events: none; }
     .page-hero-inner { position: relative; z-index: 1; }
-    .page-eyebrow { font-size: 10px; font-weight: 700; letter-spacing: 5px; text-transform: uppercase; color: rgba(255,255,255,0.4); margin-bottom: 20px; }
+    .page-eyebrow { font-size: 12px; font-weight: 700; letter-spacing: 5px; text-transform: uppercase; color: rgba(255,255,255,0.65); margin-bottom: 20px; }
     .page-heading { font-size: clamp(52px, 8vw, 100px); font-weight: 900; letter-spacing: 12px; text-transform: uppercase; color: #fff; line-height: 1; margin-bottom: 24px; }
-    .page-subtitle { font-size: 13px; font-weight: 400; letter-spacing: 5px; text-transform: uppercase; color: rgba(255,255,255,0.45); }
+    .page-subtitle { font-size: 13px; font-weight: 400; letter-spacing: 5px; text-transform: uppercase; color: rgba(255,255,255,0.7); }
 
     /* STATS BAR */
     .stats-bar { display: flex; border-top: 1px solid rgba(255,255,255,0.08); border-bottom: 1px solid rgba(255,255,255,0.08); }
     .stat-item { flex: 1; text-align: center; padding: 44px 32px; }
     .stat-item + .stat-item { border-left: 1px solid rgba(255,255,255,0.08); }
     .stat-value { font-size: 13px; font-weight: 700; letter-spacing: 4px; text-transform: uppercase; color: #fff; margin-bottom: 10px; }
-    .stat-label { font-size: 9px; font-weight: 400; letter-spacing: 3px; text-transform: uppercase; color: var(--muted); }
+    .stat-label { font-size: 12px; font-weight: 500; letter-spacing: 3px; text-transform: uppercase; color: rgba(255,255,255,0.65); }
 
     /* SOLD GRID */
     .sold-section { padding: 80px var(--px) var(--section-py); }
@@ -68,11 +68,11 @@
     .sold-image-inner { width: 100%; height: 100%; transition: transform 0.6s; filter: brightness(0.7); }
     .sold-card:hover .sold-image-inner { transform: scale(1.03); filter: brightness(0.85); }
     .sold-badge-overlay { position: absolute; top: 16px; left: 16px; font-size: 9px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: #fff; background: rgba(0,0,0,0.7); padding: 5px 14px; border: 1px solid rgba(255,255,255,0.3); }
-    .sold-address { font-size: 13px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: #fff; margin-bottom: 6px; }
+    .sold-address { font-size: 15px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: #fff; margin-bottom: 6px; }
     .sold-price { font-size: 22px; font-weight: 900; letter-spacing: 1px; color: #fff; margin-bottom: 10px; }
-    .sold-specs { font-size: 10px; font-weight: 400; letter-spacing: 2.5px; text-transform: uppercase; color: var(--muted); margin-bottom: 8px; }
-    .sold-date { font-size: 9px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: rgba(255,255,255,0.3); }
-    .sold-note { font-size: 9px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: rgba(255,255,255,0.45); margin-top: 6px; }
+    .sold-specs { font-size: 12px; font-weight: 400; letter-spacing: 2.5px; text-transform: uppercase; color: var(--muted); margin-bottom: 8px; }
+    .sold-date { font-size: 12px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: rgba(255,255,255,0.5); }
+    .sold-note { font-size: 12px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: rgba(255,255,255,0.65); margin-top: 6px; }
 
     /* Card gradients */
     .si-1 { background: linear-gradient(135deg, #0d0500 0%, #060300 50%, #000 100%); }
@@ -87,19 +87,19 @@
 
     /* TESTIMONIALS */
     .testimonials-section { padding: var(--section-py) var(--px); border-top: 1px solid rgba(255,255,255,0.07); }
-    .section-eyebrow { font-size: 10px; font-weight: 700; letter-spacing: 4px; text-transform: uppercase; color: var(--muted); margin-bottom: 64px; text-align: center; }
+    .section-eyebrow { font-size: 12px; font-weight: 700; letter-spacing: 4px; text-transform: uppercase; color: var(--muted); margin-bottom: 64px; text-align: center; }
     .testimonials-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 60px; }
     .testimonial { display: flex; flex-direction: column; gap: 16px; }
     .testimonial-quote-mark { font-size: 52px; font-weight: 300; line-height: 0.8; color: rgba(255,255,255,0.15); font-family: Georgia, serif; }
-    .testimonial-text { font-size: 14px; font-weight: 400; line-height: 1.8; color: var(--muted); font-style: italic; }
-    .testimonial-attribution { font-size: 9px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: rgba(255,255,255,0.5); }
+    .testimonial-text { font-size: 16px; font-weight: 400; line-height: 1.8; color: var(--muted); font-style: italic; }
+    .testimonial-attribution { font-size: 12px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: rgba(255,255,255,0.65); }
 
     /* FOOTER */
     #footer { border-top: 1px solid rgba(255,255,255,0.07); padding: 80px var(--px) 60px; display: flex; flex-direction: column; align-items: center; gap: 28px; text-align: center; }
     .footer-monogram { font-size: 48px; font-weight: 900; letter-spacing: 2px; color: rgba(255,255,255,0.12); }
     .footer-hashtag { font-size: 13px; font-weight: 700; letter-spacing: 6px; text-transform: uppercase; color: rgba(255,255,255,0.5); }
     .footer-icons { display: flex; gap: 12px; }
-    .footer-copyright { font-size: 9px; font-weight: 400; letter-spacing: 3px; text-transform: uppercase; color: rgba(255,255,255,0.2); }
+    .footer-copyright { font-size: 12px; font-weight: 400; letter-spacing: 3px; text-transform: uppercase; color: rgba(255,255,255,0.5); }
 
     @media (max-width: 900px) {
       :root { --px: 36px; --section-py: 100px; }
@@ -207,7 +207,7 @@
         <div class="sold-address" style="color:#000;">612 N Taylor Ave, Fort Lauderdale FL</div>
         <div class="sold-price" style="color:#000;">$2,100,000</div>
         <div class="sold-specs" style="color:#555555;">4 BD · 3 BA · 2,800 SF</div>
-        <div class="sold-date" style="color:rgba(0,0,0,0.4);">Sold — March 2025</div>
+        <div class="sold-date" style="color:rgba(0,0,0,0.55);">Sold — March 2025</div>
         <div class="sold-note" style="color:#555555;">Record Sale · Mexican War Streets</div>
         </div>
       </div>
@@ -221,7 +221,7 @@
         <div class="sold-address" style="color:#000;">1804 SE 12th St, Fort Lauderdale FL</div>
         <div class="sold-price" style="color:#000;">$3,750,000</div>
         <div class="sold-specs" style="color:#555555;">5 BD · 5 BA · 4,200 SF</div>
-        <div class="sold-date" style="color:rgba(0,0,0,0.4);">Sold — November 2025</div>
+        <div class="sold-date" style="color:rgba(0,0,0,0.55);">Sold — November 2025</div>
         <div class="sold-note" style="color:#555555;">Rio Vista Waterfront</div>
         </div>
       </div>
@@ -235,7 +235,7 @@
         <div class="sold-address" style="color:#000;">2250 N Ocean Blvd #1502, Fort Lauderdale FL</div>
         <div class="sold-price" style="color:#000;">$8,500,000</div>
         <div class="sold-specs" style="color:#555555;">4 BD · 4.5 BA · 5,800 SF</div>
-        <div class="sold-date" style="color:rgba(0,0,0,0.4);">Sold — January 2026</div>
+        <div class="sold-date" style="color:rgba(0,0,0,0.55);">Sold — January 2026</div>
         <div class="sold-note" style="color:#555555;">Harbor Beach Penthouse</div>
         </div>
       </div>
@@ -249,7 +249,7 @@
         <div class="sold-address" style="color:#000;">431 Victoria Ave, Fort Lauderdale FL</div>
         <div class="sold-price" style="color:#000;">$1,850,000</div>
         <div class="sold-specs" style="color:#555555;">3 BD · 3 BA · 2,200 SF</div>
-        <div class="sold-date" style="color:rgba(0,0,0,0.4);">Sold — August 2024</div>
+        <div class="sold-date" style="color:rgba(0,0,0,0.55);">Sold — August 2024</div>
         <div class="sold-note" style="color:#555555;">Victoria Park</div>
         </div>
       </div>
@@ -263,7 +263,7 @@
         <div class="sold-address" style="color:#000;">728 SE 4th Ave, Fort Lauderdale FL</div>
         <div class="sold-price" style="color:#000;">$2,650,000</div>
         <div class="sold-specs" style="color:#555555;">4 BD · 4 BA · 3,400 SF</div>
-        <div class="sold-date" style="color:rgba(0,0,0,0.4);">Sold — May 2025</div>
+        <div class="sold-date" style="color:rgba(0,0,0,0.55);">Sold — May 2025</div>
         <div class="sold-note" style="color:#555555;">Las Olas Isles</div>
         </div>
       </div>
@@ -277,7 +277,7 @@
         <div class="sold-address" style="color:#000;">3601 N Ocean Blvd, Fort Lauderdale FL</div>
         <div class="sold-price" style="color:#000;">$5,200,000</div>
         <div class="sold-specs" style="color:#555555;">5 BD · 6 BA · 6,100 SF</div>
-        <div class="sold-date" style="color:rgba(0,0,0,0.4);">Sold — October 2025</div>
+        <div class="sold-date" style="color:rgba(0,0,0,0.55);">Sold — October 2025</div>
         <div class="sold-note" style="color:#555555;">Galt Ocean Mile</div>
         </div>
       </div>
@@ -291,7 +291,7 @@
         <div class="sold-address" style="color:#000;">115 Isle of Venice Dr, Fort Lauderdale FL</div>
         <div class="sold-price" style="color:#000;">$4,100,000</div>
         <div class="sold-specs" style="color:#555555;">4 BD · 4 BA · 3,900 SF</div>
-        <div class="sold-date" style="color:rgba(0,0,0,0.4);">Sold — February 2026</div>
+        <div class="sold-date" style="color:rgba(0,0,0,0.55);">Sold — February 2026</div>
         <div class="sold-note" style="color:#555555;">Isle of Venice · Waterfront</div>
         </div>
       </div>
@@ -305,7 +305,7 @@
         <div class="sold-address" style="color:#000;">900 NE 18th Ave #901, Fort Lauderdale FL</div>
         <div class="sold-price" style="color:#000;">$1,200,000</div>
         <div class="sold-specs" style="color:#555555;">2 BD · 2.5 BA · 1,850 SF</div>
-        <div class="sold-date" style="color:rgba(0,0,0,0.4);">Sold — June 2024</div>
+        <div class="sold-date" style="color:rgba(0,0,0,0.55);">Sold — June 2024</div>
         <div class="sold-note" style="color:#555555;">Wilton Manors Adjacent</div>
         </div>
       </div>
