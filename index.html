@@ -233,34 +233,46 @@
       align-items: center;
       justify-content: center;
       overflow: hidden;
-      background: linear-gradient(160deg, #1a0a00 0%, #000000 40%, #0a0a14 100%);
+      background: #000;
     }
 
-    /* Warm corner glow */
+    /* Full-screen background video */
+    #hero-video {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      z-index: 0;
+    }
+
+    /* Dark overlay so text stays readable over video */
     #hero::before {
       content: '';
       position: absolute;
-      top: -10%;
-      right: -5%;
-      width: 50%;
-      height: 60%;
-      background: radial-gradient(ellipse at center, rgba(100,40,0,0.18) 0%, transparent 70%);
+      inset: 0;
+      background: rgba(0,0,0,0.45);
+      z-index: 1;
       pointer-events: none;
     }
 
-    /* Dot texture overlay */
+    /* Subtle bottom gradient to blend into next section */
     #hero::after {
       content: '';
       position: absolute;
-      inset: 0;
-      background-image: radial-gradient(circle, rgba(255,255,255,0.025) 1px, transparent 1px);
-      background-size: 28px 28px;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 220px;
+      background: linear-gradient(to bottom, transparent, rgba(0,0,0,0.85));
+      z-index: 1;
       pointer-events: none;
     }
 
     .hero-content {
       position: relative;
-      z-index: 1;
+      z-index: 2;
       text-align: center;
       display: flex;
       flex-direction: column;
@@ -353,6 +365,7 @@
       align-items: center;
       gap: 10px;
       opacity: 0;
+      z-index: 2;
       animation: fadeUp 0.8s ease-out 1.3s forwards;
     }
 
@@ -1137,6 +1150,10 @@
 
   <!-- ═══════════════════════════════════════ HERO ══ -->
   <section id="hero">
+    <video id="hero-video" autoplay muted loop playsinline preload="auto" poster="">
+      <source src="hero.mp4" type="video/mp4">
+      <source src="hero.mov" type="video/quicktime">
+    </video>
     <div class="hero-content">
       <div class="hero-label">Fort Lauderdale · Broward County</div>
       <h1 class="hero-name">Jabel Warren</h1>
