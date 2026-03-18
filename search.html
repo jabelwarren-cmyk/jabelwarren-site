@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Search Properties — Jabel Warren · Fort Lauderdale · SERHANT.</title>
+  <meta name="description" content="Search luxury properties in Fort Lauderdale & Broward County with Jabel Warren · SERHANT." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700;900&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root { --bg: #000; --text: #fff; --muted: #888; --font: 'Montserrat', sans-serif; --nav-h: 85px; --px: 60px; --section-py: 140px; }
+    html { scroll-behavior: smooth; }
+    body { background: var(--bg); color: var(--text); font-family: var(--font); -webkit-font-smoothing: antialiased; overflow-x: hidden; }
+    a { color: inherit; text-decoration: none; }
+    ::-webkit-scrollbar { width: 4px; } ::-webkit-scrollbar-track { background: #000; } ::-webkit-scrollbar-thumb { background: #333; }
+
+    /* NAV */
+    #nav { position: fixed; top: 0; left: 0; width: 100%; height: var(--nav-h); z-index: 1000; display: flex; align-items: center; justify-content: space-between; padding: 0 var(--px); transition: background 0.5s, backdrop-filter 0.5s; }
+    #nav.scrolled { background: rgba(0,0,0,0.85); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); }
+    .nav-left { display: flex; align-items: center; gap: 14px; flex-shrink: 0; }
+    .nav-monogram { width: 42px; height: 42px; display: flex; align-items: center; justify-content: center; border: 1px solid rgba(255,255,255,0.4); font-size: 14px; font-weight: 700; letter-spacing: 1px; }
+    .nav-brand { font-size: 11px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: rgba(255,255,255,0.9); }
+    .nav-links { display: flex; align-items: center; gap: 36px; list-style: none; }
+    .nav-links a { font-size: 10px; font-weight: 700; letter-spacing: 2.5px; text-transform: uppercase; color: rgba(255,255,255,0.75); transition: color 0.3s; }
+    .nav-links a:hover { color: #fff; }
+    .nav-links a.active { color: #fff; border-bottom: 1px solid rgba(255,255,255,0.6); padding-bottom: 2px; }
+    .nav-links .nav-text-jabel { color: #fff; border-bottom: 1px solid rgba(255,255,255,0.4); padding-bottom: 2px; }
+    .nav-icons { display: flex; align-items: center; gap: 10px; flex-shrink: 0; }
+    .nav-icon-btn { width: 38px; height: 38px; border-radius: 50%; border: 1px solid rgba(255,255,255,0.5); display: flex; align-items: center; justify-content: center; transition: border-color 0.3s, background 0.3s; }
+    .nav-icon-btn:hover { border-color: #fff; background: rgba(255,255,255,0.08); }
+    .nav-icon-btn svg { width: 15px; height: 15px; fill: none; stroke: rgba(255,255,255,0.8); stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
+    .nav-hamburger { display: none; flex-direction: column; gap: 6px; cursor: pointer; padding: 4px; }
+    .nav-hamburger span { display: block; width: 26px; height: 1px; background: #fff; transition: transform 0.3s, opacity 0.3s; }
+    .nav-hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .nav-hamburger.open span:nth-child(2) { opacity: 0; }
+    .nav-hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+    #mobile-menu { display: none; position: fixed; inset: 0; background: #000; z-index: 999; flex-direction: column; align-items: center; justify-content: center; gap: 40px; }
+    #mobile-menu.open { display: flex; }
+    #mobile-menu a { font-size: 28px; font-weight: 700; letter-spacing: 6px; text-transform: uppercase; color: rgba(255,255,255,0.85); }
+    #mobile-menu a:hover { color: #fff; }
+
+    /* FADE UP */
+    .fade-up { opacity: 0; transform: translateY(30px); transition: opacity 0.7s ease-out, transform 0.7s ease-out; }
+    .fade-up.visible { opacity: 1; transform: translateY(0); }
+
+    /* PAGE HERO */
+    .page-hero { position: relative; width: 100%; padding: calc(var(--nav-h) + 100px) var(--px) 120px; background: linear-gradient(160deg, #000814 0%, #000000 50%, #080400 100%); overflow: hidden; }
+    .page-hero::after { content: ''; position: absolute; inset: 0; background-image: radial-gradient(circle, rgba(255,255,255,0.02) 1px, transparent 1px); background-size: 28px 28px; pointer-events: none; }
+    .page-hero-inner { position: relative; z-index: 1; }
+    .page-eyebrow { font-size: 10px; font-weight: 700; letter-spacing: 5px; text-transform: uppercase; color: rgba(255,255,255,0.4); margin-bottom: 20px; }
+    .page-heading { font-size: clamp(52px, 8vw, 100px); font-weight: 900; letter-spacing: 12px; text-transform: uppercase; color: #fff; line-height: 1; margin-bottom: 24px; }
+    .page-subtitle { font-size: 13px; font-weight: 400; letter-spacing: 5px; text-transform: uppercase; color: rgba(255,255,255,0.45); }
+
+    /* SEARCH FORM */
+    .search-section { padding: var(--section-py) var(--px); }
+    .search-form-wrapper { max-width: 860px; margin: 0 auto; }
+    .section-eyebrow { font-size: 10px; font-weight: 700; letter-spacing: 4px; text-transform: uppercase; color: var(--muted); margin-bottom: 56px; }
+    .search-form { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
+    .form-field { display: flex; flex-direction: column; gap: 0; }
+    .form-field.full { grid-column: 1 / -1; }
+    .form-field label { font-size: 9px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: rgba(255,255,255,0.3); margin-bottom: 10px; }
+    .form-field input, .form-field select, .form-field textarea {
+      background: transparent; border: none; border-bottom: 1px solid rgba(255,255,255,0.2);
+      color: #fff; font-family: var(--font); font-size: 14px; font-weight: 400; letter-spacing: 1px;
+      padding: 8px 0; outline: none; transition: border-color 0.3s; width: 100%;
+      -webkit-appearance: none; appearance: none;
+    }
+    .form-field select option { background: #111; color: #fff; }
+    .form-field input::placeholder { color: rgba(255,255,255,0.2); }
+    .form-field input:focus, .form-field select:focus { border-color: rgba(255,255,255,0.6); }
+    .search-submit { margin-top: 24px; grid-column: 1 / -1; display: flex; justify-content: flex-end; }
+    .search-btn { background: none; border: none; font-family: var(--font); font-size: 11px; font-weight: 700; letter-spacing: 4px; text-transform: uppercase; color: #fff; cursor: pointer; border-bottom: 1px solid rgba(255,255,255,0.3); padding-bottom: 3px; transition: letter-spacing 0.3s, border-color 0.3s; }
+    .search-btn:hover { letter-spacing: 5px; border-color: #fff; }
+    .search-success { display: none; text-align: center; padding: 60px 0; font-size: 13px; font-weight: 700; letter-spacing: 4px; text-transform: uppercase; color: #fff; line-height: 2; }
+
+    /* NEIGHBORHOODS */
+    .neighborhoods-section { padding: var(--section-py) var(--px); border-top: 1px solid rgba(255,255,255,0.07); }
+    .neighborhoods-heading { font-size: clamp(28px, 4vw, 44px); font-weight: 900; letter-spacing: 6px; text-transform: uppercase; color: #fff; margin-bottom: 64px; }
+    .neighborhoods-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2px; }
+    .neighborhood-card { aspect-ratio: 3/4; position: relative; overflow: hidden; cursor: pointer; }
+    .neighborhood-bg { width: 100%; height: 100%; transition: transform 0.6s; }
+    .neighborhood-card:hover .neighborhood-bg { transform: scale(1.04); }
+    .nb-1 { background: linear-gradient(160deg, #0a0a00 0%, #050500 60%, #000 100%); }
+    .nb-2 { background: linear-gradient(150deg, #00080a 0%, #000607 60%, #000 100%); }
+    .nb-3 { background: linear-gradient(165deg, #080004 0%, #050003 60%, #000 100%); }
+    .nb-4 { background: linear-gradient(145deg, #000610 0%, #00040c 60%, #000 100%); }
+    .nb-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, transparent 60%); display: flex; flex-direction: column; justify-content: flex-end; padding: 28px 24px; }
+    .nb-name { font-size: 14px; font-weight: 900; letter-spacing: 4px; text-transform: uppercase; color: #fff; margin-bottom: 8px; }
+    .nb-tagline { font-size: 10px; font-weight: 400; letter-spacing: 2px; text-transform: uppercase; color: rgba(255,255,255,0.5); }
+
+    /* IDX STRIP */
+    .idx-strip { padding: 32px var(--px); border-top: 1px solid rgba(255,255,255,0.05); text-align: center; }
+    .idx-text { font-size: 9px; font-weight: 700; letter-spacing: 4px; text-transform: uppercase; color: rgba(255,255,255,0.2); }
+
+    /* FOOTER */
+    #footer { border-top: 1px solid rgba(255,255,255,0.07); padding: 80px var(--px) 60px; display: flex; flex-direction: column; align-items: center; gap: 28px; text-align: center; }
+    .footer-monogram { font-size: 48px; font-weight: 900; letter-spacing: 2px; color: rgba(255,255,255,0.12); }
+    .footer-hashtag { font-size: 13px; font-weight: 700; letter-spacing: 6px; text-transform: uppercase; color: rgba(255,255,255,0.5); }
+    .footer-icons { display: flex; gap: 12px; }
+    .footer-copyright { font-size: 9px; font-weight: 400; letter-spacing: 3px; text-transform: uppercase; color: rgba(255,255,255,0.2); }
+
+    @media (max-width: 900px) {
+      :root { --px: 36px; --section-py: 100px; }
+      .nav-links, .nav-icons { display: none; }
+      .nav-hamburger { display: flex; }
+      .neighborhoods-grid { grid-template-columns: repeat(2, 1fr); }
+      .search-form { grid-template-columns: 1fr; }
+      .search-submit { justify-content: center; }
+    }
+    @media (max-width: 600px) {
+      :root { --px: 24px; --section-py: 80px; }
+      .neighborhoods-grid { grid-template-columns: 1fr 1fr; gap: 1px; }
+      .neighborhood-card { aspect-ratio: 1; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav id="nav">
+    <div class="nav-left">
+      <div class="nav-monogram">JW</div>
+      <span class="nav-brand">#JabelWarren</span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="listings.html">Listings</a></li>
+      <li><a href="sold.html">Sold</a></li>
+      <li><a href="search.html" class="active">Search</a></li>
+      <li><a href="press.html">Press</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="contact.html" class="nav-text-jabel">Text Jabel</a></li>
+    </ul>
+    <div class="nav-icons">
+      <a href="https://instagram.com/jabelwarren" target="_blank" class="nav-icon-btn" aria-label="Instagram">
+        <svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4.5"/><circle cx="17.5" cy="6.5" r="0.5" fill="rgba(255,255,255,0.8)" stroke="none"/></svg>
+      </a>
+      <a href="#" class="nav-icon-btn" aria-label="YouTube">
+        <svg viewBox="0 0 24 24"><rect x="2" y="5" width="20" height="14" rx="3"/><polygon points="10,8.5 16,12 10,15.5" fill="rgba(255,255,255,0.8)" stroke="none"/></svg>
+      </a>
+      <a href="mailto:jabel@lifespacefl.com" class="nav-icon-btn" aria-label="Email">
+        <svg viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="2,4 12,13 22,4"/></svg>
+      </a>
+      <a href="tel:+19545551234" class="nav-icon-btn" aria-label="Phone">
+        <svg viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 01-2.2 2 20 20 0 01-8.6-3.1 19.5 19.5 0 01-6-6 20 20 0 01-3.1-8.7A2 2 0 014.1 2h3a2 2 0 012 1.7c.1 1 .4 2 .7 3a2 2 0 01-.4 2.1L8 9.9a16 16 0 006 6l1.1-1.4a2 2 0 012.1-.5c1 .3 2 .6 3 .7a2 2 0 011.8 2.2z"/></svg>
+      </a>
+    </div>
+    <div class="nav-hamburger" id="hamburger"><span></span><span></span><span></span></div>
+  </nav>
+
+  <div id="mobile-menu">
+    <a href="index.html" class="mobile-link">Home</a>
+    <a href="about.html" class="mobile-link">About</a>
+    <a href="listings.html" class="mobile-link">Listings</a>
+    <a href="sold.html" class="mobile-link">Sold</a>
+    <a href="search.html" class="mobile-link">Search</a>
+    <a href="press.html" class="mobile-link">Press</a>
+    <a href="contact.html" class="mobile-link">Contact</a>
+    <a href="contact.html" class="mobile-link">Text Jabel</a>
+  </div>
+
+  <!-- PAGE HERO -->
+  <section class="page-hero">
+    <div class="page-hero-inner">
+      <div class="page-eyebrow fade-up">Property Search</div>
+      <h1 class="page-heading fade-up">Search</h1>
+      <div class="page-subtitle fade-up">Find Your Perfect Property</div>
+    </div>
+  </section>
+
+  <!-- SEARCH FORM -->
+  <section class="search-section">
+    <div class="search-form-wrapper">
+      <div class="section-eyebrow fade-up">Tell Us What You're Looking For</div>
+      <form class="search-form fade-up" id="search-form">
+        <div class="form-field full">
+          <label for="location">Location / Neighborhood</label>
+          <input type="text" id="location" name="location" placeholder="Fort Lauderdale, Las Olas, Victoria Park..." />
+        </div>
+        <div class="form-field">
+          <label for="min-price">Min Price</label>
+          <select id="min-price" name="min-price">
+            <option value="">Any</option>
+            <option>$500,000</option>
+            <option>$1,000,000</option>
+            <option>$2,000,000</option>
+            <option>$5,000,000</option>
+            <option>$10,000,000+</option>
+          </select>
+        </div>
+        <div class="form-field">
+          <label for="max-price">Max Price</label>
+          <select id="max-price" name="max-price">
+            <option value="">Any</option>
+            <option>$500,000</option>
+            <option>$1,000,000</option>
+            <option>$2,000,000</option>
+            <option>$5,000,000</option>
+            <option>$10,000,000+</option>
+          </select>
+        </div>
+        <div class="form-field">
+          <label for="beds">Bedrooms</label>
+          <select id="beds" name="beds">
+            <option value="">Any</option>
+            <option>1+</option>
+            <option>2+</option>
+            <option>3+</option>
+            <option>4+</option>
+            <option>5+</option>
+          </select>
+        </div>
+        <div class="form-field">
+          <label for="baths">Bathrooms</label>
+          <select id="baths" name="baths">
+            <option value="">Any</option>
+            <option>1+</option>
+            <option>2+</option>
+            <option>3+</option>
+          </select>
+        </div>
+        <div class="form-field full">
+          <label for="type">Property Type</label>
+          <select id="type" name="type">
+            <option>All</option>
+            <option>Single Family</option>
+            <option>Condo</option>
+            <option>Investment</option>
+          </select>
+        </div>
+        <div class="search-submit">
+          <button type="submit" class="search-btn">Search Properties →</button>
+        </div>
+      </form>
+      <div class="search-success fade-up" id="search-success">
+        Thank you.<br />Jabel will personally curate a selection of<br />properties matching your criteria.
+      </div>
+    </div>
+  </section>
+
+  <!-- NEIGHBORHOODS -->
+  <section class="neighborhoods-section">
+    <div class="neighborhoods-heading fade-up">Featured Neighborhoods</div>
+    <div class="neighborhoods-grid">
+      <div class="neighborhood-card fade-up">
+        <div class="neighborhood-bg nb-1"></div>
+        <div class="nb-overlay">
+          <div class="nb-name">Las Olas</div>
+          <div class="nb-tagline">Fort Lauderdale's Most Iconic Address</div>
+        </div>
+      </div>
+      <div class="neighborhood-card fade-up" style="transition-delay:0.1s;">
+        <div class="neighborhood-bg nb-2"></div>
+        <div class="nb-overlay">
+          <div class="nb-name">Victoria Park</div>
+          <div class="nb-tagline">Historic Charm, Modern Luxury</div>
+        </div>
+      </div>
+      <div class="neighborhood-card fade-up" style="transition-delay:0.2s;">
+        <div class="neighborhood-bg nb-3"></div>
+        <div class="nb-overlay">
+          <div class="nb-name">Rio Vista</div>
+          <div class="nb-tagline">Waterfront Estates & Deep Lots</div>
+        </div>
+      </div>
+      <div class="neighborhood-card fade-up" style="transition-delay:0.3s;">
+        <div class="neighborhood-bg nb-4"></div>
+        <div class="nb-overlay">
+          <div class="nb-name">Harbor Beach</div>
+          <div class="nb-tagline">Private. Gated. Ultra-Luxury.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- IDX STRIP -->
+  <div class="idx-strip">
+    <div class="idx-text">Live MLS Integration Coming Soon · Powered By SERHANT.</div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer id="footer">
+    <div class="footer-monogram">JW</div>
+    <div class="footer-hashtag">#JabelWarren</div>
+    <div class="footer-icons">
+      <a href="https://instagram.com/jabelwarren" target="_blank" class="nav-icon-btn" aria-label="Instagram">
+        <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="rgba(255,255,255,0.6)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4.5"/><circle cx="17.5" cy="6.5" r="0.5" fill="rgba(255,255,255,0.6)" stroke="none"/></svg>
+      </a>
+      <a href="#" class="nav-icon-btn" aria-label="YouTube">
+        <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="rgba(255,255,255,0.6)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="3"/><polygon points="10,8.5 16,12 10,15.5" fill="rgba(255,255,255,0.6)" stroke="none"/></svg>
+      </a>
+      <a href="mailto:jabel@lifespacefl.com" class="nav-icon-btn" aria-label="Email">
+        <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="rgba(255,255,255,0.6)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="2,4 12,13 22,4"/></svg>
+      </a>
+      <a href="tel:+19545551234" class="nav-icon-btn" aria-label="Phone">
+        <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="rgba(255,255,255,0.6)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 01-2.2 2 20 20 0 01-8.6-3.1 19.5 19.5 0 01-6-6 20 20 0 01-3.1-8.7A2 2 0 014.1 2h3a2 2 0 012 1.7c.1 1 .4 2 .7 3a2 2 0 01-.4 2.1L8 9.9a16 16 0 006 6l1.1-1.4a2 2 0 012.1-.5c1 .3 2 .6 3 .7a2 2 0 011.8 2.2z"/></svg>
+      </a>
+    </div>
+    <div class="footer-copyright">© 2026 Jabel Warren · SERHANT. · Fort Lauderdale, FL</div>
+  </footer>
+
+  <script>
+    const nav = document.getElementById('nav');
+    window.addEventListener('scroll', () => { nav.classList.toggle('scrolled', window.scrollY > 60); });
+    const hamburger = document.getElementById('hamburger');
+    const mobileMenu = document.getElementById('mobile-menu');
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('open'); mobileMenu.classList.toggle('open');
+      document.body.style.overflow = mobileMenu.classList.contains('open') ? 'hidden' : '';
+    });
+    document.querySelectorAll('.mobile-link').forEach(l => l.addEventListener('click', () => {
+      hamburger.classList.remove('open'); mobileMenu.classList.remove('open'); document.body.style.overflow = '';
+    }));
+    const fo = new IntersectionObserver((e) => {
+      e.forEach(x => { if (x.isIntersecting) { x.target.classList.add('visible'); fo.unobserve(x.target); } });
+    }, { threshold: 0.12 });
+    document.querySelectorAll('.fade-up').forEach(el => fo.observe(el));
+    // Search form
+    document.getElementById('search-form').addEventListener('submit', (e) => {
+      e.preventDefault();
+      document.getElementById('search-form').style.display = 'none';
+      const s = document.getElementById('search-success');
+      s.style.display = 'block';
+      s.classList.add('visible');
+    });
+  </script>
+</body>
+</html>

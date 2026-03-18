@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sold — Jabel Warren · Record Sales · Fort Lauderdale · SERHANT.</title>
+  <meta name="description" content="Jabel Warren's sold portfolio — a record of excellence in Fort Lauderdale luxury real estate. SERHANT." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700;900&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root { --bg: #000; --text: #fff; --muted: #888; --font: 'Montserrat', sans-serif; --nav-h: 85px; --px: 60px; --section-py: 140px; }
+    html { scroll-behavior: smooth; }
+    body { background: var(--bg); color: var(--text); font-family: var(--font); -webkit-font-smoothing: antialiased; overflow-x: hidden; }
+    a { color: inherit; text-decoration: none; }
+    ::-webkit-scrollbar { width: 4px; } ::-webkit-scrollbar-track { background: #000; } ::-webkit-scrollbar-thumb { background: #333; }
+
+    /* NAV */
+    #nav { position: fixed; top: 0; left: 0; width: 100%; height: var(--nav-h); z-index: 1000; display: flex; align-items: center; justify-content: space-between; padding: 0 var(--px); transition: background 0.5s, backdrop-filter 0.5s; }
+    #nav.scrolled { background: rgba(0,0,0,0.85); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); }
+    .nav-left { display: flex; align-items: center; gap: 14px; flex-shrink: 0; }
+    .nav-monogram { width: 42px; height: 42px; display: flex; align-items: center; justify-content: center; border: 1px solid rgba(255,255,255,0.4); font-size: 14px; font-weight: 700; letter-spacing: 1px; }
+    .nav-brand { font-size: 11px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: rgba(255,255,255,0.9); }
+    .nav-links { display: flex; align-items: center; gap: 36px; list-style: none; }
+    .nav-links a { font-size: 10px; font-weight: 700; letter-spacing: 2.5px; text-transform: uppercase; color: rgba(255,255,255,0.75); transition: color 0.3s; }
+    .nav-links a:hover { color: #fff; }
+    .nav-links a.active { color: #fff; border-bottom: 1px solid rgba(255,255,255,0.6); padding-bottom: 2px; }
+    .nav-links .nav-text-jabel { color: #fff; border-bottom: 1px solid rgba(255,255,255,0.4); padding-bottom: 2px; }
+    .nav-icons { display: flex; align-items: center; gap: 10px; flex-shrink: 0; }
+    .nav-icon-btn { width: 38px; height: 38px; border-radius: 50%; border: 1px solid rgba(255,255,255,0.5); display: flex; align-items: center; justify-content: center; transition: border-color 0.3s, background 0.3s; }
+    .nav-icon-btn:hover { border-color: #fff; background: rgba(255,255,255,0.08); }
+    .nav-icon-btn svg { width: 15px; height: 15px; fill: none; stroke: rgba(255,255,255,0.8); stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
+    .nav-hamburger { display: none; flex-direction: column; gap: 6px; cursor: pointer; padding: 4px; }
+    .nav-hamburger span { display: block; width: 26px; height: 1px; background: #fff; transition: transform 0.3s, opacity 0.3s; }
+    .nav-hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .nav-hamburger.open span:nth-child(2) { opacity: 0; }
+    .nav-hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+    #mobile-menu { display: none; position: fixed; inset: 0; background: #000; z-index: 999; flex-direction: column; align-items: center; justify-content: center; gap: 40px; }
+    #mobile-menu.open { display: flex; }
+    #mobile-menu a { font-size: 28px; font-weight: 700; letter-spacing: 6px; text-transform: uppercase; color: rgba(255,255,255,0.85); }
+    #mobile-menu a:hover { color: #fff; }
+
+    /* FADE UP */
+    .fade-up { opacity: 0; transform: translateY(30px); transition: opacity 0.7s ease-out, transform 0.7s ease-out; }
+    .fade-up.visible { opacity: 1; transform: translateY(0); }
+
+    /* PAGE HERO */
+    .page-hero { position: relative; width: 100%; padding: calc(var(--nav-h) + 100px) var(--px) 120px; background: linear-gradient(160deg, #080808 0%, #000000 50%, #050010 100%); overflow: hidden; }
+    .page-hero::after { content: ''; position: absolute; inset: 0; background-image: radial-gradient(circle, rgba(255,255,255,0.02) 1px, transparent 1px); background-size: 28px 28px; pointer-events: none; }
+    .page-hero-inner { position: relative; z-index: 1; }
+    .page-eyebrow { font-size: 10px; font-weight: 700; letter-spacing: 5px; text-transform: uppercase; color: rgba(255,255,255,0.4); margin-bottom: 20px; }
+    .page-heading { font-size: clamp(52px, 8vw, 100px); font-weight: 900; letter-spacing: 12px; text-transform: uppercase; color: #fff; line-height: 1; margin-bottom: 24px; }
+    .page-subtitle { font-size: 13px; font-weight: 400; letter-spacing: 5px; text-transform: uppercase; color: rgba(255,255,255,0.45); }
+
+    /* STATS BAR */
+    .stats-bar { display: flex; border-top: 1px solid rgba(255,255,255,0.08); border-bottom: 1px solid rgba(255,255,255,0.08); }
+    .stat-item { flex: 1; text-align: center; padding: 44px 32px; }
+    .stat-item + .stat-item { border-left: 1px solid rgba(255,255,255,0.08); }
+    .stat-value { font-size: 13px; font-weight: 700; letter-spacing: 4px; text-transform: uppercase; color: #fff; margin-bottom: 10px; }
+    .stat-label { font-size: 9px; font-weight: 400; letter-spacing: 3px; text-transform: uppercase; color: var(--muted); }
+
+    /* SOLD GRID */
+    .sold-section { padding: 80px var(--px) var(--section-py); }
+    .sold-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; }
+    .sold-card { cursor: pointer; }
+    .sold-image { aspect-ratio: 4/3; overflow: hidden; margin-bottom: 22px; position: relative; }
+    .sold-image-inner { width: 100%; height: 100%; transition: transform 0.6s; filter: brightness(0.7); }
+    .sold-card:hover .sold-image-inner { transform: scale(1.03); filter: brightness(0.85); }
+    .sold-badge-overlay { position: absolute; top: 16px; left: 16px; font-size: 9px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: #fff; background: rgba(0,0,0,0.7); padding: 5px 14px; border: 1px solid rgba(255,255,255,0.3); }
+    .sold-address { font-size: 13px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: #fff; margin-bottom: 6px; }
+    .sold-price { font-size: 22px; font-weight: 900; letter-spacing: 1px; color: #fff; margin-bottom: 10px; }
+    .sold-specs { font-size: 10px; font-weight: 400; letter-spacing: 2.5px; text-transform: uppercase; color: var(--muted); margin-bottom: 8px; }
+    .sold-date { font-size: 9px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: rgba(255,255,255,0.3); }
+    .sold-note { font-size: 9px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: rgba(255,255,255,0.45); margin-top: 6px; }
+
+    /* Card gradients */
+    .si-1 { background: linear-gradient(135deg, #0d0500 0%, #060300 50%, #000 100%); }
+    .si-2 { background: linear-gradient(160deg, #00040a 0%, #000307 50%, #000 100%); }
+    .si-3 { background: linear-gradient(135deg, #040010 0%, #020008 50%, #000 100%); }
+    .si-4 { background: linear-gradient(140deg, #000a05 0%, #000703 50%, #000 100%); }
+    .si-5 { background: linear-gradient(155deg, #0e0500 0%, #080300 50%, #000 100%); }
+    .si-6 { background: linear-gradient(145deg, #08000c 0%, #040006 50%, #000 100%); }
+    .si-7 { background: linear-gradient(130deg, #000612 0%, #000410 50%, #000 100%); }
+    .si-8 { background: linear-gradient(150deg, #0a0800 0%, #060500 50%, #000 100%); }
+    .img-overlay { width: 100%; height: 100%; background: radial-gradient(ellipse at 30% 40%, rgba(255,255,255,0.02) 0%, transparent 60%); }
+
+    /* TESTIMONIALS */
+    .testimonials-section { padding: var(--section-py) var(--px); border-top: 1px solid rgba(255,255,255,0.07); }
+    .section-eyebrow { font-size: 10px; font-weight: 700; letter-spacing: 4px; text-transform: uppercase; color: var(--muted); margin-bottom: 64px; text-align: center; }
+    .testimonials-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 60px; }
+    .testimonial { display: flex; flex-direction: column; gap: 16px; }
+    .testimonial-quote-mark { font-size: 52px; font-weight: 300; line-height: 0.8; color: rgba(255,255,255,0.15); font-family: Georgia, serif; }
+    .testimonial-text { font-size: 14px; font-weight: 400; line-height: 1.8; color: var(--muted); font-style: italic; }
+    .testimonial-attribution { font-size: 9px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: rgba(255,255,255,0.5); }
+
+    /* FOOTER */
+    #footer { border-top: 1px solid rgba(255,255,255,0.07); padding: 80px var(--px) 60px; display: flex; flex-direction: column; align-items: center; gap: 28px; text-align: center; }
+    .footer-monogram { font-size: 48px; font-weight: 900; letter-spacing: 2px; color: rgba(255,255,255,0.12); }
+    .footer-hashtag { font-size: 13px; font-weight: 700; letter-spacing: 6px; text-transform: uppercase; color: rgba(255,255,255,0.5); }
+    .footer-icons { display: flex; gap: 12px; }
+    .footer-copyright { font-size: 9px; font-weight: 400; letter-spacing: 3px; text-transform: uppercase; color: rgba(255,255,255,0.2); }
+
+    @media (max-width: 900px) {
+      :root { --px: 36px; --section-py: 100px; }
+      .nav-links, .nav-icons { display: none; }
+      .nav-hamburger { display: flex; }
+      .sold-grid { grid-template-columns: repeat(2, 1fr); gap: 28px; }
+      .testimonials-grid { grid-template-columns: 1fr; gap: 48px; }
+      .stats-bar { flex-wrap: wrap; }
+      .stat-item { flex: 1 1 48%; }
+      .stat-item:nth-child(3), .stat-item:nth-child(4) { border-top: 1px solid rgba(255,255,255,0.08); }
+      .stat-item:nth-child(odd) { border-left: none; }
+    }
+    @media (max-width: 600px) {
+      :root { --px: 24px; --section-py: 80px; }
+      .sold-grid { grid-template-columns: 1fr; }
+      .stat-item { flex: 1 1 100%; border-left: none !important; border-top: 1px solid rgba(255,255,255,0.08); }
+      .stat-item:first-child { border-top: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav id="nav">
+    <div class="nav-left">
+      <div class="nav-monogram">JW</div>
+      <span class="nav-brand">#JabelWarren</span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="listings.html">Listings</a></li>
+      <li><a href="sold.html" class="active">Sold</a></li>
+      <li><a href="search.html">Search</a></li>
+      <li><a href="press.html">Press</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="contact.html" class="nav-text-jabel">Text Jabel</a></li>
+    </ul>
+    <div class="nav-icons">
+      <a href="https://instagram.com/jabelwarren" target="_blank" class="nav-icon-btn" aria-label="Instagram">
+        <svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4.5"/><circle cx="17.5" cy="6.5" r="0.5" fill="rgba(255,255,255,0.8)" stroke="none"/></svg>
+      </a>
+      <a href="#" class="nav-icon-btn" aria-label="YouTube">
+        <svg viewBox="0 0 24 24"><rect x="2" y="5" width="20" height="14" rx="3"/><polygon points="10,8.5 16,12 10,15.5" fill="rgba(255,255,255,0.8)" stroke="none"/></svg>
+      </a>
+      <a href="mailto:jabel@lifespacefl.com" class="nav-icon-btn" aria-label="Email">
+        <svg viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="2,4 12,13 22,4"/></svg>
+      </a>
+      <a href="tel:+19545551234" class="nav-icon-btn" aria-label="Phone">
+        <svg viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 01-2.2 2 20 20 0 01-8.6-3.1 19.5 19.5 0 01-6-6 20 20 0 01-3.1-8.7A2 2 0 014.1 2h3a2 2 0 012 1.7c.1 1 .4 2 .7 3a2 2 0 01-.4 2.1L8 9.9a16 16 0 006 6l1.1-1.4a2 2 0 012.1-.5c1 .3 2 .6 3 .7a2 2 0 011.8 2.2z"/></svg>
+      </a>
+    </div>
+    <div class="nav-hamburger" id="hamburger"><span></span><span></span><span></span></div>
+  </nav>
+
+  <div id="mobile-menu">
+    <a href="index.html" class="mobile-link">Home</a>
+    <a href="about.html" class="mobile-link">About</a>
+    <a href="listings.html" class="mobile-link">Listings</a>
+    <a href="sold.html" class="mobile-link">Sold</a>
+    <a href="search.html" class="mobile-link">Search</a>
+    <a href="press.html" class="mobile-link">Press</a>
+    <a href="contact.html" class="mobile-link">Contact</a>
+    <a href="contact.html" class="mobile-link">Text Jabel</a>
+  </div>
+
+  <!-- PAGE HERO -->
+  <section class="page-hero">
+    <div class="page-hero-inner">
+      <div class="page-eyebrow fade-up">Track Record</div>
+      <h1 class="page-heading fade-up">Sold</h1>
+      <div class="page-subtitle fade-up">A Record of Excellence · Fort Lauderdale</div>
+    </div>
+  </section>
+
+  <!-- STATS BAR -->
+  <div class="stats-bar fade-up">
+    <div class="stat-item">
+      <div class="stat-value">$54M+</div>
+      <div class="stat-label">Total Volume</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-value">11 Days</div>
+      <div class="stat-label">Avg Days on Market</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-value">103%</div>
+      <div class="stat-label">Above Asking Average</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-value">Record Sales</div>
+      <div class="stat-label">Mexican War Streets</div>
+    </div>
+  </div>
+
+  <!-- SOLD GRID -->
+  <section class="sold-section">
+    <div class="sold-grid">
+
+      <div class="sold-card fade-up">
+        <div class="sold-image">
+          <div class="sold-image-inner si-1"><div class="img-overlay"></div></div>
+          <div class="sold-badge-overlay">Sold</div>
+        </div>
+        <div class="sold-address">612 N Taylor Ave, Fort Lauderdale FL</div>
+        <div class="sold-price">$2,100,000</div>
+        <div class="sold-specs">4 BD · 3 BA · 2,800 SF</div>
+        <div class="sold-date">Sold — March 2025</div>
+        <div class="sold-note">Record Sale · Mexican War Streets</div>
+      </div>
+
+      <div class="sold-card fade-up" style="transition-delay:0.1s;">
+        <div class="sold-image">
+          <div class="sold-image-inner si-2"><div class="img-overlay"></div></div>
+          <div class="sold-badge-overlay">Sold</div>
+        </div>
+        <div class="sold-address">1804 SE 12th St, Fort Lauderdale FL</div>
+        <div class="sold-price">$3,750,000</div>
+        <div class="sold-specs">5 BD · 5 BA · 4,200 SF</div>
+        <div class="sold-date">Sold — November 2025</div>
+        <div class="sold-note">Rio Vista Waterfront</div>
+      </div>
+
+      <div class="sold-card fade-up" style="transition-delay:0.2s;">
+        <div class="sold-image">
+          <div class="sold-image-inner si-3"><div class="img-overlay"></div></div>
+          <div class="sold-badge-overlay">Sold</div>
+        </div>
+        <div class="sold-address">2250 N Ocean Blvd #1502, Fort Lauderdale FL</div>
+        <div class="sold-price">$8,500,000</div>
+        <div class="sold-specs">4 BD · 4.5 BA · 5,800 SF</div>
+        <div class="sold-date">Sold — January 2026</div>
+        <div class="sold-note">Harbor Beach Penthouse</div>
+      </div>
+
+      <div class="sold-card fade-up" style="transition-delay:0.05s;">
+        <div class="sold-image">
+          <div class="sold-image-inner si-4"><div class="img-overlay"></div></div>
+          <div class="sold-badge-overlay">Sold</div>
+        </div>
+        <div class="sold-address">431 Victoria Ave, Fort Lauderdale FL</div>
+        <div class="sold-price">$1,850,000</div>
+        <div class="sold-specs">3 BD · 3 BA · 2,200 SF</div>
+        <div class="sold-date">Sold — August 2024</div>
+        <div class="sold-note">Victoria Park</div>
+      </div>
+
+      <div class="sold-card fade-up" style="transition-delay:0.15s;">
+        <div class="sold-image">
+          <div class="sold-image-inner si-5"><div class="img-overlay"></div></div>
+          <div class="sold-badge-overlay">Sold</div>
+        </div>
+        <div class="sold-address">728 SE 4th Ave, Fort Lauderdale FL</div>
+        <div class="sold-price">$2,650,000</div>
+        <div class="sold-specs">4 BD · 4 BA · 3,400 SF</div>
+        <div class="sold-date">Sold — May 2025</div>
+        <div class="sold-note">Las Olas Isles</div>
+      </div>
+
+      <div class="sold-card fade-up" style="transition-delay:0.25s;">
+        <div class="sold-image">
+          <div class="sold-image-inner si-6"><div class="img-overlay"></div></div>
+          <div class="sold-badge-overlay">Sold</div>
+        </div>
+        <div class="sold-address">3601 N Ocean Blvd, Fort Lauderdale FL</div>
+        <div class="sold-price">$5,200,000</div>
+        <div class="sold-specs">5 BD · 6 BA · 6,100 SF</div>
+        <div class="sold-date">Sold — October 2025</div>
+        <div class="sold-note">Galt Ocean Mile</div>
+      </div>
+
+      <div class="sold-card fade-up">
+        <div class="sold-image">
+          <div class="sold-image-inner si-7"><div class="img-overlay"></div></div>
+          <div class="sold-badge-overlay">Sold</div>
+        </div>
+        <div class="sold-address">115 Isle of Venice Dr, Fort Lauderdale FL</div>
+        <div class="sold-price">$4,100,000</div>
+        <div class="sold-specs">4 BD · 4 BA · 3,900 SF</div>
+        <div class="sold-date">Sold — February 2026</div>
+        <div class="sold-note">Isle of Venice · Waterfront</div>
+      </div>
+
+      <div class="sold-card fade-up" style="transition-delay:0.1s;">
+        <div class="sold-image">
+          <div class="sold-image-inner si-8"><div class="img-overlay"></div></div>
+          <div class="sold-badge-overlay">Sold</div>
+        </div>
+        <div class="sold-address">900 NE 18th Ave #901, Fort Lauderdale FL</div>
+        <div class="sold-price">$1,200,000</div>
+        <div class="sold-specs">2 BD · 2.5 BA · 1,850 SF</div>
+        <div class="sold-date">Sold — June 2024</div>
+        <div class="sold-note">Wilton Manors Adjacent</div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="testimonials-section">
+    <div class="section-eyebrow fade-up">Client Testimonials</div>
+    <div class="testimonials-grid">
+      <div class="testimonial fade-up">
+        <div class="testimonial-quote-mark">"</div>
+        <p class="testimonial-text">Jabel doesn't just sell homes — he understands the art of luxury living. From our first conversation to closing, every detail was handled with precision and care. We couldn't imagine working with anyone else.</p>
+        <div class="testimonial-attribution">— M. & R. Fontaine, Fort Lauderdale</div>
+      </div>
+      <div class="testimonial fade-up" style="transition-delay:0.15s;">
+        <div class="testimonial-quote-mark">"</div>
+        <p class="testimonial-text">In a market this competitive, having Jabel in your corner is the difference between a missed opportunity and a record-breaking sale. His knowledge of Broward County is unmatched — period.</p>
+        <div class="testimonial-attribution">— D. Ashworth, Investor</div>
+      </div>
+      <div class="testimonial fade-up" style="transition-delay:0.3s;">
+        <div class="testimonial-quote-mark">"</div>
+        <p class="testimonial-text">We had worked with three other agents before finding Jabel. The difference was immediate. Professional, responsive, and deeply connected. Our home sold above asking in under two weeks.</p>
+        <div class="testimonial-attribution">— The Okonkwo Family, Broward County</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer id="footer">
+    <div class="footer-monogram">JW</div>
+    <div class="footer-hashtag">#JabelWarren</div>
+    <div class="footer-icons">
+      <a href="https://instagram.com/jabelwarren" target="_blank" class="nav-icon-btn" aria-label="Instagram">
+        <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="rgba(255,255,255,0.6)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4.5"/><circle cx="17.5" cy="6.5" r="0.5" fill="rgba(255,255,255,0.6)" stroke="none"/></svg>
+      </a>
+      <a href="#" class="nav-icon-btn" aria-label="YouTube">
+        <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="rgba(255,255,255,0.6)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="3"/><polygon points="10,8.5 16,12 10,15.5" fill="rgba(255,255,255,0.6)" stroke="none"/></svg>
+      </a>
+      <a href="mailto:jabel@lifespacefl.com" class="nav-icon-btn" aria-label="Email">
+        <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="rgba(255,255,255,0.6)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="2,4 12,13 22,4"/></svg>
+      </a>
+      <a href="tel:+19545551234" class="nav-icon-btn" aria-label="Phone">
+        <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="rgba(255,255,255,0.6)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 01-2.2 2 20 20 0 01-8.6-3.1 19.5 19.5 0 01-6-6 20 20 0 01-3.1-8.7A2 2 0 014.1 2h3a2 2 0 012 1.7c.1 1 .4 2 .7 3a2 2 0 01-.4 2.1L8 9.9a16 16 0 006 6l1.1-1.4a2 2 0 012.1-.5c1 .3 2 .6 3 .7a2 2 0 011.8 2.2z"/></svg>
+      </a>
+    </div>
+    <div class="footer-copyright">© 2026 Jabel Warren · SERHANT. · Fort Lauderdale, FL</div>
+  </footer>
+
+  <script>
+    const nav = document.getElementById('nav');
+    window.addEventListener('scroll', () => { nav.classList.toggle('scrolled', window.scrollY > 60); });
+    const hamburger = document.getElementById('hamburger');
+    const mobileMenu = document.getElementById('mobile-menu');
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('open'); mobileMenu.classList.toggle('open');
+      document.body.style.overflow = mobileMenu.classList.contains('open') ? 'hidden' : '';
+    });
+    document.querySelectorAll('.mobile-link').forEach(l => l.addEventListener('click', () => {
+      hamburger.classList.remove('open'); mobileMenu.classList.remove('open'); document.body.style.overflow = '';
+    }));
+    const fo = new IntersectionObserver((e) => {
+      e.forEach(x => { if (x.isIntersecting) { x.target.classList.add('visible'); fo.unobserve(x.target); } });
+    }, { threshold: 0.12 });
+    document.querySelectorAll('.fade-up').forEach(el => fo.observe(el));
+  </script>
+</body>
+</html>
