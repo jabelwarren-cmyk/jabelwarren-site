@@ -953,8 +953,8 @@
 
     /* ─── FADE-UP ANIMATION (IntersectionObserver) ──────── */
     .fade-up {
-      opacity: 0;
-      transform: translateY(30px);
+      opacity: 1;
+      transform: translateY(0);
       transition: opacity 0.7s ease-out, transform 0.7s ease-out;
     }
 
@@ -1529,7 +1529,7 @@
           fadeObserver.unobserve(entry.target);
         }
       });
-    }, { threshold: 0.15 });
+    }, { threshold: 0.05 });
 
     fadeEls.forEach(el => fadeObserver.observe(el));
 
