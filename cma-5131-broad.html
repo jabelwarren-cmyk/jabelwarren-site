@@ -442,16 +442,6 @@
       transition: background 0.15s;
       white-space: nowrap;
     }
-    .comp-link-zillow {
-      background: #0074E4;
-      color: white;
-    }
-    .comp-link-zillow:hover { background: #005BB5; }
-    .comp-link-redfin {
-      background: #CC0000;
-      color: white;
-    }
-    .comp-link-redfin:hover { background: #aa0000; }
     .comp-link-search {
       background: var(--navy);
       color: white;
@@ -831,9 +821,9 @@
         <div class="stat-sub">Based on 2 closed sales</div>
       </div>
       <div class="stat-card">
-        <div class="stat-label">Current Zestimate</div>
-        <div class="stat-value">$382,800</div>
-        <div class="stat-sub">$234/sqft · Range $356K–$413K</div>
+        <div class="stat-label">3BR MLS Comp Band</div>
+        <div class="stat-value">$402K–$408K</div>
+        <div class="stat-sub">West Penn MLS closed sales</div>
       </div>
       <div class="stat-card">
         <div class="stat-label">Last Sale (Dec 2022)</div>
@@ -886,7 +876,6 @@
           <tr><td>2025 Assessment</td><td>$148,400</td></tr>
           <tr><td>2025 Property Tax</td><td>$3,652/yr</td></tr>
           <tr><td>Last Sale Price</td><td><span class="highlight-cell">$340,000 (Dec 2022)</span></td></tr>
-          <tr><td>Rent Zestimate</td><td>~$3,116/mo</td></tr>
           <tr><td>Condition</td><td><span class="confirm-cell">⚠ To Confirm at Walkthrough</span></td></tr>
         </table>
       </div>
@@ -912,43 +901,24 @@
             <span class="badge badge-subject">Off-Market</span>
             <span class="badge badge-ren">Gut-Renovated 2022</span>
           </div>
-          <div class="comp-note">3 bed / 4 bath (3+1) · Bath-heavy layout · 2 off-street spaces</div>
+          <div class="comp-note">3 bed / 4 bath (3 full + 1 half) · 2 off-street spaces · Pittsburgh, PA 15224</div>
         </div>
         <div class="comp-stats">
-          <div>
-            <div class="comp-stat-label">Price</div>
-            <div class="comp-stat-val na">—</div>
-          </div>
-          <div>
-            <div class="comp-stat-label">Bed / Bath</div>
-            <div class="comp-stat-val">3 / 4</div>
-          </div>
-          <div>
-            <div class="comp-stat-label">SqFt</div>
-            <div class="comp-stat-val">1,636</div>
-          </div>
-          <div>
-            <div class="comp-stat-label">$/SqFt</div>
-            <div class="comp-stat-val na">—</div>
-          </div>
-          <div>
-            <div class="comp-stat-label">Date</div>
-            <div class="comp-stat-val na">—</div>
-          </div>
-          <div>
-            <div class="comp-stat-label">Tier</div>
-            <div class="comp-stat-val" style="color:var(--gold)">Renovated</div>
-          </div>
+          <div><div class="comp-stat-label">Price</div><div class="comp-stat-val na">—</div></div>
+          <div><div class="comp-stat-label">Bed / Bath</div><div class="comp-stat-val">3 / 4</div></div>
+          <div><div class="comp-stat-label">Style</div><div class="comp-stat-val">3+ Stories</div></div>
+          <div><div class="comp-stat-label">Built</div><div class="comp-stat-val">1900</div></div>
+          <div><div class="comp-stat-label">Closed</div><div class="comp-stat-val na">—</div></div>
+          <div><div class="comp-stat-label">MLS #</div><div class="comp-stat-val na">—</div></div>
         </div>
         <div class="comp-action">
-          <a class="comp-link comp-link-search" href="https://www.zillow.com/homes/5131-Broad-St-Pittsburgh-PA_rb/" target="_blank">View on Zillow ↗</a>
+          <a class="comp-link comp-link-search" href="https://lifespacerealestate.idxbroker.com/idx/map/mapsearch" target="_blank">Search MLS ↗</a>
         </div>
       </div>
 
-      <!-- Renovated Tier -->
-      <div class="tier-label tier-renovated">★ Renovated Tier — Primary Comps</div>
+      <div class="tier-label tier-renovated">Closed Sales · Garfield 15224 · West Penn MLS</div>
 
-      <!-- 4815 Dearborn -->
+      <!-- Comp 1: 4815 Dearborn — closest match -->
       <div class="comp-card tier-ren">
         <div class="comp-rank"><div class="comp-rank-num">1</div></div>
         <div class="comp-main">
@@ -958,298 +928,94 @@
             <span class="badge badge-ren">Renovated</span>
             <span class="badge badge-closest">Closest Match</span>
           </div>
-          <div class="comp-note">Full reno · 2 off-street spaces · Nearly identical size (1,712 sqft). <strong>Strongest pricing anchor.</strong></div>
+          <div class="comp-note">3BR/3BA — same bath count as subject. Listed $435,000, sold $33K under ask. Strongest 3BR pricing anchor.</div>
         </div>
         <div class="comp-stats">
-          <div>
-            <div class="comp-stat-label">Sale Price</div>
-            <div class="comp-stat-val price-val">$402,000</div>
-          </div>
-          <div>
-            <div class="comp-stat-label">Bed / Bath</div>
-            <div class="comp-stat-val">3 / 3</div>
-          </div>
-          <div>
-            <div class="comp-stat-label">SqFt</div>
-            <div class="comp-stat-val">1,712</div>
-          </div>
-          <div>
-            <div class="comp-stat-label">$/SqFt</div>
-            <div class="comp-stat-val">$235</div>
-          </div>
-          <div>
-            <div class="comp-stat-label">DOM</div>
-            <div class="comp-stat-val na">—</div>
-          </div>
-          <div>
-            <div class="comp-stat-label">Distance</div>
-            <div class="comp-stat-val">0.1 mi</div>
-          </div>
+          <div><div class="comp-stat-label">Sold Price</div><div class="comp-stat-val price-val">$402,000</div></div>
+          <div><div class="comp-stat-label">List Price</div><div class="comp-stat-val">$435,000</div></div>
+          <div><div class="comp-stat-label">Bed / Bath</div><div class="comp-stat-val">3 / 3</div></div>
+          <div><div class="comp-stat-label">Style</div><div class="comp-stat-val">3+ Stories</div></div>
+          <div><div class="comp-stat-label">Built</div><div class="comp-stat-val">1900</div></div>
+          <div><div class="comp-stat-label">MLS #</div><div class="comp-stat-val">1713395</div></div>
         </div>
         <div class="comp-action">
-          <a class="comp-link comp-link-zillow" href="https://www.zillow.com/homedetails/4815-Dearborn-St-Pittsburgh-PA-15224/11519893_zpid/" target="_blank">Zillow ↗</a>
-          <a class="comp-link comp-link-redfin" href="https://www.realtor.com/realestateandhomes-detail/4815-Dearborn-St_Pittsburgh_PA_15224_M47874-54792" target="_blank">Realtor ↗</a>
+          <a class="comp-link comp-link-search" href="https://lifespacerealestate.idxbroker.com/idx/map/mapsearch" target="_blank">View on MLS ↗</a>
         </div>
       </div>
 
-      <!-- 5010 Broad -->
+      <!-- Comp 2: 5211 Penn Ave -->
       <div class="comp-card tier-ren">
         <div class="comp-rank"><div class="comp-rank-num">2</div></div>
         <div class="comp-main">
-          <div class="comp-address">5010 Broad Street</div>
+          <div class="comp-address">5211 Penn Avenue</div>
           <div class="comp-badges">
-            <span class="badge badge-sold">Sold May 2025</span>
-            <span class="badge badge-ren">Renovated Flip</span>
+            <span class="badge badge-sold">Sold Jun 2025</span>
+            <span class="badge badge-ren">Renovated</span>
           </div>
-          <div class="comp-note">Same street · Flip · Sold in 0 days on market. Slightly smaller than subject.</div>
+          <div class="comp-note">3BR/2BA+½ · Listed $430,000, sold $22K under ask. 3BR comp — slightly fewer baths than subject.</div>
         </div>
         <div class="comp-stats">
-          <div>
-            <div class="comp-stat-label">Sale Price</div>
-            <div class="comp-stat-val price-val">$425,000</div>
-          </div>
-          <div>
-            <div class="comp-stat-label">Bed / Bath</div>
-            <div class="comp-stat-val">3 / 2.5</div>
-          </div>
-          <div>
-            <div class="comp-stat-label">SqFt</div>
-            <div class="comp-stat-val">1,482</div>
-          </div>
-          <div>
-            <div class="comp-stat-label">$/SqFt</div>
-            <div class="comp-stat-val">$287</div>
-          </div>
-          <div>
-            <div class="comp-stat-label">DOM</div>
-            <div class="comp-stat-val">0 days</div>
-          </div>
-          <div>
-            <div class="comp-stat-label">Distance</div>
-            <div class="comp-stat-val">Same St</div>
-          </div>
+          <div><div class="comp-stat-label">Sold Price</div><div class="comp-stat-val price-val">$408,000</div></div>
+          <div><div class="comp-stat-label">List Price</div><div class="comp-stat-val">$430,000</div></div>
+          <div><div class="comp-stat-label">Bed / Bath</div><div class="comp-stat-val">3 / 2.5</div></div>
+          <div><div class="comp-stat-label">Style</div><div class="comp-stat-val">3+ Stories</div></div>
+          <div><div class="comp-stat-label">Built</div><div class="comp-stat-val">1900</div></div>
+          <div><div class="comp-stat-label">MLS #</div><div class="comp-stat-val">1657230</div></div>
         </div>
         <div class="comp-action">
-          <a class="comp-link comp-link-zillow" href="https://www.zillow.com/homedetails/5010-Broad-St-Pittsburgh-PA-15224/11519958_zpid/" target="_blank">Zillow ↗</a>
-          <a class="comp-link comp-link-redfin" href="https://www.redfin.com/PA/Pittsburgh/5010-Broad-St-15224/home/74657606" target="_blank">Redfin ↗</a>
+          <a class="comp-link comp-link-search" href="https://lifespacerealestate.idxbroker.com/idx/map/mapsearch" target="_blank">View on MLS ↗</a>
         </div>
       </div>
 
-      <!-- 232 N Aiken -->
+      <!-- Comp 3: 5110 Dearborn -->
       <div class="comp-card tier-ren">
         <div class="comp-rank"><div class="comp-rank-num">3</div></div>
         <div class="comp-main">
-          <div class="comp-address">232 N Aiken Avenue</div>
-          <div class="comp-badges">
-            <span class="badge badge-sold">Sold Mar 2026</span>
-            <span class="badge badge-ren">Renovated</span>
-          </div>
-          <div class="comp-note">15206 (Friendship side) · Larger home, nicer block. Useful for top-of-range ceiling. <em>Note: larger homes trade at lower $/sqft.</em></div>
-        </div>
-        <div class="comp-stats">
-          <div>
-            <div class="comp-stat-label">Sale Price</div>
-            <div class="comp-stat-val price-val">$489,000</div>
-          </div>
-          <div>
-            <div class="comp-stat-label">Bed / Bath</div>
-            <div class="comp-stat-val">4 / 2</div>
-          </div>
-          <div>
-            <div class="comp-stat-label">SqFt</div>
-            <div class="comp-stat-val">2,326</div>
-          </div>
-          <div>
-            <div class="comp-stat-label">$/SqFt</div>
-            <div class="comp-stat-val">$210</div>
-          </div>
-          <div>
-            <div class="comp-stat-label">DOM</div>
-            <div class="comp-stat-val na">—</div>
-          </div>
-          <div>
-            <div class="comp-stat-label">Zip</div>
-            <div class="comp-stat-val">15206</div>
-          </div>
-        </div>
-        <div class="comp-action">
-          <a class="comp-link comp-link-zillow" href="https://www.zillow.com/homes/232-N-Aiken-Ave-Pittsburgh-PA_rb/" target="_blank">Zillow ↗</a>
-          <a class="comp-link comp-link-search" href="https://www.realtor.com/realestateandhomes-search/Pittsburgh_PA/type-single-family-home/price-na-489000/" target="_blank">Search ↗</a>
-        </div>
-      </div>
-
-      <!-- 5110 Dearborn ACTIVE -->
-      <div class="comp-card is-active">
-        <div class="comp-rank"><div class="comp-rank-num">4</div></div>
-        <div class="comp-main">
           <div class="comp-address">5110 Dearborn Street</div>
           <div class="comp-badges">
-            <span class="badge badge-active">Active Listing Apr 2026</span>
+            <span class="badge badge-sold">Sold May 2026</span>
             <span class="badge badge-ren">Renovated</span>
           </div>
-          <div class="comp-note">Current competition. Larger 4-bed home. <strong>Asking price only</strong> — not a cleared sale. Verify current DOM and price cuts.</div>
+          <div class="comp-note">4BR/2BA · Sold at full asking price — most recent 4BR closing on the block. Marks the 4BR floor.</div>
         </div>
         <div class="comp-stats">
-          <div>
-            <div class="comp-stat-label">List Price</div>
-            <div class="comp-stat-val price-val" style="color:var(--active)">$444,900</div>
-          </div>
-          <div>
-            <div class="comp-stat-label">Bed / Bath</div>
-            <div class="comp-stat-val">4 / 2</div>
-          </div>
-          <div>
-            <div class="comp-stat-label">SqFt</div>
-            <div class="comp-stat-val">2,015</div>
-          </div>
-          <div>
-            <div class="comp-stat-label">$/SqFt</div>
-            <div class="comp-stat-val">$221</div>
-          </div>
-          <div>
-            <div class="comp-stat-label">Status</div>
-            <div class="comp-stat-val" style="color:var(--active)">Active</div>
-          </div>
-          <div>
-            <div class="comp-stat-label">Distance</div>
-            <div class="comp-stat-val">0.1 mi</div>
-          </div>
+          <div><div class="comp-stat-label">Sold Price</div><div class="comp-stat-val price-val">$444,900</div></div>
+          <div><div class="comp-stat-label">List Price</div><div class="comp-stat-val">$444,900</div></div>
+          <div><div class="comp-stat-label">Bed / Bath</div><div class="comp-stat-val">4 / 2</div></div>
+          <div><div class="comp-stat-label">Style</div><div class="comp-stat-val">3+ Stories</div></div>
+          <div><div class="comp-stat-label">Built</div><div class="comp-stat-val">1905</div></div>
+          <div><div class="comp-stat-label">MLS #</div><div class="comp-stat-val">1747205</div></div>
         </div>
         <div class="comp-action">
-          <a class="comp-link comp-link-zillow" href="https://www.zillow.com/homes/5110-Dearborn-St-Pittsburgh-PA_rb/" target="_blank">Zillow ↗</a>
-          <a class="comp-link comp-link-search" href="https://www.redfin.com/PA/Pittsburgh/5110-Dearborn-St-15224" target="_blank">Redfin ↗</a>
+          <a class="comp-link comp-link-search" href="https://lifespacerealestate.idxbroker.com/idx/map/mapsearch" target="_blank">View on MLS ↗</a>
         </div>
       </div>
 
-      <!-- Context Tier -->
-      <div class="tier-label tier-partial">Context Only — Partial-Update Tier</div>
-
-      <!-- 5347 Broad -->
-      <div class="comp-card tier-par">
-        <div class="comp-rank"><div class="comp-rank-num">5</div></div>
+      <!-- Comp 4: 116 N Evaline -->
+      <div class="comp-card tier-ren">
+        <div class="comp-rank"><div class="comp-rank-num">4</div></div>
         <div class="comp-main">
-          <div class="comp-address">5347 Broad Street</div>
+          <div class="comp-address">116 N Evaline Street</div>
           <div class="comp-badges">
-            <span class="badge badge-sold">Sold May 2025</span>
-            <span class="badge badge-par">Partial Update</span>
+            <span class="badge badge-sold">Sold May 2026</span>
+            <span class="badge badge-ren">Renovated</span>
           </div>
-          <div class="comp-note">Same street — partial-update tier. Not a valid comp for 5131 Broad, shown only to illustrate the bifurcation gap.</div>
+          <div class="comp-note">4BR/2BA+½ · Sold $5,000 <strong>over</strong> asking — most recent sale and highest in market. Strong buyer demand signal.</div>
         </div>
         <div class="comp-stats">
-          <div>
-            <div class="comp-stat-label">Sale Price</div>
-            <div class="comp-stat-val price-val">$275,000</div>
-          </div>
-          <div>
-            <div class="comp-stat-label">Bed / Bath</div>
-            <div class="comp-stat-val">3 / 1</div>
-          </div>
-          <div>
-            <div class="comp-stat-label">SqFt</div>
-            <div class="comp-stat-val">1,770</div>
-          </div>
-          <div>
-            <div class="comp-stat-label">$/SqFt</div>
-            <div class="comp-stat-val">$155</div>
-          </div>
-          <div>
-            <div class="comp-stat-label">DOM</div>
-            <div class="comp-stat-val na">—</div>
-          </div>
-          <div>
-            <div class="comp-stat-label">Tier</div>
-            <div class="comp-stat-val" style="color:var(--partial)">Partial</div>
-          </div>
+          <div><div class="comp-stat-label">Sold Price</div><div class="comp-stat-val price-val" style="color:var(--green);">$530,000</div></div>
+          <div><div class="comp-stat-label">List Price</div><div class="comp-stat-val">$525,000</div></div>
+          <div><div class="comp-stat-label">Bed / Bath</div><div class="comp-stat-val">4 / 2.5</div></div>
+          <div><div class="comp-stat-label">Style</div><div class="comp-stat-val">3+ Stories</div></div>
+          <div><div class="comp-stat-label">Built</div><div class="comp-stat-val">1900</div></div>
+          <div><div class="comp-stat-label">MLS #</div><div class="comp-stat-val">1747352</div></div>
         </div>
         <div class="comp-action">
-          <a class="comp-link comp-link-zillow" href="https://www.zillow.com/homes/5347-Broad-St-Pittsburgh-PA_rb/" target="_blank">Zillow ↗</a>
-        </div>
-      </div>
-
-      <!-- Shell Tier -->
-      <div class="tier-label tier-shell">Context Only — Un-Renovated / Shell Tier</div>
-
-      <!-- 5025 Rosetta -->
-      <div class="comp-card tier-she">
-        <div class="comp-rank"><div class="comp-rank-num">6</div></div>
-        <div class="comp-main">
-          <div class="comp-address">5025 Rosetta Street</div>
-          <div class="comp-badges">
-            <span class="badge badge-sold">Sold Jan 2025</span>
-            <span class="badge badge-she">Un-Renovated</span>
-          </div>
-          <div class="comp-note">Un-renovated tier — context only. $127K below the renovated band.</div>
-        </div>
-        <div class="comp-stats">
-          <div>
-            <div class="comp-stat-label">Sale Price</div>
-            <div class="comp-stat-val">$203,000</div>
-          </div>
-          <div>
-            <div class="comp-stat-label">Bed / Bath</div>
-            <div class="comp-stat-val">3 / 1</div>
-          </div>
-          <div>
-            <div class="comp-stat-label">SqFt</div>
-            <div class="comp-stat-val">1,388</div>
-          </div>
-          <div>
-            <div class="comp-stat-label">$/SqFt</div>
-            <div class="comp-stat-val">$146</div>
-          </div>
-          <div></div>
-          <div>
-            <div class="comp-stat-label">Tier</div>
-            <div class="comp-stat-val" style="color:var(--shell)">Shell</div>
-          </div>
-        </div>
-        <div class="comp-action">
-          <a class="comp-link comp-link-zillow" href="https://www.zillow.com/homes/5025-Rosetta-St-Pittsburgh-PA_rb/" target="_blank">Zillow ↗</a>
-        </div>
-      </div>
-
-      <!-- 5311 Kincaid -->
-      <div class="comp-card tier-she">
-        <div class="comp-rank"><div class="comp-rank-num">7</div></div>
-        <div class="comp-main">
-          <div class="comp-address">5311 Kincaid Street</div>
-          <div class="comp-badges">
-            <span class="badge badge-sold">Sold Nov 2025</span>
-            <span class="badge badge-she">Shell / Fixer</span>
-          </div>
-          <div class="comp-note">Shell / fixer tier — context only. $300K+ below the renovated band.</div>
-        </div>
-        <div class="comp-stats">
-          <div>
-            <div class="comp-stat-label">Sale Price</div>
-            <div class="comp-stat-val">$99,000</div>
-          </div>
-          <div>
-            <div class="comp-stat-label">Bed / Bath</div>
-            <div class="comp-stat-val">3 / 1</div>
-          </div>
-          <div>
-            <div class="comp-stat-label">SqFt</div>
-            <div class="comp-stat-val">1,200</div>
-          </div>
-          <div>
-            <div class="comp-stat-label">$/SqFt</div>
-            <div class="comp-stat-val">$82</div>
-          </div>
-          <div></div>
-          <div>
-            <div class="comp-stat-label">Tier</div>
-            <div class="comp-stat-val" style="color:var(--shell)">Shell</div>
-          </div>
-        </div>
-        <div class="comp-action">
-          <a class="comp-link comp-link-zillow" href="https://www.zillow.com/homes/5311-Kincaid-St-Pittsburgh-PA_rb/" target="_blank">Zillow ↗</a>
+          <a class="comp-link comp-link-search" href="https://lifespacerealestate.idxbroker.com/idx/map/mapsearch" target="_blank">View on MLS ↗</a>
         </div>
       </div>
 
     </div>
-  </div>
-
   <!-- 4. PRICING ANALYSIS -->
   <div class="section">
     <div class="section-header">
@@ -1269,7 +1035,7 @@
         <div class="strategy-rec-badge">★ Recommended</div>
         <div class="strategy-label">Market-Aligned</div>
         <div class="strategy-price">$399,900</div>
-        <div class="strategy-desc">Anchored to the closest renovated comps (4815 Dearborn, 5010 Broad). Balances price and time on market.</div>
+        <div class="strategy-desc">Anchored to the closest renovated comps (4815 Dearborn, 5211 Penn Ave). Balances price and time on market.</div>
       </div>
       <div class="strategy-card aggressive">
         <div class="strategy-label">Aggressive</div>
@@ -1291,24 +1057,24 @@
         </thead>
         <tbody>
           <tr>
-            <td>Renovated comp $/sqft (size-adjusted)</td>
-            <td>1,636 sqft × ~$245</td>
-            <td class="range-val">~$401,000</td>
+            <td>3BR closed sales — closest match</td>
+            <td>4815 Dearborn $402K · 5211 Penn Ave $408K</td>
+            <td class="range-val">$402K – $408K</td>
           </tr>
           <tr>
-            <td>Renovated comp sale-price bracket</td>
-            <td>4815 Dearborn $402K · 5010 Broad $425K</td>
-            <td class="range-val">$400K – $415K</td>
+            <td>4BR closed sales — market ceiling</td>
+            <td>5110 Dearborn $444,900 · 116 N Evaline $530K</td>
+            <td class="range-val">$444K – $530K</td>
           </tr>
           <tr>
-            <td>Zestimate midpoint (Zillow)</td>
-            <td>Public AVM — range $356K–$413K</td>
-            <td class="range-val">~$383,000</td>
+            <td>Subject premium — bath-heavy 3BR/4BA</td>
+            <td>Extra full bath vs 3BR/2.5BA comps</td>
+            <td class="range-val">+$5K – $15K</td>
           </tr>
           <tr>
-            <td><strong>Converged Range</strong></td>
-            <td></td>
-            <td class="range-val" style="color:var(--renovated);font-size:18px;"><strong>$390K – $410K</strong></td>
+            <td><strong>CONVERGED RANGE</strong></td>
+            <td>—</td>
+            <td class="range-val">$399K – $425K</td>
           </tr>
         </tbody>
       </table>
@@ -1352,7 +1118,7 @@
           <div style="font-size:9px;color:var(--renovated);font-weight:500;white-space:nowrap;margin-top:6px;">4815 Dearborn: $402K ↑</div>
         </div>
         <div style="position:absolute; left:62%; top:10px; transform:translateX(-50%);">
-          <div style="font-size:9px;color:var(--renovated);font-weight:500;white-space:nowrap;margin-top:6px;">5010 Broad: $425K ↑</div>
+          <div style="font-size:9px;color:var(--renovated);font-weight:500;white-space:nowrap;margin-top:6px;">5211 Penn Ave: $408K ↑</div>
         </div>
       </div>
     </div>
@@ -1381,7 +1147,7 @@
       <div class="context-item">
         <div class="context-icon">🏢</div>
         <div class="context-label">Investor Demand</div>
-        <div class="context-text">Rent Zestimate ~<strong>$3,116/mo</strong> keeps investor interest active alongside owner-occupant buyers, supporting steady demand for move-in-ready homes.</div>
+        <div class="context-text">Strong rental fundamentals and proximity to Bakery Square, Children's Hospital, and the universities keep investor demand active alongside owner-occupant buyers.</div>
       </div>
       <div class="context-item">
         <div class="context-icon">📈</div>
@@ -1392,7 +1158,7 @@
 
     <div class="callout-box">
       <p>
-        A clean, fully renovated home is exactly what this market rewards. Priced in the <strong>low-$400s</strong> with strong photography and a tight launch, 5131 Broad should draw the renovated-tier buyer pool that recently absorbed <strong>5010 Broad in zero days on market</strong>. The risk is not demand — it is over-reaching past the comp band and stalling, which is what happened to this home in 2022.
+        A clean, fully renovated home is exactly what this market rewards. The most recent 4BR sales (May 2026) closed at or above asking, confirming active buyer demand in Garfield. Priced at the top of the 3BR comp band with strong photography and a tight launch, 5131 Broad is positioned to attract serious buyers quickly. The risk remains over-pricing past the 3BR band without the bedroom count to justify it — which is what happened to this home in 2022.
       </p>
     </div>
   </div>
@@ -1470,7 +1236,7 @@
         <div class="timeline-item">
           <div class="timeline-phase">Week 3</div>
           <div class="timeline-title">Go Live + First Open House</div>
-          <div class="timeline-desc">Launch on MLS + full syndication (Zillow, Realtor.com, Redfin, Trulia, Homes.com). First open house weekend.</div>
+          <div class="timeline-desc">Go live on West Penn MLS + all syndication partners. First open house weekend.</div>
         </div>
         <div class="timeline-item">
           <div class="timeline-phase">Weeks 3–6</div>
@@ -1522,7 +1288,7 @@
 
 <!-- DISCLAIMER -->
 <div class="disclaimer">
-  <strong>Disclaimer:</strong> This Comparative Market Analysis is not an appraisal. Values are estimates based on recent comparable sales, public records, and professional judgment. Actual sale price depends on market conditions at the time of listing, buyer demand, property condition, negotiation, and other factors. Source data: West Penn Multi-List, Allegheny County Office of Property Assessments, Zillow, and owner-provided information.
+  <strong>Disclaimer:</strong> This Comparative Market Analysis is not an appraisal. Values are estimates based on recent comparable sales, public records, and professional judgment. Actual sale price depends on market conditions at the time of listing, buyer demand, property condition, negotiation, and other factors. Source data: West Penn Multi-List and Allegheny County Office of Property Assessments.
   <br><br>
   <strong>Prepared by:</strong> Connor [Last Name], REALTOR® &nbsp;|&nbsp; [Brokerage Name] &nbsp;|&nbsp; [Phone] &nbsp;|&nbsp; [Email]
   &nbsp;·&nbsp; Prepared June 2026
