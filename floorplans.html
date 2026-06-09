@@ -1,0 +1,791 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Floor Plans — The Row on Guadalupe</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --charcoal:  #2C2925;
+      --taupe:     #5C5347;
+      --brass:     #B09060;
+      --gold:      #D4B896;
+      --limestone: #F5F0E8;
+      --white:     #FDFBF7;
+      --stone:     #8C8070;
+      --slate:     #3D4448;
+      --display:   'Cormorant Garamond', serif;
+      --body:      'Jost', sans-serif;
+    }
+
+    html { font-size: 16px; }
+    body {
+      font-family: var(--body);
+      background: var(--charcoal);
+      color: var(--white);
+      min-height: 100vh;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ── HEADER ──────────────────────────── */
+    header {
+      padding: 32px 48px 0;
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+    }
+    .logo-mark {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+    .logo-the {
+      font-family: var(--display);
+      font-size: 13px;
+      font-style: italic;
+      font-weight: 300;
+      color: var(--gold);
+      letter-spacing: 0.08em;
+    }
+    .logo-row {
+      font-family: var(--display);
+      font-size: 40px;
+      font-weight: 300;
+      color: var(--white);
+      line-height: 0.9;
+      letter-spacing: 0.03em;
+    }
+    .logo-sub {
+      font-size: 9px;
+      font-weight: 500;
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+      color: var(--stone);
+      margin-top: 6px;
+    }
+    .header-nav {
+      display: flex;
+      gap: 32px;
+      align-items: center;
+      padding-top: 8px;
+    }
+    .header-nav a {
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--stone);
+      text-decoration: none;
+      transition: color 0.15s;
+    }
+    .header-nav a:hover { color: var(--gold); }
+    .btn-reserve {
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--charcoal);
+      background: var(--brass);
+      padding: 10px 20px;
+      text-decoration: none;
+      transition: background 0.15s;
+    }
+    .btn-reserve:hover { background: var(--gold); color: var(--charcoal); }
+
+    /* ── HERO TEXT ───────────────────────── */
+    .hero-text {
+      padding: 48px 48px 40px;
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: 40px;
+    }
+    .hero-left {}
+    .page-eyebrow {
+      font-size: 9px;
+      font-weight: 500;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--brass);
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .page-eyebrow::before {
+      content: '';
+      display: inline-block;
+      width: 20px;
+      height: 1px;
+      background: var(--brass);
+    }
+    .page-title {
+      font-family: var(--display);
+      font-size: 52px;
+      font-weight: 300;
+      line-height: 1.05;
+      color: var(--white);
+    }
+    .page-title em {
+      font-style: italic;
+      color: var(--gold);
+    }
+    .page-desc {
+      font-size: 13px;
+      font-weight: 300;
+      line-height: 1.8;
+      color: rgba(255,255,255,0.5);
+      max-width: 420px;
+      margin-top: 12px;
+    }
+    .hero-specs {
+      display: flex;
+      gap: 32px;
+      padding-bottom: 4px;
+    }
+    .spec-item { text-align: right; }
+    .spec-val {
+      font-family: var(--display);
+      font-size: 28px;
+      font-weight: 300;
+      color: var(--white);
+      line-height: 1;
+    }
+    .spec-lbl {
+      font-size: 9px;
+      font-weight: 500;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--stone);
+      margin-top: 4px;
+    }
+
+    /* ── UNIT TYPE TOGGLE ────────────────── */
+    .unit-toggle-wrap {
+      padding: 0 48px 28px;
+    }
+    .unit-toggle {
+      display: inline-flex;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.08);
+      padding: 4px;
+      gap: 4px;
+    }
+    .unit-btn {
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      padding: 12px 28px;
+      cursor: pointer;
+      border: none;
+      background: transparent;
+      color: var(--stone);
+      transition: all 0.2s;
+      position: relative;
+    }
+    .unit-btn.active {
+      background: var(--brass);
+      color: var(--charcoal);
+    }
+    .unit-btn:not(.active):hover { color: var(--gold); }
+    .unit-badge {
+      display: inline-block;
+      font-size: 8px;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 2px 7px;
+      margin-left: 8px;
+      background: rgba(255,255,255,0.1);
+      vertical-align: middle;
+    }
+    .unit-btn.active .unit-badge {
+      background: rgba(44,41,37,0.2);
+    }
+
+    /* ── LEVEL TABS ──────────────────────── */
+    .level-tabs-wrap {
+      padding: 0 48px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+      display: flex;
+      align-items: flex-end;
+      gap: 0;
+    }
+    .level-tab {
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      padding: 14px 28px;
+      cursor: pointer;
+      border: none;
+      background: transparent;
+      color: var(--stone);
+      border-bottom: 2px solid transparent;
+      margin-bottom: -1px;
+      transition: all 0.2s;
+      white-space: nowrap;
+    }
+    .level-tab.active {
+      color: var(--gold);
+      border-bottom-color: var(--brass);
+    }
+    .level-tab:not(.active):hover { color: rgba(255,255,255,0.6); }
+
+    /* ── PLAN VIEWER ─────────────────────── */
+    .plan-section {
+      padding: 40px 48px 0;
+    }
+    .plan-container {
+      position: relative;
+      background: var(--white);
+      overflow: hidden;
+      line-height: 0;
+      max-width: 1000px;
+      margin: 0 auto;
+      box-shadow: 0 20px 80px rgba(0,0,0,0.5);
+    }
+    .plan-img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    /* Unit highlight overlays — positioned as % of image width */
+    /* Unit positions (% from left): U1: 11-30%, U2: 30-53%, U3: 53-76%, U4: 76-93% */
+    .plan-overlay {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      transition: opacity 0.3s;
+    }
+    /* Dim overlay for NON-selected units */
+    .overlay-exterior-dim,
+    .overlay-interior-dim {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      background: rgba(44,41,37,0.55);
+      transition: opacity 0.35s;
+    }
+    /* When exterior is selected: dim center (Units 2&3: 30%–76%) */
+    .overlay-exterior-dim {
+      left: 30%;
+      width: 46%;
+    }
+    /* When interior is selected: dim edges (Units 1: 11-30%, Unit 4: 76-93%) */
+    .overlay-interior-dim-left {
+      position: absolute;
+      top: 0; bottom: 0;
+      left: 0; width: 30%;
+      background: rgba(44,41,37,0.55);
+      transition: opacity 0.35s;
+    }
+    .overlay-interior-dim-right {
+      position: absolute;
+      top: 0; bottom: 0;
+      right: 0; width: 24%;
+      background: rgba(44,41,37,0.55);
+      transition: opacity 0.35s;
+    }
+    /* Gold border highlight on selected unit groups */
+    .overlay-ext-border-left,
+    .overlay-ext-border-right,
+    .overlay-int-border {
+      position: absolute;
+      top: 0; bottom: 0;
+      border: 2px solid var(--brass);
+      pointer-events: none;
+      box-sizing: border-box;
+      transition: opacity 0.35s;
+    }
+    .overlay-ext-border-left { left: 11%; width: 19%; }
+    .overlay-ext-border-right { left: 76%; width: 17%; }
+    .overlay-int-border { left: 30%; width: 46%; }
+
+    /* Unit label chips on the plan */
+    .plan-labels {
+      position: absolute;
+      top: 16px;
+      left: 0;
+      right: 0;
+      display: flex;
+      justify-content: space-around;
+      padding: 0 11%;
+      pointer-events: none;
+    }
+    .unit-label-chip {
+      font-family: var(--body);
+      font-size: 9px;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      padding: 5px 10px;
+      transition: all 0.3s;
+    }
+    .chip-ext {
+      background: var(--brass);
+      color: var(--charcoal);
+    }
+    .chip-int {
+      background: var(--charcoal);
+      color: var(--gold);
+      border: 1px solid var(--brass);
+    }
+
+    /* ── PLAN INFO STRIP ─────────────────── */
+    .plan-info {
+      max-width: 1000px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      border-top: 1px solid rgba(255,255,255,0.06);
+      background: rgba(255,255,255,0.02);
+    }
+    .info-cell {
+      padding: 16px 20px;
+      border-right: 1px solid rgba(255,255,255,0.06);
+    }
+    .info-cell:last-child { border-right: none; }
+    .info-label {
+      font-size: 9px;
+      font-weight: 500;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--stone);
+      margin-bottom: 4px;
+    }
+    .info-val {
+      font-family: var(--display);
+      font-size: 17px;
+      font-weight: 400;
+      color: var(--white);
+    }
+
+    /* ── UNIT DETAILS PANELS ─────────────── */
+    .unit-details {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 40px 0;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+    }
+    .unit-panel { display: none; }
+    .unit-panel.visible { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+    .detail-group {}
+    .detail-group-title {
+      font-size: 9px;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--brass);
+      margin-bottom: 14px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .detail-group-title::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: rgba(255,255,255,0.08);
+    }
+    .detail-item {
+      display: flex;
+      justify-content: space-between;
+      padding: 8px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.05);
+      font-size: 13px;
+    }
+    .detail-item:last-child { border-bottom: none; }
+    .detail-key { color: var(--stone); font-weight: 300; }
+    .detail-val { color: var(--white); font-weight: 400; text-align: right; }
+    .detail-val.highlight { color: var(--gold); }
+
+    /* ── CTA STRIP ───────────────────────── */
+    .cta-strip {
+      padding: 48px;
+      border-top: 1px solid rgba(255,255,255,0.06);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 32px;
+    }
+    .cta-text {}
+    .cta-title {
+      font-family: var(--display);
+      font-size: 32px;
+      font-weight: 300;
+      font-style: italic;
+      color: var(--gold);
+      margin-bottom: 6px;
+    }
+    .cta-sub {
+      font-size: 13px;
+      font-weight: 300;
+      color: var(--stone);
+      line-height: 1.6;
+    }
+    .cta-actions { display: flex; gap: 12px; }
+    .btn-primary {
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      background: var(--brass);
+      color: var(--charcoal);
+      padding: 14px 28px;
+      text-decoration: none;
+      border: none;
+      cursor: pointer;
+      display: inline-block;
+      transition: background 0.15s;
+    }
+    .btn-primary:hover { background: var(--gold); }
+    .btn-secondary {
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      background: transparent;
+      color: var(--stone);
+      padding: 14px 28px;
+      text-decoration: none;
+      border: 1px solid rgba(255,255,255,0.12);
+      cursor: pointer;
+      display: inline-block;
+      transition: all 0.15s;
+    }
+    .btn-secondary:hover { color: var(--white); border-color: rgba(255,255,255,0.3); }
+
+    /* ── FOOTER ──────────────────────────── */
+    footer {
+      padding: 24px 48px;
+      border-top: 1px solid rgba(255,255,255,0.04);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 10px;
+      color: rgba(255,255,255,0.2);
+      font-weight: 300;
+      letter-spacing: 0.06em;
+    }
+
+    /* ── RESPONSIVE ──────────────────────── */
+    @media (max-width: 900px) {
+      header, .hero-text, .unit-toggle-wrap, .level-tabs-wrap, .plan-section, .cta-strip, footer {
+        padding-left: 24px;
+        padding-right: 24px;
+      }
+      .hero-text { flex-direction: column; align-items: flex-start; }
+      .hero-specs { flex-wrap: wrap; gap: 20px; }
+      .spec-item { text-align: left; }
+      .plan-info { grid-template-columns: repeat(3, 1fr); }
+      .cta-strip { flex-direction: column; align-items: flex-start; }
+      .header-nav { display: none; }
+      .level-tab { padding: 14px 16px; }
+      .unit-details { padding: 24px 24px; }
+      .unit-panel.visible { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ── HEADER ──────────────────────────────────── -->
+<header>
+  <div class="logo-mark">
+    <div class="logo-the">The</div>
+    <div class="logo-row">Row</div>
+    <div class="logo-sub">On Guadalupe</div>
+  </div>
+  <nav class="header-nav">
+    <a href="#">The Building</a>
+    <a href="#">The Life</a>
+    <a href="floorplans.html" style="color:var(--gold);">Floor Plans</a>
+    <a href="#">The Neighborhood</a>
+    <a href="#reserve" class="btn-reserve">Reserve</a>
+  </nav>
+</header>
+
+<!-- ── HERO TEXT ────────────────────────────────── -->
+<div class="hero-text">
+  <div class="hero-left">
+    <div class="page-eyebrow">Guadalupe Place · Pittsburgh, PA</div>
+    <div class="page-title">Floor <em>Plans</em></div>
+    <div class="page-desc">Four distinguished four-story townhomes on a private street. Two models — each with a rooftop terrace, private sauna, and views of the Pittsburgh skyline.</div>
+  </div>
+  <div class="hero-specs">
+    <div class="spec-item">
+      <div class="spec-val">4</div>
+      <div class="spec-lbl">Homes<br>Available</div>
+    </div>
+    <div class="spec-item">
+      <div class="spec-val">4</div>
+      <div class="spec-lbl">Stories<br>Each</div>
+    </div>
+    <div class="spec-item">
+      <div class="spec-val">3+</div>
+      <div class="spec-lbl">Bed /<br>Bath</div>
+    </div>
+  </div>
+</div>
+
+<!-- ── UNIT TYPE TOGGLE ──────────────────────────── -->
+<div class="unit-toggle-wrap">
+  <div class="unit-toggle">
+    <button class="unit-btn active" data-unit="exterior" onclick="setUnit('exterior')">
+      Exterior Unit
+      <span class="unit-badge">1 &amp; 4</span>
+    </button>
+    <button class="unit-btn" data-unit="interior" onclick="setUnit('interior')">
+      Interior Unit
+      <span class="unit-badge">2 &amp; 3</span>
+    </button>
+  </div>
+</div>
+
+<!-- ── LEVEL TABS ────────────────────────────────── -->
+<div class="level-tabs-wrap">
+  <button class="level-tab active" data-level="garage" onclick="setLevel('garage')">Garage Level</button>
+  <button class="level-tab" data-level="floor1" onclick="setLevel('floor1')">First Floor</button>
+  <button class="level-tab" data-level="floor2" onclick="setLevel('floor2')">Second Floor</button>
+  <button class="level-tab" data-level="floor3" onclick="setLevel('floor3')">Third Floor</button>
+  <button class="level-tab" data-level="roof" onclick="setLevel('roof')">Roof Terrace</button>
+</div>
+
+<!-- ── PLAN VIEWER ───────────────────────────────── -->
+<div class="plan-section">
+  <div class="plan-container">
+
+    <!-- Floor plan images, one per level -->
+    <img id="plan-img" class="plan-img"
+         src="floorplans/plan_garage.jpg"
+         alt="Floor Plan — Garage Level"
+         loading="eager">
+
+    <!-- Overlay system -->
+    <div class="plan-overlay" id="overlay-exterior">
+      <div class="overlay-exterior-dim"></div>
+      <div class="overlay-ext-border-left"></div>
+      <div class="overlay-ext-border-right"></div>
+    </div>
+    <div class="plan-overlay" id="overlay-interior" style="opacity:0;pointer-events:none;">
+      <div class="overlay-interior-dim-left"></div>
+      <div class="overlay-interior-dim-right"></div>
+      <div class="overlay-int-border"></div>
+    </div>
+
+    <!-- Unit label chips -->
+    <div class="plan-labels">
+      <span class="unit-label-chip chip-ext" id="chip-1">Unit 1<br>Exterior</span>
+      <span class="unit-label-chip chip-int" id="chip-2">Unit 2<br>Interior</span>
+      <span class="unit-label-chip chip-int" id="chip-3">Unit 3<br>Interior</span>
+      <span class="unit-label-chip chip-ext" id="chip-4">Unit 4<br>Exterior</span>
+    </div>
+
+  </div>
+
+  <!-- Info strip below plan -->
+  <div class="plan-info" id="plan-info-exterior">
+    <div class="info-cell">
+      <div class="info-label">Unit Type</div>
+      <div class="info-val">Exterior</div>
+    </div>
+    <div class="info-cell">
+      <div class="info-label">Width</div>
+      <div class="info-val">18'-0"</div>
+    </div>
+    <div class="info-cell">
+      <div class="info-label">Garage</div>
+      <div class="info-val">1-Car</div>
+    </div>
+    <div class="info-cell">
+      <div class="info-label">Elevator</div>
+      <div class="info-val">—</div>
+    </div>
+    <div class="info-cell">
+      <div class="info-label">Level</div>
+      <div class="info-val" id="level-label-ext">Garage Level</div>
+    </div>
+  </div>
+  <div class="plan-info" id="plan-info-interior" style="display:none;">
+    <div class="info-cell">
+      <div class="info-label">Unit Type</div>
+      <div class="info-val">Interior</div>
+    </div>
+    <div class="info-cell">
+      <div class="info-label">Width</div>
+      <div class="info-val">21'-0"</div>
+    </div>
+    <div class="info-cell">
+      <div class="info-label">Garage</div>
+      <div class="info-val">2-Car</div>
+    </div>
+    <div class="info-cell">
+      <div class="info-label">Elevator</div>
+      <div class="info-val">Yes</div>
+    </div>
+    <div class="info-cell">
+      <div class="info-label">Level</div>
+      <div class="info-val" id="level-label-int">Garage Level</div>
+    </div>
+  </div>
+
+</div>
+
+<!-- ── UNIT DETAIL PANELS ──────────────────────── -->
+<div style="padding: 0 48px; max-width:1096px; margin: 0 auto;">
+
+  <!-- Exterior Unit Details -->
+  <div id="details-exterior" class="unit-panel visible">
+    <div class="detail-group">
+      <div class="detail-group-title">Exterior Unit · Specifications</div>
+      <div class="detail-item"><span class="detail-key">Bedrooms</span><span class="detail-val">3</span></div>
+      <div class="detail-item"><span class="detail-key">Full Bathrooms</span><span class="detail-val">3</span></div>
+      <div class="detail-item"><span class="detail-key">Half Bath</span><span class="detail-val">1</span></div>
+      <div class="detail-item"><span class="detail-key">Unit Width</span><span class="detail-val">18'-0"</span></div>
+      <div class="detail-item"><span class="detail-key">Stories</span><span class="detail-val">4</span></div>
+      <div class="detail-item"><span class="detail-key">Garage</span><span class="detail-val">1-Car Integral</span></div>
+    </div>
+    <div class="detail-group">
+      <div class="detail-group-title">Amenities &amp; Features</div>
+      <div class="detail-item"><span class="detail-key">Rooftop Terrace</span><span class="detail-val highlight">Included</span></div>
+      <div class="detail-item"><span class="detail-key">Private Sauna</span><span class="detail-val highlight">Included</span></div>
+      <div class="detail-item"><span class="detail-key">Cold Plunge</span><span class="detail-val highlight">Included</span></div>
+      <div class="detail-item"><span class="detail-key">Office / Gym</span><span class="detail-val highlight">Included</span></div>
+      <div class="detail-item"><span class="detail-key">Elevator</span><span class="detail-val">Not included</span></div>
+      <div class="detail-item"><span class="detail-key">Availability</span><span class="detail-val highlight">2 Units</span></div>
+    </div>
+  </div>
+
+  <!-- Interior Unit Details -->
+  <div id="details-interior" class="unit-panel">
+    <div class="detail-group">
+      <div class="detail-group-title">Interior Unit · Specifications</div>
+      <div class="detail-item"><span class="detail-key">Bedrooms</span><span class="detail-val">3</span></div>
+      <div class="detail-item"><span class="detail-key">Full Bathrooms</span><span class="detail-val">3</span></div>
+      <div class="detail-item"><span class="detail-key">Half Bath</span><span class="detail-val">1</span></div>
+      <div class="detail-item"><span class="detail-key">Unit Width</span><span class="detail-val">21'-0"</span></div>
+      <div class="detail-item"><span class="detail-key">Stories</span><span class="detail-val">4</span></div>
+      <div class="detail-item"><span class="detail-key">Garage</span><span class="detail-val">2-Car Integral</span></div>
+    </div>
+    <div class="detail-group">
+      <div class="detail-group-title">Amenities &amp; Features</div>
+      <div class="detail-item"><span class="detail-key">Rooftop Terrace</span><span class="detail-val highlight">Included</span></div>
+      <div class="detail-item"><span class="detail-key">Private Sauna</span><span class="detail-val highlight">Included</span></div>
+      <div class="detail-item"><span class="detail-key">Cold Plunge</span><span class="detail-val highlight">Included</span></div>
+      <div class="detail-item"><span class="detail-key">Office / Gym</span><span class="detail-val highlight">Included</span></div>
+      <div class="detail-item"><span class="detail-key">Elevator</span><span class="detail-val highlight">Private Elevator</span></div>
+      <div class="detail-item"><span class="detail-key">Availability</span><span class="detail-val highlight">2 Units</span></div>
+    </div>
+  </div>
+
+</div>
+
+<!-- ── CTA ────────────────────────────────────── -->
+<div class="cta-strip" id="reserve">
+  <div class="cta-text">
+    <div class="cta-title">"A home of consequence,<br>on a street that lasts."</div>
+    <div class="cta-sub">Four homes. Private previews now open.<br>Preferred construction financing available through our partner lender.</div>
+  </div>
+  <div class="cta-actions">
+    <a href="mailto:brand@therowonguadalupe.com?subject=Floor Plan Request — The Row on Guadalupe" class="btn-primary">Request Floor Plans</a>
+    <a href="mailto:brand@therowonguadalupe.com?subject=Private Preview — The Row on Guadalupe" class="btn-secondary">Schedule a Preview</a>
+  </div>
+</div>
+
+<!-- ── FOOTER ────────────────────────────────── -->
+<footer>
+  <span>The Row on Guadalupe · Guadalupe Place · Pittsburgh, PA</span>
+  <span>Jabel Warren · SERHANT. · brand@therowonguadalupe.com</span>
+</footer>
+
+<script>
+  // Level data
+  const levelLabels = {
+    garage: 'Garage Level',
+    floor1: 'First Floor',
+    floor2: 'Second Floor',
+    floor3: 'Third Floor',
+    roof:   'Roof Terrace'
+  };
+
+  let currentUnit  = 'exterior';
+  let currentLevel = 'garage';
+
+  function setUnit(unit) {
+    currentUnit = unit;
+
+    // Toggle buttons
+    document.querySelectorAll('.unit-btn').forEach(b => {
+      b.classList.toggle('active', b.dataset.unit === unit);
+    });
+
+    // Toggle overlays
+    const extOvr = document.getElementById('overlay-exterior');
+    const intOvr = document.getElementById('overlay-interior');
+    if (unit === 'exterior') {
+      extOvr.style.opacity = '1';
+      extOvr.style.pointerEvents = 'none';
+      intOvr.style.opacity = '0';
+      intOvr.style.pointerEvents = 'none';
+    } else {
+      extOvr.style.opacity = '0';
+      intOvr.style.opacity = '1';
+    }
+
+    // Toggle info strips
+    document.getElementById('plan-info-exterior').style.display = unit === 'exterior' ? 'grid' : 'none';
+    document.getElementById('plan-info-interior').style.display = unit === 'interior' ? 'grid' : 'none';
+
+    // Toggle detail panels
+    document.getElementById('details-exterior').classList.toggle('visible', unit === 'exterior');
+    document.getElementById('details-interior').classList.toggle('visible', unit === 'interior');
+
+    // Highlight chips
+    ['chip-1','chip-4'].forEach(id => {
+      document.getElementById(id).style.opacity = unit === 'exterior' ? '1' : '0.35';
+    });
+    ['chip-2','chip-3'].forEach(id => {
+      document.getElementById(id).style.opacity = unit === 'interior' ? '1' : '0.35';
+    });
+  }
+
+  function setLevel(level) {
+    currentLevel = level;
+
+    // Update tab active state
+    document.querySelectorAll('.level-tab').forEach(t => {
+      t.classList.toggle('active', t.dataset.level === level);
+    });
+
+    // Swap image
+    const img = document.getElementById('plan-img');
+    img.style.opacity = '0';
+    img.style.transition = 'opacity 0.2s';
+    setTimeout(() => {
+      img.src = `floorplans/plan_${level}.jpg`;
+      img.alt = `Floor Plan — ${levelLabels[level]}`;
+      img.onload = () => { img.style.opacity = '1'; };
+    }, 150);
+
+    // Update level label in info strip
+    document.getElementById('level-label-ext').textContent = levelLabels[level];
+    document.getElementById('level-label-int').textContent = levelLabels[level];
+  }
+
+  // Keyboard navigation
+  const levelOrder = ['garage','floor1','floor2','floor3','roof'];
+  document.addEventListener('keydown', e => {
+    const idx = levelOrder.indexOf(currentLevel);
+    if (e.key === 'ArrowRight' && idx < levelOrder.length - 1) setLevel(levelOrder[idx + 1]);
+    if (e.key === 'ArrowLeft'  && idx > 0)                     setLevel(levelOrder[idx - 1]);
+  });
+</script>
+
+</body>
+</html>
