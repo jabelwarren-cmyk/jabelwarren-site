@@ -1,0 +1,2274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Row on Guadalupe — Brand & Media Plan · Launch June 11</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      /* Brand palette — exact from TheRowOnGuadalupe_BrandGuidelines.pdf */
+      --charcoal:   #2C2925;
+      --deep-taupe: #5C5347;
+      --brass:      #B09060;
+      --warm-gold:  #D4B896;
+      --limestone:  #F5F0E8;
+      --warm-white: #FDFBF7;
+      --stone:      #8C8070;
+      --slate:      #3D4448;
+
+      --font-display: 'Cormorant Garamond', serif;
+      --font-body:    'Jost', sans-serif;
+    }
+
+    html { font-size: 16px; scroll-behavior: smooth; }
+    body {
+      font-family: var(--font-body);
+      background: var(--warm-white);
+      color: var(--charcoal);
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ── NAV ─────────────────────────────── */
+    .toc {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: var(--charcoal);
+      padding: 0 48px;
+      display: flex;
+      align-items: center;
+      gap: 0;
+      overflow-x: auto;
+      scrollbar-width: none;
+    }
+    .toc::-webkit-scrollbar { display: none; }
+    .toc-brand {
+      font-family: var(--font-display);
+      font-size: 13px;
+      font-weight: 300;
+      color: var(--warm-gold);
+      letter-spacing: 0.08em;
+      white-space: nowrap;
+      padding: 14px 24px 14px 0;
+      border-right: 1px solid rgba(255,255,255,0.1);
+      margin-right: 20px;
+    }
+    .toc a {
+      color: rgba(255,255,255,0.5);
+      text-decoration: none;
+      font-size: 9px;
+      font-weight: 500;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      padding: 14px 16px;
+      white-space: nowrap;
+      transition: color 0.15s;
+    }
+    .toc a:hover { color: var(--warm-gold); }
+
+    /* ── HERO ─────────────────────────────── */
+    .hero {
+      background: var(--charcoal);
+      padding: 96px 80px 80px;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 0; right: 0; bottom: 0;
+      width: 40%;
+      background: linear-gradient(135deg, transparent, rgba(176,144,96,0.06));
+      pointer-events: none;
+    }
+    .hero-rule {
+      width: 40px;
+      height: 1px;
+      background: var(--brass);
+      margin-bottom: 32px;
+    }
+    .hero-eyebrow {
+      font-family: var(--font-body);
+      font-size: 9px;
+      font-weight: 500;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--brass);
+      margin-bottom: 16px;
+    }
+    .hero-title {
+      font-family: var(--font-display);
+      font-size: 64px;
+      font-weight: 300;
+      line-height: 1.05;
+      color: var(--warm-white);
+      margin-bottom: 8px;
+    }
+    .hero-title em {
+      font-style: italic;
+      color: var(--warm-gold);
+    }
+    .hero-subtitle {
+      font-family: var(--font-display);
+      font-size: 28px;
+      font-weight: 300;
+      color: var(--stone);
+      margin-bottom: 40px;
+    }
+    .hero-tagline {
+      font-family: var(--font-display);
+      font-size: 18px;
+      font-style: italic;
+      font-weight: 300;
+      color: var(--warm-gold);
+      margin-bottom: 40px;
+      padding-left: 20px;
+      border-left: 2px solid var(--brass);
+    }
+    .hero-meta {
+      display: flex;
+      gap: 40px;
+      padding-top: 32px;
+      border-top: 1px solid rgba(255,255,255,0.08);
+    }
+    .hero-meta-item { }
+    .hero-meta-label {
+      font-size: 9px;
+      font-weight: 500;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--stone);
+      margin-bottom: 4px;
+    }
+    .hero-meta-val {
+      font-size: 14px;
+      font-weight: 300;
+      color: rgba(255,255,255,0.7);
+    }
+
+    /* ── PAGE BODY ────────────────────────── */
+    .page { max-width: 1080px; margin: 0 auto; padding: 0 48px 100px; }
+
+    /* ── SECTION ──────────────────────────── */
+    .section { padding: 72px 0 0; }
+    .section-header {
+      margin-bottom: 48px;
+      padding-bottom: 24px;
+      border-bottom: 1px solid var(--limestone);
+    }
+    .section-eyebrow {
+      font-size: 9px;
+      font-weight: 500;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--brass);
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .section-eyebrow::before {
+      content: '';
+      display: inline-block;
+      width: 24px;
+      height: 1px;
+      background: var(--brass);
+    }
+    .section-title {
+      font-family: var(--font-display);
+      font-size: 40px;
+      font-weight: 300;
+      color: var(--charcoal);
+      line-height: 1.1;
+    }
+    .section-desc {
+      font-size: 14px;
+      font-weight: 300;
+      line-height: 1.8;
+      color: var(--deep-taupe);
+      margin-top: 12px;
+      max-width: 600px;
+    }
+
+    /* ── CARDS ────────────────────────────── */
+    .card {
+      background: var(--warm-white);
+      border: 1px solid var(--limestone);
+      border-radius: 2px;
+      padding: 28px 32px;
+    }
+    .card-gold {
+      background: var(--limestone);
+      border: 1px solid var(--warm-gold);
+      padding: 28px 32px;
+      border-radius: 2px;
+    }
+    .card-dark {
+      background: var(--charcoal);
+      border: none;
+      padding: 32px;
+      border-radius: 2px;
+      color: var(--warm-white);
+    }
+    .card-title {
+      font-size: 9px;
+      font-weight: 500;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--brass);
+      margin-bottom: 12px;
+    }
+
+    /* ── GRIDS ────────────────────────────── */
+    .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+    .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+    .grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+
+    /* ── OVERVIEW STATS ───────────────────── */
+    .stat-row {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 0;
+      border: 1px solid var(--limestone);
+      margin-bottom: 32px;
+    }
+    .stat-item {
+      padding: 24px 20px;
+      border-right: 1px solid var(--limestone);
+      text-align: center;
+    }
+    .stat-item:last-child { border-right: none; }
+    .stat-num {
+      font-family: var(--font-display);
+      font-size: 36px;
+      font-weight: 300;
+      color: var(--charcoal);
+      line-height: 1;
+      margin-bottom: 8px;
+    }
+    .stat-label {
+      font-size: 9px;
+      font-weight: 500;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--stone);
+      line-height: 1.4;
+    }
+
+    /* ── UNIT CARDS ───────────────────────── */
+    .unit-card {
+      border: 1px solid var(--limestone);
+      overflow: hidden;
+      border-radius: 2px;
+    }
+    .unit-card-header {
+      padding: 24px 28px;
+      background: var(--limestone);
+      border-bottom: 1px solid var(--warm-gold);
+    }
+    .unit-type {
+      font-size: 9px;
+      font-weight: 500;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--brass);
+      margin-bottom: 6px;
+    }
+    .unit-name {
+      font-family: var(--font-display);
+      font-size: 28px;
+      font-weight: 400;
+      color: var(--charcoal);
+    }
+    .unit-body { padding: 24px 28px; }
+    .unit-feature {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      padding: 8px 0;
+      border-bottom: 1px solid var(--limestone);
+      font-size: 13px;
+      font-weight: 300;
+      color: var(--deep-taupe);
+    }
+    .unit-feature:last-child { border-bottom: none; }
+    .unit-feature::before {
+      content: '—';
+      color: var(--brass);
+      flex-shrink: 0;
+      font-weight: 300;
+    }
+
+    /* ── CONTENT PILLARS ─────────────────── */
+    .pillar-card {
+      border-top: 2px solid var(--brass);
+      padding: 24px 0;
+    }
+    .pillar-num {
+      font-family: var(--font-display);
+      font-size: 48px;
+      font-weight: 300;
+      color: var(--limestone);
+      line-height: 1;
+      margin-bottom: 8px;
+    }
+    .pillar-name {
+      font-family: var(--font-display);
+      font-size: 20px;
+      font-weight: 400;
+      color: var(--charcoal);
+      margin-bottom: 4px;
+    }
+    .pillar-pct {
+      font-size: 9px;
+      font-weight: 500;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--brass);
+      margin-bottom: 12px;
+    }
+    .pillar-desc {
+      font-size: 12px;
+      font-weight: 300;
+      line-height: 1.7;
+      color: var(--deep-taupe);
+      margin-bottom: 12px;
+    }
+    .pillar-examples {
+      list-style: none;
+    }
+    .pillar-examples li {
+      font-size: 11px;
+      font-weight: 300;
+      color: var(--stone);
+      padding: 3px 0;
+      padding-left: 12px;
+      position: relative;
+    }
+    .pillar-examples li::before {
+      content: '·';
+      position: absolute;
+      left: 0;
+      color: var(--brass);
+    }
+
+    /* ── CAPTION POSTS ────────────────────── */
+    .caption-example {
+      background: var(--limestone);
+      padding: 20px 24px;
+      border-left: 3px solid var(--brass);
+      margin: 8px 0;
+      border-radius: 0 2px 2px 0;
+    }
+    .caption-tag {
+      font-size: 9px;
+      font-weight: 500;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--brass);
+      margin-bottom: 8px;
+    }
+    .caption-text {
+      font-family: var(--font-display);
+      font-size: 14px;
+      font-weight: 300;
+      font-style: italic;
+      line-height: 1.7;
+      color: var(--charcoal);
+    }
+
+    /* ── PHASE TIMELINE ───────────────────── */
+    .phase-row {
+      display: grid;
+      grid-template-columns: 120px 1fr;
+      gap: 32px;
+      padding: 32px 0;
+      border-bottom: 1px solid var(--limestone);
+    }
+    .phase-row:last-child { border-bottom: none; }
+    .phase-label {
+      text-align: right;
+      padding-top: 4px;
+    }
+    .phase-week {
+      font-size: 9px;
+      font-weight: 500;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--brass);
+      margin-bottom: 4px;
+    }
+    .phase-name {
+      font-family: var(--font-display);
+      font-size: 18px;
+      font-weight: 400;
+      color: var(--charcoal);
+      line-height: 1.2;
+    }
+    .phase-body {
+      border-left: 1px solid var(--warm-gold);
+      padding-left: 28px;
+    }
+    .phase-goal {
+      font-size: 12px;
+      font-weight: 500;
+      color: var(--deep-taupe);
+      margin-bottom: 10px;
+    }
+    .task-list { list-style: none; }
+    .task-list li {
+      font-size: 13px;
+      font-weight: 300;
+      color: var(--deep-taupe);
+      padding: 4px 0;
+      padding-left: 20px;
+      position: relative;
+    }
+    .task-list li::before {
+      content: '—';
+      position: absolute;
+      left: 0;
+      color: var(--brass);
+      font-size: 11px;
+    }
+    .post-examples {
+      margin-top: 14px;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    .post-chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--warm-white);
+      border: 1px solid var(--limestone);
+      padding: 6px 12px;
+      font-size: 11px;
+      font-weight: 400;
+      color: var(--deep-taupe);
+      border-radius: 1px;
+    }
+    .post-chip-type {
+      font-size: 9px;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--brass);
+    }
+
+    /* ── HASHTAG / INSTAGRAM SETUP ────────── */
+    .ig-setup-grid {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      gap: 24px;
+    }
+    .ig-profile-mock {
+      background: var(--charcoal);
+      border-radius: 2px;
+      padding: 28px 24px;
+      text-align: center;
+    }
+    .ig-avatar {
+      width: 72px;
+      height: 72px;
+      border-radius: 50%;
+      background: var(--brass);
+      margin: 0 auto 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .ig-avatar-text {
+      font-family: var(--font-display);
+      font-size: 22px;
+      font-weight: 300;
+      color: var(--charcoal);
+    }
+    .ig-handle {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--warm-white);
+      margin-bottom: 4px;
+    }
+    .ig-bio {
+      font-size: 12px;
+      font-weight: 300;
+      color: rgba(255,255,255,0.6);
+      line-height: 1.6;
+      margin-bottom: 12px;
+      text-align: left;
+    }
+    .ig-link {
+      font-size: 11px;
+      color: #7EB8F7;
+      font-weight: 400;
+    }
+    .ig-stats {
+      display: flex;
+      justify-content: center;
+      gap: 24px;
+      padding: 14px 0;
+      border-top: 1px solid rgba(255,255,255,0.1);
+      margin-top: 14px;
+    }
+    .ig-stat { text-align: center; }
+    .ig-stat-num { font-size: 14px; font-weight: 500; color: var(--warm-white); }
+    .ig-stat-lbl { font-size: 10px; color: rgba(255,255,255,0.4); }
+
+    /* ── HIGHLIGHT COVERS ─────────────────── */
+    .highlights-row {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+      margin-top: 16px;
+    }
+    .highlight-item {
+      text-align: center;
+    }
+    .highlight-circle {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      border: 2px solid var(--brass);
+      background: var(--limestone);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 6px;
+      font-size: 22px;
+    }
+    .highlight-name {
+      font-size: 10px;
+      font-weight: 400;
+      color: var(--deep-taupe);
+    }
+
+    /* ── HASHTAGS ─────────────────────────── */
+    .hashtag-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 8px;
+    }
+    .hashtag {
+      font-size: 12px;
+      font-weight: 300;
+      color: var(--slate);
+      background: var(--limestone);
+      padding: 4px 10px;
+      border-radius: 1px;
+    }
+    .hashtag.primary {
+      background: var(--charcoal);
+      color: var(--warm-gold);
+    }
+
+    /* ── WEBSITE ──────────────────────────── */
+    .sitemap {
+      border: 1px solid var(--limestone);
+      border-radius: 2px;
+      overflow: hidden;
+    }
+    .sitemap-row {
+      display: grid;
+      grid-template-columns: 160px 1fr 200px;
+      border-bottom: 1px solid var(--limestone);
+      align-items: stretch;
+    }
+    .sitemap-row:last-child { border-bottom: none; }
+    .sitemap-row.header-row {
+      background: var(--charcoal);
+    }
+    .sitemap-row.header-row .sm-page,
+    .sitemap-row.header-row .sm-desc,
+    .sitemap-row.header-row .sm-cta {
+      font-size: 9px;
+      font-weight: 500;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--stone);
+      padding: 12px 16px;
+    }
+    .sm-page {
+      padding: 14px 16px;
+      border-right: 1px solid var(--limestone);
+      font-weight: 500;
+      font-size: 13px;
+      color: var(--charcoal);
+      background: var(--limestone);
+      display: flex;
+      align-items: center;
+    }
+    .sm-desc {
+      padding: 14px 16px;
+      font-size: 12px;
+      font-weight: 300;
+      color: var(--deep-taupe);
+      border-right: 1px solid var(--limestone);
+      display: flex;
+      align-items: center;
+    }
+    .sm-cta {
+      padding: 14px 16px;
+      font-size: 11px;
+      font-weight: 500;
+      color: var(--brass);
+      display: flex;
+      align-items: center;
+    }
+
+    /* ── VOICE GUIDE ──────────────────────── */
+    .voice-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+    .voice-do {
+      background: #F0F5EE;
+      border-top: 2px solid #4A7A5E;
+      padding: 20px;
+    }
+    .voice-dont {
+      background: #F8F0F0;
+      border-top: 2px solid #8B3A3A;
+      padding: 20px;
+    }
+    .voice-label {
+      font-size: 9px;
+      font-weight: 500;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      margin-bottom: 14px;
+    }
+    .voice-do .voice-label { color: #4A7A5E; }
+    .voice-dont .voice-label { color: #8B3A3A; }
+    .voice-ex {
+      font-size: 12px;
+      font-weight: 300;
+      color: var(--deep-taupe);
+      line-height: 1.7;
+      padding: 8px 0;
+      border-bottom: 1px solid rgba(0,0,0,0.06);
+    }
+    .voice-ex:last-child { border-bottom: none; }
+    .voice-ex em {
+      font-style: italic;
+      color: var(--charcoal);
+    }
+
+    /* ── PAID MEDIA ───────────────────────── */
+    .audience-card {
+      border: 1px solid var(--limestone);
+      padding: 20px 24px;
+      border-top: 3px solid var(--brass);
+    }
+    .audience-tier {
+      font-size: 9px;
+      font-weight: 500;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--brass);
+      margin-bottom: 8px;
+    }
+    .audience-name {
+      font-family: var(--font-display);
+      font-size: 18px;
+      font-weight: 400;
+      color: var(--charcoal);
+      margin-bottom: 10px;
+    }
+    .audience-detail {
+      font-size: 12px;
+      font-weight: 300;
+      color: var(--deep-taupe);
+      line-height: 1.6;
+    }
+    .budget-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 12px 0;
+      border-bottom: 1px solid var(--limestone);
+      font-size: 13px;
+    }
+    .budget-row:last-child { border-bottom: none; }
+    .budget-label { font-weight: 400; color: var(--deep-taupe); }
+    .budget-amt {
+      font-family: var(--font-display);
+      font-size: 18px;
+      font-weight: 400;
+      color: var(--charcoal);
+    }
+
+    /* ── PRESALE ──────────────────────────── */
+    .funnel-step {
+      display: flex;
+      gap: 24px;
+      padding: 24px 0;
+      border-bottom: 1px solid var(--limestone);
+      align-items: flex-start;
+    }
+    .funnel-step:last-child { border-bottom: none; }
+    .funnel-num {
+      font-family: var(--font-display);
+      font-size: 52px;
+      font-weight: 300;
+      color: var(--limestone);
+      line-height: 1;
+      min-width: 52px;
+    }
+    .funnel-content { }
+    .funnel-stage {
+      font-size: 9px;
+      font-weight: 500;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--brass);
+      margin-bottom: 4px;
+    }
+    .funnel-title {
+      font-family: var(--font-display);
+      font-size: 22px;
+      font-weight: 400;
+      color: var(--charcoal);
+      margin-bottom: 8px;
+    }
+    .funnel-desc {
+      font-size: 13px;
+      font-weight: 300;
+      line-height: 1.7;
+      color: var(--deep-taupe);
+    }
+
+    /* ── METRICS ──────────────────────────── */
+    .kpi-card {
+      padding: 20px;
+      border: 1px solid var(--limestone);
+      text-align: center;
+    }
+    .kpi-icon { font-size: 28px; margin-bottom: 8px; }
+    .kpi-label {
+      font-size: 9px;
+      font-weight: 500;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--stone);
+      margin-bottom: 6px;
+    }
+    .kpi-target {
+      font-family: var(--font-display);
+      font-size: 22px;
+      font-weight: 400;
+      color: var(--charcoal);
+    }
+    .kpi-timeline {
+      font-size: 11px;
+      font-weight: 300;
+      color: var(--stone);
+      margin-top: 4px;
+    }
+
+    /* ── PR LIST ──────────────────────────── */
+    .pr-item {
+      display: flex;
+      gap: 16px;
+      padding: 14px 0;
+      border-bottom: 1px solid var(--limestone);
+      align-items: flex-start;
+    }
+    .pr-item:last-child { border-bottom: none; }
+    .pr-outlet {
+      font-weight: 500;
+      font-size: 14px;
+      color: var(--charcoal);
+      min-width: 180px;
+    }
+    .pr-angle {
+      font-size: 13px;
+      font-weight: 300;
+      color: var(--deep-taupe);
+      flex: 1;
+      line-height: 1.5;
+    }
+    .pr-priority {
+      font-size: 9px;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 3px 8px;
+      border-radius: 1px;
+      white-space: nowrap;
+    }
+    .pr-high { background: var(--charcoal); color: var(--warm-gold); }
+    .pr-med { background: var(--limestone); color: var(--brass); }
+
+    /* ── TAGLINE BOX ──────────────────────── */
+    .tagline-showcase {
+      background: var(--charcoal);
+      padding: 40px;
+      border-radius: 2px;
+      margin-bottom: 24px;
+    }
+    .tagline-main {
+      font-family: var(--font-display);
+      font-size: 32px;
+      font-weight: 300;
+      font-style: italic;
+      color: var(--warm-gold);
+      margin-bottom: 8px;
+    }
+    .tagline-use {
+      font-size: 9px;
+      font-weight: 500;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--stone);
+    }
+    .tagline-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+    .tagline-item {
+      background: var(--limestone);
+      padding: 16px 20px;
+    }
+    .tagline-line {
+      font-family: var(--font-display);
+      font-size: 15px;
+      font-weight: 300;
+      color: var(--charcoal);
+      margin-bottom: 4px;
+    }
+    .tagline-context {
+      font-size: 10px;
+      font-weight: 400;
+      color: var(--stone);
+    }
+
+    /* ── FOOTER ───────────────────────────── */
+    .page-footer {
+      background: var(--charcoal);
+      padding: 40px 80px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .footer-brand {
+      font-family: var(--font-display);
+      font-size: 16px;
+      font-weight: 300;
+      color: var(--warm-gold);
+    }
+    .footer-detail {
+      font-size: 11px;
+      font-weight: 300;
+      color: var(--stone);
+      text-align: right;
+    }
+
+    /* ── URGENCY BANNER ─────────────────── */
+    .launch-banner {
+      background: #1A1209;
+      border-bottom: 2px solid var(--brass);
+      padding: 14px 48px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+    .launch-countdown {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+    .launch-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: #E8A020;
+      box-shadow: 0 0 8px #E8A020;
+      animation: pulse 1.5s infinite;
+      flex-shrink: 0;
+    }
+    @keyframes pulse {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.6; transform: scale(0.85); }
+    }
+    .launch-label {
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: 0.26em;
+      text-transform: uppercase;
+      color: #E8A020;
+    }
+    .launch-date {
+      font-family: var(--font-display);
+      font-size: 20px;
+      font-weight: 400;
+      color: var(--warm-white);
+    }
+    .launch-days {
+      display: flex;
+      gap: 12px;
+    }
+    .day-box {
+      background: rgba(184,146,74,0.12);
+      border: 1px solid rgba(184,146,74,0.3);
+      border-radius: 4px;
+      padding: 8px 16px;
+      text-align: center;
+      min-width: 70px;
+    }
+    .day-num {
+      font-family: var(--font-display);
+      font-size: 28px;
+      font-weight: 300;
+      color: var(--warm-gold);
+      line-height: 1;
+    }
+    .day-lbl {
+      font-size: 9px;
+      font-weight: 500;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--stone);
+      margin-top: 3px;
+    }
+
+    /* ── SPRINT SECTION ──────────────────── */
+    .sprint-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2px;
+      background: var(--limestone);
+      border: 1px solid var(--limestone);
+      border-radius: 2px;
+      overflow: hidden;
+      margin-bottom: 24px;
+    }
+    .sprint-day {
+      background: var(--warm-white);
+      padding: 24px;
+    }
+    .sprint-day.launch-day {
+      background: var(--charcoal);
+    }
+    .sprint-day-label {
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      margin-bottom: 4px;
+    }
+    .sprint-day:not(.launch-day) .sprint-day-label { color: var(--brass); }
+    .sprint-day.launch-day .sprint-day-label { color: var(--warm-gold); }
+    .sprint-day-date {
+      font-family: var(--font-display);
+      font-size: 22px;
+      font-weight: 400;
+      margin-bottom: 16px;
+      padding-bottom: 14px;
+    }
+    .sprint-day:not(.launch-day) .sprint-day-date { color: var(--charcoal); border-bottom: 1px solid var(--limestone); }
+    .sprint-day.launch-day .sprint-day-date { color: var(--warm-white); border-bottom: 1px solid rgba(255,255,255,0.1); }
+    .sprint-task {
+      display: flex;
+      gap: 10px;
+      align-items: flex-start;
+      padding: 6px 0;
+      border-bottom: 1px solid var(--limestone);
+      font-size: 12px;
+      font-weight: 300;
+      line-height: 1.4;
+    }
+    .sprint-day.launch-day .sprint-task { border-bottom: 1px solid rgba(255,255,255,0.07); }
+    .sprint-task:last-child { border-bottom: none; }
+    .sprint-task-status {
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      flex-shrink: 0;
+      margin-top: 1px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 9px;
+      font-weight: 700;
+    }
+    .status-urgent { background: #C0390A; color: white; }
+    .status-today { background: #B09060; color: white; }
+    .status-launch { background: var(--warm-gold); color: var(--charcoal); }
+    .sprint-task-text { color: var(--deep-taupe); }
+    .sprint-day.launch-day .sprint-task-text { color: rgba(255,255,255,0.7); }
+    .sprint-task-text strong { font-weight: 600; }
+    .sprint-day:not(.launch-day) .sprint-task-text strong { color: var(--charcoal); }
+    .sprint-day.launch-day .sprint-task-text strong { color: var(--warm-gold); }
+    .sprint-time {
+      font-size: 9px;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--brass);
+      margin-top: 2px;
+      display: block;
+    }
+    .sprint-day.launch-day .sprint-time { color: var(--warm-gold); opacity: 0.7; }
+
+    /* ── HOUR-BY-HOUR ─────────────────────── */
+    .launch-hour-row {
+      display: grid;
+      grid-template-columns: 80px 1fr;
+      gap: 20px;
+      padding: 14px 0;
+      border-bottom: 1px solid var(--limestone);
+      align-items: start;
+    }
+    .launch-hour-row:last-child { border-bottom: none; }
+    .launch-time {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      color: var(--brass);
+      padding-top: 2px;
+      text-align: right;
+    }
+    .launch-action { }
+    .launch-action-title {
+      font-weight: 500;
+      font-size: 13px;
+      color: var(--charcoal);
+      margin-bottom: 2px;
+    }
+    .launch-action-desc {
+      font-size: 12px;
+      font-weight: 300;
+      color: var(--deep-taupe);
+      line-height: 1.5;
+    }
+    .post-preview {
+      background: var(--limestone);
+      border-left: 3px solid var(--brass);
+      padding: 10px 14px;
+      margin-top: 6px;
+      font-family: var(--font-display);
+      font-size: 13px;
+      font-style: italic;
+      font-weight: 300;
+      color: var(--charcoal);
+      line-height: 1.6;
+    }
+
+    @media (max-width: 800px) {
+      .hero { padding: 56px 32px; }
+      .page { padding: 0 24px 60px; }
+      .grid-2, .grid-3, .grid-4, .ig-setup-grid, .voice-grid, .tagline-grid { grid-template-columns: 1fr; }
+      .stat-row { grid-template-columns: repeat(2, 1fr); }
+      .hero-title { font-size: 40px; }
+      .toc { padding: 0 24px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ── NAV ──────────────────────────────────────── -->
+<nav class="toc">
+  <div class="toc-brand">The Row on Guadalupe</div>
+  <a href="#sprint">48-Hr Sprint</a>
+  <a href="#launch-day">Launch Day</a>
+  <a href="#overview">Overview</a>
+  <a href="#brand">Brand</a>
+  <a href="#instagram">Instagram</a>
+  <a href="#content">Content</a>
+  <a href="#calendar">Calendar</a>
+  <a href="#website">Website</a>
+  <a href="#presale">Presale</a>
+  <a href="#paid">Paid Media</a>
+  <a href="#pr">PR</a>
+  <a href="#metrics">Metrics</a>
+</nav>
+
+<!-- ── LAUNCH BANNER ─────────────────────────── -->
+<div class="launch-banner">
+  <div class="launch-countdown">
+    <div class="launch-dot"></div>
+    <div>
+      <div class="launch-label">Active Market Launch</div>
+      <div class="launch-date">Thursday, June 11, 2026</div>
+    </div>
+  </div>
+  <div class="launch-days">
+    <div class="day-box"><div class="day-num">2</div><div class="day-lbl">Days</div></div>
+    <div class="day-box"><div class="day-num">48</div><div class="day-lbl">Hours</div></div>
+  </div>
+</div>
+
+<!-- ── HERO ─────────────────────────────────────── -->
+<div class="hero">
+  <div style="max-width:1080px; margin:0 auto; padding:0 32px;">
+    <div class="hero-rule"></div>
+    <div class="hero-eyebrow">Brand & Media Plan · 2026</div>
+    <div class="hero-title"><em>The Row</em> on Guadalupe</div>
+    <div class="hero-subtitle">Presale Strategy · Instagram · Website · Paid Media</div>
+    <div class="hero-tagline">"Where tradition finds its finest expression."</div>
+    <div class="hero-meta">
+      <div class="hero-meta-item">
+        <div class="hero-meta-label">Property</div>
+        <div class="hero-meta-val">514 W Jefferson / Guadalupe Place</div>
+      </div>
+      <div class="hero-meta-item">
+        <div class="hero-meta-label">Neighborhood</div>
+        <div class="hero-meta-val">Mexican War Streets, Pittsburgh</div>
+      </div>
+      <div class="hero-meta-item">
+        <div class="hero-meta-label">Units</div>
+        <div class="hero-meta-val">4 Townhomes (2 models)</div>
+      </div>
+      <div class="hero-meta-item">
+        <div class="hero-meta-label">Goal</div>
+        <div class="hero-meta-val">100% Presold — All 4 Units</div>
+      </div>
+      <div class="hero-meta-item">
+        <div class="hero-meta-label">Prepared by</div>
+        <div class="hero-meta-val">Jabel Warren · SERHANT.</div>
+      </div>
+      <div class="hero-meta-item">
+        <div class="hero-meta-label">Launch Date</div>
+        <div class="hero-meta-val" style="color:var(--warm-gold);font-weight:400;">Thursday, June 11</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="page">
+
+  <!-- ─── SECTION 0: 48-HOUR SPRINT ────────────────── -->
+  <div class="section" id="sprint">
+    <div class="section-header">
+      <div class="section-eyebrow">00 — 48-Hour Sprint</div>
+      <div class="section-title">What has to happen<br>before Thursday morning.</div>
+      <div class="section-desc">The 90-day rollout plan is compressed. The brand, the content, and the systems all need to be ready to go live simultaneously. This is the checklist.</div>
+    </div>
+
+    <div class="sprint-grid">
+
+      <!-- TUESDAY -->
+      <div class="sprint-day">
+        <div class="sprint-day-label">Today</div>
+        <div class="sprint-day-date">Tuesday, June 9</div>
+
+        <div class="sprint-task">
+          <div class="sprint-task-status status-urgent">!</div>
+          <div class="sprint-task-text"><strong>Create @therowonguadalupe Instagram</strong> — full profile setup: bio, profile photo (logo mark on limestone), contact button, link in bio.<span class="sprint-time">Do first — handles can be taken</span></div>
+        </div>
+        <div class="sprint-task">
+          <div class="sprint-task-status status-urgent">!</div>
+          <div class="sprint-task-text"><strong>Build Story Highlight covers</strong> — 7 branded circles in brand palette. Pin to account before any content goes live.</div>
+        </div>
+        <div class="sprint-task">
+          <div class="sprint-task-status status-urgent">!</div>
+          <div class="sprint-task-text"><strong>Landing page live at therowonguadalupe.com</strong> — minimum viable: hero rendering, tagline, priority list email capture form. Full site can follow post-launch.<span class="sprint-time">Must be live before Thursday</span></div>
+        </div>
+        <div class="sprint-task">
+          <div class="sprint-task-status status-today">✓</div>
+          <div class="sprint-task-text"><strong>Queue 6 launch posts</strong> in scheduling tool (Later, Planoly, or Meta Business Suite) — scheduled for Wed PM + Thu morning. Write captions in brand voice today.</div>
+        </div>
+        <div class="sprint-task">
+          <div class="sprint-task-status status-today">✓</div>
+          <div class="sprint-task-text"><strong>Build paid ad creative</strong> in Meta Ads Manager — use exterior street rendering + primary tagline. Set audience, budget. <em>Do not activate yet</em> — launch Thursday 9am.<span class="sprint-time">$300 initial monthly budget</span></div>
+        </div>
+        <div class="sprint-task">
+          <div class="sprint-task-status status-today">✓</div>
+          <div class="sprint-task-text"><strong>Personal page warm-up</strong> — post a Story on your personal account: "Something is coming to Pittsburgh Thursday. Follow @therowonguadalupe."</div>
+        </div>
+        <div class="sprint-task">
+          <div class="sprint-task-status status-today">✓</div>
+          <div class="sprint-task-text"><strong>Text/email warm contacts</strong> — anyone in your existing network who might be a buyer or refer one. Personal message only, no mass blast.</div>
+        </div>
+        <div class="sprint-task">
+          <div class="sprint-task-status status-today">✓</div>
+          <div class="sprint-task-text"><strong>Confirm preferred lender</strong> is ready to handle pre-approval inquiries starting Thursday — they need to know the launch date.</div>
+        </div>
+      </div>
+
+      <!-- WEDNESDAY -->
+      <div class="sprint-day">
+        <div class="sprint-day-label">Pre-Launch</div>
+        <div class="sprint-day-date">Wednesday, June 10</div>
+
+        <div class="sprint-task">
+          <div class="sprint-task-status status-urgent">!</div>
+          <div class="sprint-task-text"><strong>Cross-post teaser video</strong> to @therowonguadalupe as the account’s first Reel. This seeds the account with content before the launch flood. Caption: brand voice only — no price, no spec list.<span class="sprint-time">Post by 9am Wednesday</span></div>
+        </div>
+        <div class="sprint-task">
+          <div class="sprint-task-status status-urgent">!</div>
+          <div class="sprint-task-text"><strong>Post 2 seed posts on project account</strong> — the exterior street rendering and one rooftop rendering. Short captions. Establishes a feed before Thursday’s full reveal.<span class="sprint-time">Post 9am + 6pm</span></div>
+        </div>
+        <div class="sprint-task">
+          <div class="sprint-task-status status-today">✓</div>
+          <div class="sprint-task-text"><strong>Personal page Story — "Tomorrow."</strong> Single word. Exterior rendering. Tag @therowonguadalupe. Nothing more. Let it do the work.</div>
+        </div>
+        <div class="sprint-task">
+          <div class="sprint-task-status status-today">✓</div>
+          <div class="sprint-task-text"><strong>Press release drafted and ready to send</strong> — Pittsburgh Magazine, Pittsburgh Business Times, Next Pittsburgh. Send Thursday 8am before MLS goes live.<span class="sprint-time">Target 3 outlets minimum</span></div>
+        </div>
+        <div class="sprint-task">
+          <div class="sprint-task-status status-today">✓</div>
+          <div class="sprint-task-text"><strong>Verify website lead capture is connected to FUB</strong> — every form submission should create a new contact in FollowUpBoss automatically.</div>
+        </div>
+        <div class="sprint-task">
+          <div class="sprint-task-status status-today">✓</div>
+          <div class="sprint-task-text"><strong>Prepare private preview invitation</strong> — a short, elegant email in brand voice ready to send to anyone who inquires Thursday. Include floor plan PDF attachment.</div>
+        </div>
+        <div class="sprint-task">
+          <div class="sprint-task-status status-today">✓</div>
+          <div class="sprint-task-text"><strong>Final content review</strong> — read every Thursday caption out loud. If any sentence sounds like a brochure or uses an exclamation point, rewrite it.</div>
+        </div>
+      </div>
+
+      <!-- THURSDAY -->
+      <div class="sprint-day launch-day">
+        <div class="sprint-day-label">Launch Day</div>
+        <div class="sprint-day-date">Thursday, June 11</div>
+
+        <div class="sprint-task">
+          <div class="sprint-task-status status-launch">★</div>
+          <div class="sprint-task-text"><strong>7:00 AM — Launch post goes live</strong> — best exterior rendering + primary tagline. Schedule this in advance so it fires even if you’re on the phone.<span class="sprint-time">Pillar 01 — Architecture</span></div>
+        </div>
+        <div class="sprint-task">
+          <div class="sprint-task-status status-launch">★</div>
+          <div class="sprint-task-text"><strong>8:00 AM — Press release sends</strong> — Pittsburgh Magazine, Pittsburgh Business Times, Next Pittsburgh, Post-Gazette. Email + follow-up DM on Instagram.<span class="sprint-time">Personalize each pitch</span></div>
+        </div>
+        <div class="sprint-task">
+          <div class="sprint-task-status status-launch">★</div>
+          <div class="sprint-task-text"><strong>9:00 AM — MLS listing goes active</strong> — coordinate timing with listing activation so digital launch and MLS launch are simultaneous.<span class="sprint-time">Sync with MLS activation</span></div>
+        </div>
+        <div class="sprint-task">
+          <div class="sprint-task-status status-launch">★</div>
+          <div class="sprint-task-text"><strong>9:00 AM — Paid ads activate</strong> — turn on the Meta campaign built Tuesday. Instagram + Facebook, exterior rendering creative, priority list CTA.<span class="sprint-time">$300/mo initial budget</span></div>
+        </div>
+        <div class="sprint-task">
+          <div class="sprint-task-status status-launch">★</div>
+          <div class="sprint-task-text"><strong>10:00 AM — Personal page full reveal post</strong> — your personal account goes big. Tag @therowonguadalupe. Your audience is the warmest lead source you have.<span class="sprint-time">Cross-post to Stories immediately</span></div>
+        </div>
+        <div class="sprint-task">
+          <div class="sprint-task-status status-launch">★</div>
+          <div class="sprint-task-text"><strong>12:00 PM — Story series: The Full Reveal</strong> — 5-slide Stories: exterior, rooftop, kitchen, master bath, CTA slide. End with “Link in bio — reserve your home.”</div>
+        </div>
+        <div class="sprint-task">
+          <div class="sprint-task-status status-launch">★</div>
+          <div class="sprint-task-text"><strong>6:00 PM — Second feed post</strong> — rooftop terrace. Evening is peak engagement. Caption lands the lifestyle, not the specs.<span class="sprint-time">Pillar 03 — The Rooftop</span></div>
+        </div>
+        <div class="sprint-task">
+          <div class="sprint-task-status status-launch">★</div>
+          <div class="sprint-task-text"><strong>All day — Respond to every DM within the hour</strong> — Thursday’s engagement window is the most valuable one you’ll have. Don’t let inquiries sit.<span class="sprint-time">Be available all day</span></div>
+        </div>
+      </div>
+
+    </div><!-- /sprint-grid -->
+
+    <div class="card" style="background:var(--limestone);border-color:var(--warm-gold);">
+      <div style="display:flex;gap:20px;align-items:flex-start;">
+        <div style="font-size:32px;flex-shrink:0;">&#9888;</div>
+        <div>
+          <div style="font-size:12px;font-weight:600;color:var(--charcoal);margin-bottom:6px;letter-spacing:0.05em;text-transform:uppercase;">What gets cut from the original plan</div>
+          <div style="font-size:13px;font-weight:300;color:var(--deep-taupe);line-height:1.7;">The gradual reveal sequence — one room per week — is now compressed into the first 10 days post-launch. The priority list build phase is happening in parallel with active market exposure, not before it. This means <strong style="color:var(--charcoal);">you’re generating leads and content simultaneously</strong> rather than warming an audience first. That’s fine — the renderings are strong enough to do both jobs at once. The tradeoff is that the first few weeks will be high-effort and you need to be highly responsive. The content calendar below reflects this compression.</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ─── SECTION 0b: LAUNCH DAY PLAYBOOK ──────────── -->
+  <div class="section" id="launch-day">
+    <div class="section-header">
+      <div class="section-eyebrow">00b — Launch Day Playbook</div>
+      <div class="section-title">Thursday, June 11.<br>Post by post.</div>
+      <div class="section-desc">The exact content for each post on launch day, written in brand voice and ready to copy. Adjust only if the walkthrough reveals something worth updating.</div>
+    </div>
+
+    <div class="grid-2" style="margin-bottom:24px;">
+      <div class="card">
+        <div style="font-size:9px;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:var(--brass);margin-bottom:16px;">Post 1 — 7:00 AM · Feed · Exterior</div>
+        <div style="font-size:9px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:var(--stone);margin-bottom:6px;">Image</div>
+        <div style="font-size:13px;font-weight:300;color:var(--deep-taupe);margin-bottom:14px;">514_W_Jefferson_Ext_Cam1_Street_V02.jpg — street-level facade. No text overlay.</div>
+        <div style="font-size:9px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:var(--stone);margin-bottom:6px;">Caption</div>
+        <div style="font-family:var(--font-display);font-size:14px;font-style:italic;font-weight:300;color:var(--charcoal);line-height:1.7;background:var(--limestone);padding:14px 16px;">“Guadalupe Place. A private street, at the end of which stand four homes built for permanence. The Row on Guadalupe. Pittsburgh’s most considered address. Now active.”<br><br>#TheRowOnGuadalupe #GuadalupePlace #MexicanWarStreets #PittsburghLuxury</div>
+      </div>
+      <div class="card">
+        <div style="font-size:9px;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:var(--brass);margin-bottom:16px;">Post 2 — 6:00 PM · Feed · Rooftop</div>
+        <div style="font-size:9px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:var(--stone);margin-bottom:6px;">Image</div>
+        <div style="font-size:13px;font-weight:300;color:var(--deep-taupe);margin-bottom:14px;">514_W_Jefferson_Ext_Cam5_TerraceMid_V1.jpg — rooftop terrace with skyline. No overlay.</div>
+        <div style="font-size:9px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:var(--stone);margin-bottom:6px;">Caption</div>
+        <div style="font-family:var(--font-display);font-size:14px;font-style:italic;font-weight:300;color:var(--charcoal);line-height:1.7;background:var(--limestone);padding:14px 16px;">“The skyline is not the view. It is the context. A private sauna. A cold plunge. Your own rooftop, above the rest of the city. Four homes. Private previews now open. Link in bio.”<br><br>#TheRowOnGuadalupe #RooftopLiving #PittsburghSkyline #QuietLuxury</div>
+      </div>
+    </div>
+
+    <div class="card" style="margin-bottom:24px;">
+      <div style="font-size:9px;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:var(--brass);margin-bottom:16px;">Story Series — 12:00 PM · 5 Slides</div>
+      <div style="display:grid;grid-template-columns:repeat(5,1fr);gap:12px;">
+        <div style="background:var(--limestone);padding:14px;text-align:center;">
+          <div style="font-size:9px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--brass);margin-bottom:8px;">Slide 1</div>
+          <div style="font-size:12px;font-weight:300;color:var(--deep-taupe);line-height:1.5;">Aerial rendering<br><em>"Four homes. One address."</em></div>
+        </div>
+        <div style="background:var(--limestone);padding:14px;text-align:center;">
+          <div style="font-size:9px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--brass);margin-bottom:8px;">Slide 2</div>
+          <div style="font-size:12px;font-weight:300;color:var(--deep-taupe);line-height:1.5;">Street facade<br><em>"Guadalupe Place, Pittsburgh."</em></div>
+        </div>
+        <div style="background:var(--limestone);padding:14px;text-align:center;">
+          <div style="font-size:9px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--brass);margin-bottom:8px;">Slide 3</div>
+          <div style="font-size:12px;font-weight:300;color:var(--deep-taupe);line-height:1.5;">Kitchen / living<br><em>"Nothing incidental."</em></div>
+        </div>
+        <div style="background:var(--limestone);padding:14px;text-align:center;">
+          <div style="font-size:9px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--brass);margin-bottom:8px;">Slide 4</div>
+          <div style="font-size:12px;font-weight:300;color:var(--deep-taupe);line-height:1.5;">Rooftop terrace<br><em>"Your own skyline."</em></div>
+        </div>
+        <div style="background:var(--charcoal);padding:14px;text-align:center;">
+          <div style="font-size:9px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--warm-gold);margin-bottom:8px;">Slide 5</div>
+          <div style="font-size:12px;font-weight:300;color:rgba(255,255,255,0.7);line-height:1.5;">Logo on limestone<br><em style="color:var(--warm-gold);">“Reserve your home. Link below.”</em></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div style="font-size:9px;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:var(--brass);margin-bottom:14px;">DM Response Template — for Thursday inquiries</div>
+      <div style="font-family:var(--font-display);font-size:15px;font-style:italic;font-weight:300;color:var(--charcoal);line-height:1.8;background:var(--limestone);padding:18px 20px;">“Thank you for reaching out. The Row on Guadalupe is a collection of four distinguished townhomes on a private street in the Mexican War Streets — each with a rooftop terrace, private sauna, and views of the Pittsburgh skyline. I’d be glad to share the floor plans and arrange a private preview. May I ask what you’re looking for in your next home?”</div>
+      <div style="font-size:11px;font-weight:300;color:var(--stone);margin-top:10px;">Note: This opens a conversation, not a pitch. Let them answer before you send specs or prices.</div>
+    </div>
+
+  </div>
+
+  <!-- ─── SECTION 1: PROJECT OVERVIEW ──────────────── -->
+  <div class="section" id="overview">
+    <div class="section-header">
+      <div class="section-eyebrow">01 — Project Overview</div>
+      <div class="section-title">Four townhomes.<br>One considered address.</div>
+      <div class="section-desc">A collection of distinguished four-story townhomes set against the Pittsburgh skyline, on a private street in the Mexican War Streets neighborhood.</div>
+    </div>
+
+    <div class="stat-row">
+      <div class="stat-item">
+        <div class="stat-num">4</div>
+        <div class="stat-label">Townhomes<br>Total</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">2</div>
+        <div class="stat-label">Unit<br>Models</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">3+</div>
+        <div class="stat-label">Bed / Bath<br>Each Unit</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">4</div>
+        <div class="stat-label">Stories<br>Per Home</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">100%</div>
+        <div class="stat-label">Presale<br>Target</div>
+      </div>
+    </div>
+
+    <div class="grid-2">
+      <div class="unit-card">
+        <div class="unit-card-header">
+          <div class="unit-type">Exterior Units · 2 Available</div>
+          <div class="unit-name">The Exterior</div>
+        </div>
+        <div class="unit-body">
+          <div class="unit-feature">3 Bedrooms / 3 Full Bathrooms / 1 Half Bath</div>
+          <div class="unit-feature">Rooftop Terrace with Sauna &amp; Cold Plunge</div>
+          <div class="unit-feature">Additional Office or Gym Space</div>
+          <div class="unit-feature">1-Car Integral Garage</div>
+        </div>
+      </div>
+      <div class="unit-card">
+        <div class="unit-card-header">
+          <div class="unit-type">Interior Units · 2 Available</div>
+          <div class="unit-name">The Interior</div>
+        </div>
+        <div class="unit-body">
+          <div class="unit-feature">3 Bedrooms / 3 Full Bathrooms / 1 Half Bath</div>
+          <div class="unit-feature">Rooftop Terrace with Sauna &amp; Cold Plunge</div>
+          <div class="unit-feature">Additional Office or Gym Space</div>
+          <div class="unit-feature">Elevator (exclusive to interior model)</div>
+          <div class="unit-feature">2-Car Integral Garage</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ─── SECTION 2: BRAND QUICK REFERENCE ─────────── -->
+  <div class="section" id="brand">
+    <div class="section-header">
+      <div class="section-eyebrow">02 — Brand Quick Reference</div>
+      <div class="section-title">The brand, distilled.</div>
+      <div class="section-desc">Every piece of content, every caption, every ad — filtered through these principles. The brand guidelines do the heavy lifting.</div>
+    </div>
+
+    <div class="grid-3" style="margin-bottom:24px;">
+      <div class="card-dark">
+        <div class="card-title" style="color:var(--warm-gold);margin-bottom:14px;">Three Brand Principles</div>
+        <div style="margin-bottom:14px;">
+          <div style="font-size:9px;letter-spacing:0.18em;text-transform:uppercase;color:var(--warm-gold);margin-bottom:4px;">Rooted in Place</div>
+          <div style="font-size:12px;font-weight:300;color:rgba(255,255,255,0.6);line-height:1.6;">Honoring Pittsburgh's materiality — stone, steel, warmth. A continuation of the neighborhood's enduring character.</div>
+        </div>
+        <div style="margin-bottom:14px;">
+          <div style="font-size:9px;letter-spacing:0.18em;text-transform:uppercase;color:var(--warm-gold);margin-bottom:4px;">Quiet Luxury</div>
+          <div style="font-size:12px;font-weight:300;color:rgba(255,255,255,0.6);line-height:1.6;">Refinement requires no announcement. Every element earns its place through restraint.</div>
+        </div>
+        <div>
+          <div style="font-size:9px;letter-spacing:0.18em;text-transform:uppercase;color:var(--warm-gold);margin-bottom:4px;">The Long View</div>
+          <div style="font-size:12px;font-weight:300;color:rgba(255,255,255,0.6);line-height:1.6;">A home made with permanence in mind. Communications reflect that gravitas.</div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-title">Color Palette</div>
+        <div style="display:flex;flex-direction:column;gap:8px;margin-top:8px;">
+          <div style="display:flex;align-items:center;gap:10px;">
+            <div style="width:28px;height:28px;background:#2C2925;border-radius:2px;flex-shrink:0;"></div>
+            <div><div style="font-size:12px;font-weight:500;">Charcoal · #2C2925</div><div style="font-size:10px;color:var(--stone);">Primary · All text</div></div>
+          </div>
+          <div style="display:flex;align-items:center;gap:10px;">
+            <div style="width:28px;height:28px;background:#B09060;border-radius:2px;flex-shrink:0;"></div>
+            <div><div style="font-size:12px;font-weight:500;">Brass Gold · #B09060</div><div style="font-size:10px;color:var(--stone);">Accent only — rules, dividers</div></div>
+          </div>
+          <div style="display:flex;align-items:center;gap:10px;">
+            <div style="width:28px;height:28px;background:#D4B896;border-radius:2px;flex-shrink:0;"></div>
+            <div><div style="font-size:12px;font-weight:500;">Warm Gold · #D4B896</div><div style="font-size:10px;color:var(--stone);">Accent light</div></div>
+          </div>
+          <div style="display:flex;align-items:center;gap:10px;">
+            <div style="width:28px;height:28px;background:#F5F0E8;border-radius:2px;border:1px solid #E0D8CC;flex-shrink:0;"></div>
+            <div><div style="font-size:12px;font-weight:500;">Limestone · #F5F0E8</div><div style="font-size:10px;color:var(--stone);">Backgrounds</div></div>
+          </div>
+          <div style="display:flex;align-items:center;gap:10px;">
+            <div style="width:28px;height:28px;background:#3D4448;border-radius:2px;flex-shrink:0;"></div>
+            <div><div style="font-size:12px;font-weight:500;">Slate · #3D4448</div><div style="font-size:10px;color:var(--stone);">Alt dark / digital</div></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-title">Typography</div>
+        <div style="margin-bottom:20px;">
+          <div style="font-family:var(--font-display);font-size:32px;font-weight:300;color:var(--charcoal);line-height:1.1;margin-bottom:4px;">The Row</div>
+          <div style="font-size:9px;font-weight:500;letter-spacing:0.2em;text-transform:uppercase;color:var(--stone);">Cormorant Garamond 300 · Display</div>
+        </div>
+        <div style="margin-bottom:20px;">
+          <div style="font-family:var(--font-display);font-size:32px;font-weight:300;font-style:italic;color:var(--brass);line-height:1.1;margin-bottom:4px;"><em>The Row</em></div>
+          <div style="font-size:9px;font-weight:500;letter-spacing:0.2em;text-transform:uppercase;color:var(--stone);">Cormorant Garamond 300i · Editorial</div>
+        </div>
+        <div>
+          <div style="font-family:var(--font-body);font-size:14px;font-weight:300;color:var(--deep-taupe);line-height:1.8;margin-bottom:4px;">Jost Light — body & captions.</div>
+          <div style="font-size:9px;font-weight:500;letter-spacing:0.2em;text-transform:uppercase;color:var(--stone);">Jost 300 · All Body & UI Copy</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Taglines -->
+    <div class="tagline-showcase">
+      <div class="tagline-main">"Where tradition finds its finest expression."</div>
+      <div class="tagline-use">Primary tagline · All uses</div>
+    </div>
+    <div class="tagline-grid">
+      <div class="tagline-item">
+        <div class="tagline-line">"The Row. Pittsburgh's most considered address."</div>
+        <div class="tagline-context">Digital — concise / social bios</div>
+      </div>
+      <div class="tagline-item">
+        <div class="tagline-line">"The skyline is not the view. It is the context."</div>
+        <div class="tagline-context">Social — aerial & rooftop posts</div>
+      </div>
+      <div class="tagline-item">
+        <div class="tagline-line">"A home of consequence, on a street that lasts."</div>
+        <div class="tagline-context">Print / long-form marketing</div>
+      </div>
+      <div class="tagline-item">
+        <div class="tagline-line">"Not all addresses are equal."</div>
+        <div class="tagline-context">Teaser / pre-launch phase</div>
+      </div>
+    </div>
+
+    <!-- Voice Do/Don't -->
+    <div style="margin-top:24px;">
+      <div class="card-title" style="margin-bottom:14px;">Brand Voice · Do's &amp; Don'ts</div>
+      <div class="voice-grid">
+        <div class="voice-do">
+          <div class="voice-label">✓ Sound Like This</div>
+          <div class="voice-ex"><em>"The materials speak for themselves — selected for how they age, not how they photograph."</em></div>
+          <div class="voice-ex"><em>"Steps from the cultural institutions that define the city. Minutes from everything; distanced from the ordinary."</em></div>
+          <div class="voice-ex"><em>"A rooftop sauna. A kitchen designed for someone who actually cooks. Space where nothing is incidental."</em></div>
+          <div class="voice-ex"><em>"This is not an investment in square footage. It is an investment in how you intend to live."</em></div>
+        </div>
+        <div class="voice-dont">
+          <div class="voice-label">✗ Never Sound Like This</div>
+          <div class="voice-ex">"An unprecedented luxury experience unlike anything Pittsburgh has ever seen!!"</div>
+          <div class="voice-ex">"Where modern meets traditional in a perfect blend of timeless elegance and contemporary charm."</div>
+          <div class="voice-ex">"3 bed, 3 bath, rooftop, hot tub, sauna, chef's kitchen. Won't last long!!"</div>
+          <div class="voice-ex">"Only 2 units remaining! Act now before it's too late."</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ─── SECTION 3: INSTAGRAM ACCOUNT ─────────────── -->
+  <div class="section" id="instagram">
+    <div class="section-header">
+      <div class="section-eyebrow">03 — Instagram Account Setup</div>
+      <div class="section-title">The project account,<br>built for the presale.</div>
+      <div class="section-desc">A dedicated account — separate from your personal page — with one job: build the waitlist and convert followers into reservation holders.</div>
+    </div>
+
+    <div class="ig-setup-grid">
+      <div>
+        <div class="ig-profile-mock">
+          <div class="ig-avatar"><div class="ig-avatar-text">R</div></div>
+          <div class="ig-handle">@therowonguadalupe</div>
+          <div style="font-size:10px;color:var(--stone);margin-bottom:8px;">The Row on Guadalupe</div>
+          <div class="ig-bio">Four distinguished townhomes.<br>Pittsburgh's most considered address.<br><br>Rooftop terrace. Sauna. Private garage.<br>Mexican War Streets, Pittsburgh.<br><br>↓ Reserve your home.</div>
+          <div class="ig-link">therowonguadalupe.com</div>
+          <div class="ig-stats">
+            <div class="ig-stat"><div class="ig-stat-num">—</div><div class="ig-stat-lbl">Posts</div></div>
+            <div class="ig-stat"><div class="ig-stat-num">—</div><div class="ig-stat-lbl">Followers</div></div>
+            <div class="ig-stat"><div class="ig-stat-num">—</div><div class="ig-stat-lbl">Following</div></div>
+          </div>
+        </div>
+
+        <div style="margin-top:16px;">
+          <div class="card-title">Story Highlight Covers</div>
+          <div class="highlights-row">
+            <div class="highlight-item">
+              <div class="highlight-circle">🏛️</div>
+              <div class="highlight-name">The Building</div>
+            </div>
+            <div class="highlight-item">
+              <div class="highlight-circle">🌅</div>
+              <div class="highlight-name">The Rooftop</div>
+            </div>
+            <div class="highlight-item">
+              <div class="highlight-circle">🏠</div>
+              <div class="highlight-name">Interiors</div>
+            </div>
+            <div class="highlight-item">
+              <div class="highlight-circle">📐</div>
+              <div class="highlight-name">Floor Plans</div>
+            </div>
+            <div class="highlight-item">
+              <div class="highlight-circle">📍</div>
+              <div class="highlight-name">The Block</div>
+            </div>
+            <div class="highlight-item">
+              <div class="highlight-circle">📖</div>
+              <div class="highlight-name">The Story</div>
+            </div>
+            <div class="highlight-item">
+              <div class="highlight-circle">🔑</div>
+              <div class="highlight-name">Reserve</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div style="display:flex;flex-direction:column;gap:16px;">
+        <div class="card">
+          <div class="card-title">Account Configuration</div>
+          <table style="width:100%;border-collapse:collapse;font-size:13px;">
+            <tr style="border-bottom:1px solid var(--limestone);">
+              <td style="padding:10px 0;color:var(--stone);font-size:11px;text-transform:uppercase;letter-spacing:0.08em;width:40%;">Handle</td>
+              <td style="padding:10px 0;font-weight:500;">@therowonguadalupe</td>
+            </tr>
+            <tr style="border-bottom:1px solid var(--limestone);">
+              <td style="padding:10px 0;color:var(--stone);font-size:11px;text-transform:uppercase;letter-spacing:0.08em;">Account Type</td>
+              <td style="padding:10px 0;font-weight:300;">Professional / Creator · Real Estate</td>
+            </tr>
+            <tr style="border-bottom:1px solid var(--limestone);">
+              <td style="padding:10px 0;color:var(--stone);font-size:11px;text-transform:uppercase;letter-spacing:0.08em;">Contact Button</td>
+              <td style="padding:10px 0;font-weight:300;">Email → brand@therowonguadalupe.com</td>
+            </tr>
+            <tr style="border-bottom:1px solid var(--limestone);">
+              <td style="padding:10px 0;color:var(--stone);font-size:11px;text-transform:uppercase;letter-spacing:0.08em;">Link in Bio</td>
+              <td style="padding:10px 0;font-weight:300;">Linktree or direct → /reserve page</td>
+            </tr>
+            <tr>
+              <td style="padding:10px 0;color:var(--stone);font-size:11px;text-transform:uppercase;letter-spacing:0.08em;">Profile Photo</td>
+              <td style="padding:10px 0;font-weight:300;">Logo mark on limestone · no text version</td>
+            </tr>
+          </table>
+        </div>
+
+        <div class="card">
+          <div class="card-title">Hashtag Strategy</div>
+          <div style="font-size:11px;color:var(--stone);margin-bottom:8px;font-weight:300;">Own these. Use consistently on every post.</div>
+          <div class="hashtag-grid">
+            <span class="hashtag primary">#TheRowOnGuadalupe</span>
+            <span class="hashtag primary">#GuadalupePlace</span>
+            <span class="hashtag">#PittsburghRealEstate</span>
+            <span class="hashtag">#MexicanWarStreets</span>
+            <span class="hashtag">#PittsburghLuxury</span>
+            <span class="hashtag">#PittsburghNewConstruction</span>
+            <span class="hashtag">#PittsburghHomes</span>
+            <span class="hashtag">#NorthSidePittsburgh</span>
+            <span class="hashtag">#LuxuryTownhome</span>
+            <span class="hashtag">#UrbanLiving</span>
+            <span class="hashtag">#QuietLuxury</span>
+            <span class="hashtag">#RooftopLiving</span>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-title">Posting Cadence</div>
+          <div style="display:flex;flex-direction:column;gap:8px;margin-top:4px;">
+            <div style="display:flex;justify-content:space-between;align-items:center;padding:8px 0;border-bottom:1px solid var(--limestone);">
+              <div style="font-size:13px;font-weight:400;">Feed Posts</div>
+              <div style="font-size:13px;font-weight:500;color:var(--charcoal);">4–5× per week</div>
+            </div>
+            <div style="display:flex;justify-content:space-between;align-items:center;padding:8px 0;border-bottom:1px solid var(--limestone);">
+              <div style="font-size:13px;font-weight:400;">Reels</div>
+              <div style="font-size:13px;font-weight:500;color:var(--charcoal);">2× per week</div>
+            </div>
+            <div style="display:flex;justify-content:space-between;align-items:center;padding:8px 0;border-bottom:1px solid var(--limestone);">
+              <div style="font-size:13px;font-weight:400;">Stories</div>
+              <div style="font-size:13px;font-weight:500;color:var(--charcoal);">Daily</div>
+            </div>
+            <div style="display:flex;justify-content:space-between;align-items:center;padding:8px 0;">
+              <div style="font-size:13px;font-weight:400;">Best Post Times</div>
+              <div style="font-size:13px;font-weight:500;color:var(--charcoal);">Tue–Thu 7am, 12pm, 7pm</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ─── SECTION 4: CONTENT PILLARS ───────────────── -->
+  <div class="section" id="content">
+    <div class="section-header">
+      <div class="section-eyebrow">04 — Content Pillars</div>
+      <div class="section-title">Six pillars.<br>One consistent story.</div>
+      <div class="section-desc">Every post belongs to one of six pillars. This keeps the feed purposeful, varied, and on-brand — and makes content planning systematic.</div>
+    </div>
+
+    <div class="grid-3" style="margin-bottom:40px;">
+
+      <div class="pillar-card">
+        <div class="pillar-num">01</div>
+        <div class="pillar-name">Architecture & Exterior</div>
+        <div class="pillar-pct">20% of feed</div>
+        <div class="pillar-desc">The building is the anchor. The facade, street presence, aerial views, and material details communicate permanence before a single interior is shown.</div>
+        <ul class="pillar-examples">
+          <li>Street-level facade at dusk</li>
+          <li>Aerial overview of the site</li>
+          <li>Rear elevation + garage detail</li>
+          <li>Construction progress shots</li>
+          <li>Side-by-side: neighborhood context vs. The Row</li>
+        </ul>
+      </div>
+
+      <div class="pillar-card">
+        <div class="pillar-num">02</div>
+        <div class="pillar-name">Interior Spaces</div>
+        <div class="pillar-pct">25% of feed</div>
+        <div class="pillar-desc">The kitchen, living room, master suite, and baths — each a standalone feature reveal. One room. One image. One sentence of copy.</div>
+        <ul class="pillar-examples">
+          <li>Kitchen / living / dining reveal</li>
+          <li>Master bath: freestanding tub + gold fixtures</li>
+          <li>Master suite with marble fireplace</li>
+          <li>Bedroom + floor-to-ceiling windows</li>
+          <li>Option 1 vs Option 2 design comparison</li>
+        </ul>
+      </div>
+
+      <div class="pillar-card">
+        <div class="pillar-num">03</div>
+        <div class="pillar-name">The Rooftop Experience</div>
+        <div class="pillar-pct">20% of feed</div>
+        <div class="pillar-desc">The sauna, cold plunge, terrace, and skyline view are the most emotionally compelling content in the project. This pillar sells the lifestyle, not the specs.</div>
+        <ul class="pillar-examples">
+          <li>Sauna with cedar interior + skyline view</li>
+          <li>Cold plunge at golden hour</li>
+          <li>Rooftop dining setup with Pittsburgh backdrop</li>
+          <li>Night terrace — city lights</li>
+          <li>Morning: coffee on the terrace</li>
+        </ul>
+      </div>
+
+      <div class="pillar-card">
+        <div class="pillar-num">04</div>
+        <div class="pillar-name">Pittsburgh as Context</div>
+        <div class="pillar-pct">15% of feed</div>
+        <div class="pillar-desc">The skyline is not decoration — it's the context. Posts that anchor the project to the city, its culture, and its story give non-Pittsburgh buyers a reason to care.</div>
+        <ul class="pillar-examples">
+          <li>Skyline from the rooftop terrace</li>
+          <li>"The skyline is not the view. It is the context."</li>
+          <li>Mexican War Streets neighborhood walk</li>
+          <li>Walking distance: restaurants, institutions, culture</li>
+          <li>Historic block + modern contrast</li>
+        </ul>
+      </div>
+
+      <div class="pillar-card">
+        <div class="pillar-num">05</div>
+        <div class="pillar-name">The Details</div>
+        <div class="pillar-pct">10% of feed</div>
+        <div class="pillar-desc">Close-cropped material shots reward the eye. Brass hardware, marble grain, oak millwork — the images that stop the scroll and signal that nothing was incidental.</div>
+        <ul class="pillar-examples">
+          <li>Brass floor-mounted faucet close-up</li>
+          <li>Marble fireplace surround detail</li>
+          <li>White oak cabinetry + brass pulls</li>
+          <li>Herringbone marble floor with brass inlay</li>
+          <li>Steel window frames against limestone</li>
+        </ul>
+      </div>
+
+      <div class="pillar-card">
+        <div class="pillar-num">06</div>
+        <div class="pillar-name">The Story</div>
+        <div class="pillar-pct">10% of feed</div>
+        <div class="pillar-desc">The development journey, the vision, and the people behind the project. This pillar builds trust and turns followers into invested stakeholders before the presale opens.</div>
+        <ul class="pillar-examples">
+          <li>Site before + rendering after</li>
+          <li>Why Guadalupe Place (the street's story)</li>
+          <li>The decision to include a sauna on every unit</li>
+          <li>Design process: choosing the materials</li>
+          <li>Meet the developer / agent</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <!-- Caption examples -->
+    <div class="card-dark" style="margin-bottom:24px;">
+      <div class="card-title">Sample Captions · On-Brand Voice</div>
+    </div>
+    <div class="caption-example">
+      <div class="caption-tag">Pillar 03 · Rooftop · Aerial Post</div>
+      <div class="caption-text">"The skyline is not the view. It is the context. Four townhomes on a private street — elevated, in every sense. The Row on Guadalupe. #TheRowOnGuadalupe"</div>
+    </div>
+    <div class="caption-example">
+      <div class="caption-tag">Pillar 05 · Detail · Brass Hardware</div>
+      <div class="caption-text">"The materials speak for themselves — selected for how they age, not how they photograph. Brass floor-mounted fixtures. Marble. White oak. Nothing incidental. #TheRowOnGuadalupe"</div>
+    </div>
+    <div class="caption-example">
+      <div class="caption-tag">Pillar 01 · Architecture · Street View</div>
+      <div class="caption-text">"Guadalupe Place. A private address. Four stories of limestone, steel, and intention, set against a neighborhood that has stood for more than a century. Where tradition finds its finest expression. #MexicanWarStreets #TheRowOnGuadalupe"</div>
+    </div>
+    <div class="caption-example">
+      <div class="caption-tag">Pillar 03 · Rooftop Sauna CTA</div>
+      <div class="caption-text">"A private sauna on your own rooftop. A cold plunge. The Pittsburgh skyline as your backdrop. This is not an amenity — it is how you intend to live. Private previews now open. Link in bio. #TheRowOnGuadalupe"</div>
+    </div>
+    <div class="caption-example">
+      <div class="caption-tag">Pillar 06 · The Story</div>
+      <div class="caption-text">"Guadalupe Place is a private street. It has always been. Four homes at the end of it will always belong to four families who understood that not all addresses are equal. Reservations are open. #TheRowOnGuadalupe #GuadalupePlace"</div>
+    </div>
+
+  </div>
+
+  <!-- ─── SECTION 5: CONTENT CALENDAR (REVISED — JUNE 11 LAUNCH) -->
+  <div class="section" id="calendar">
+    <div class="section-header">
+      <div class="section-eyebrow">05 — Content Calendar · Revised for June 11 Launch</div>
+      <div class="section-title">Compressed timeline.<br>Same goal.</div>
+      <div class="section-desc">The gradual pre-launch build is gone. Content and active market exposure now run simultaneously. The calendar below reflects real dates, starting Thursday.</div>
+    </div>
+
+    <div class="phase-row">
+      <div class="phase-label">
+        <div class="phase-week">June 11–15</div>
+        <div class="phase-name">Launch Week</div>
+      </div>
+      <div class="phase-body">
+        <div class="phase-goal">Goal: Maximum reach on day one. Establish the account across all 6 pillars. Generate first inquiries and private preview requests.</div>
+        <ul class="task-list">
+          <li><strong>Thu:</strong> Post 1 (7am — exterior facade) + Post 2 (6pm — rooftop terrace). Story series at noon. Paid ads live.</li>
+          <li><strong>Fri:</strong> Interior reveal #1 — kitchen / living / dining. Caption on the experience, not the specs.</li>
+          <li><strong>Sat:</strong> Neighborhood post — Mexican War Streets context, walkability, cultural access.</li>
+          <li><strong>Sun:</strong> The Details #1 — brass floor-mounted faucet close-up. One sentence.</li>
+          <li>Stories daily with “Private previews now open” CTA every other slide.</li>
+          <li>Respond to every DM within the hour. The first 72 hours are the highest-value engagement window you have.</li>
+        </ul>
+        <div class="post-examples">
+          <div class="post-chip"><span class="post-chip-type">Thu 7am</span> Exterior facade · “Guadalupe Place. Now active.”</div>
+          <div class="post-chip"><span class="post-chip-type">Thu 6pm</span> Rooftop terrace · “The skyline is not the view. It is the context.”</div>
+          <div class="post-chip"><span class="post-chip-type">Fri</span> Kitchen / living · “A kitchen designed for someone who actually cooks.”</div>
+          <div class="post-chip"><span class="post-chip-type">Sat</span> Mexican War Streets neighborhood context + walkability</div>
+          <div class="post-chip"><span class="post-chip-type">Sun</span> Brass hardware detail · “Selected for how they age.”</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="phase-row">
+      <div class="phase-label">
+        <div class="phase-week">June 16–22</div>
+        <div class="phase-name">Interior Reveal</div>
+      </div>
+      <div class="phase-body">
+        <div class="phase-goal">Goal: Complete interior reveal series. First private previews scheduled. Floor plan package ready to deliver privately to warm inquiries.</div>
+        <ul class="task-list">
+          <li>Master suite reveal — marble fireplace, chandelier, floor-to-ceiling windows</li>
+          <li>Master bath reveal — freestanding tub, gold fixtures, white oak millwork</li>
+          <li>Aerial rendering reprise with skyline tagline — best-performing exterior revisited</li>
+          <li>Option 1 vs Option 2 carousel — same room, two distinct palettes. First major engagement driver.</li>
+          <li>Reel: full rendering walkthrough — all floors, score only, no narration</li>
+          <li>Stories: “Sauna or cold plunge?” poll — use results to inform what to post next</li>
+          <li>DM every new engaged follower with a private preview invitation</li>
+        </ul>
+        <div class="post-examples">
+          <div class="post-chip"><span class="post-chip-type">Post</span> Master suite · “A second marble fireplace. Because the first one is in the living room.”</div>
+          <div class="post-chip"><span class="post-chip-type">Post</span> Master bath · “A freestanding tub. Gold on every fixture. Nothing negotiated down.”</div>
+          <div class="post-chip"><span class="post-chip-type">Carousel</span> Option 1 vs Option 2 · “Two homes. Same address. Different palettes.”</div>
+          <div class="post-chip"><span class="post-chip-type">Reel</span> Full walkthrough · all renderings sequenced, music only</div>
+          <div class="post-chip"><span class="post-chip-type">Story Poll</span> “First thing in the morning: sauna or cold plunge?”</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="phase-row">
+      <div class="phase-label">
+        <div class="phase-week">June 23–July 5</div>
+        <div class="phase-name">First Reservations</div>
+      </div>
+      <div class="phase-body">
+        <div class="phase-goal">Goal: First 1–2 reservation deposits. Floor plans revealed publicly. Preferred lender introduced. Paid budget increasing.</div>
+        <ul class="task-list">
+          <li>Floor plan reveal — Interior unit: elevator, 2-car garage, rooftop. “The home with the elevator.”</li>
+          <li>Floor plan reveal — Exterior unit: rooftop, 1-car garage. “The home with the view.”</li>
+          <li>Reel: two-model side-by-side — calm, no hard sell</li>
+          <li>Preferred lender intro — Q&A format, new construction financing made approachable</li>
+          <li>Announce first reservation in brand voice: “One home has found its owner. Three remain.”</li>
+          <li>Increase paid budget to $500/mo. Add retargeting pixel audience from website visitors.</li>
+          <li>Follow up with Pittsburgh press on the Thursday pitch</li>
+        </ul>
+        <div class="post-examples">
+          <div class="post-chip"><span class="post-chip-type">Post</span> Floor plan — Interior · “Four stories. An elevator. Two cars below. Everything above.”</div>
+          <div class="post-chip"><span class="post-chip-type">Post</span> Floor plan — Exterior · “Three bedrooms. A rooftop. And a view that cannot be appraised.”</div>
+          <div class="post-chip"><span class="post-chip-type">Post</span> Preferred lender · “New construction financing, without the complexity.”</div>
+          <div class="post-chip"><span class="post-chip-type">Milestone</span> “One home has found its owner. Three remain.”</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="phase-row">
+      <div class="phase-label">
+        <div class="phase-week">July 6+</div>
+        <div class="phase-name">Presale Close</div>
+      </div>
+      <div class="phase-body">
+        <div class="phase-goal">Goal: All 4 units reserved. Use real scarcity milestones, never urgency tactics. Press hard on the back half with increased spend and PR.</div>
+        <ul class="task-list">
+          <li>Availability Story updates: “3 of 4 → 2 of 4 → 1 remaining” as each reservation closes</li>
+          <li>Continue all 6 content pillars — never let the feed go quiet</li>
+          <li>Detail series continues — gym/office space, bedroom, laundry, rear elevation</li>
+          <li>The neighborhood deep-dive for diaspora buyers — “why Pittsburgh, why now, why this street”</li>
+          <li>Paid budget to $1,000/mo once 2+ units reserved — press hard to close the back half</li>
+          <li>Any editorial coverage amplified on social immediately upon publication</li>
+        </ul>
+        <div class="post-examples">
+          <div class="post-chip"><span class="post-chip-type">Story</span> “2 of 4 homes remain. Private previews: link in bio.”</div>
+          <div class="post-chip"><span class="post-chip-type">Post</span> Rooftop at night · “The city from above. Yours.”</div>
+          <div class="post-chip"><span class="post-chip-type">Post</span> Gym/office · “A room with one job. You decide what it is.”</div>
+          <div class="post-chip"><span class="post-chip-type">Milestone</span> “Three homes have found their owners. One remains.”</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+    <!-- ─── SECTION 6: WEBSITE ────────────────────────── -->
+  <div class="section" id="website">
+    <div class="section-header">
+      <div class="section-eyebrow">06 — Website Strategy</div>
+      <div class="section-title">therowonguadalupe.com</div>
+      <div class="section-desc">One job: capture leads and convert them to reservation inquiries. Clean, brand-faithful, mobile-first. No clutter, no feature lists, no urgency tricks.</div>
+    </div>
+
+    <div class="sitemap" style="margin-bottom:24px;">
+      <div class="sitemap-row header-row">
+        <div class="sm-page">Page</div>
+        <div class="sm-desc">Content & Purpose</div>
+        <div class="sm-cta">Primary CTA</div>
+      </div>
+      <div class="sitemap-row">
+        <div class="sm-page">Home</div>
+        <div class="sm-desc">Hero: aerial rendering + primary tagline. One-line project description. Immediate "Join the Priority List" CTA. Scroll reveals 3 summary sections: The Building / The Life / The Address.</div>
+        <div class="sm-cta">Join Priority List</div>
+      </div>
+      <div class="sitemap-row">
+        <div class="sm-page">The Homes</div>
+        <div class="sm-desc">Side-by-side unit comparison. Both models with floor plans, features, and key differentiators (elevator, garage count). Rendering gallery per unit.</div>
+        <div class="sm-cta">Request Floor Plans</div>
+      </div>
+      <div class="sitemap-row">
+        <div class="sm-page">The Building</div>
+        <div class="sm-desc">Architecture story. Exterior rendering gallery. Design narrative in brand voice — no bullet lists. The private street. The materials. The decision-making.</div>
+        <div class="sm-cta">Schedule a Preview</div>
+      </div>
+      <div class="sitemap-row">
+        <div class="sm-page">The Life</div>
+        <div class="sm-desc">Interior gallery + rooftop experience. Lifestyle copy. Sauna, cold plunge, kitchen, master suite — each with a single image and a single sentence.</div>
+        <div class="sm-cta">Reserve Your Home</div>
+      </div>
+      <div class="sitemap-row">
+        <div class="sm-page">The Neighborhood</div>
+        <div class="sm-desc">Mexican War Streets — history, walkability, cultural institutions, restaurants, proximity to downtown. Map with walking distances. The context that justifies the address.</div>
+        <div class="sm-cta">See Location</div>
+      </div>
+      <div class="sitemap-row">
+        <div class="sm-page">Reserve</div>
+        <div class="sm-desc">Lead capture form: Name, Email, Phone, Unit Interest (Interior / Exterior / Both), Timeline. Connects to preferred lender pre-approval pathway. Reservation deposit info.</div>
+        <div class="sm-cta">Submit Inquiry</div>
+      </div>
+    </div>
+
+    <div class="grid-2">
+      <div class="card">
+        <div class="card-title">Lead Capture System</div>
+        <ul class="task-list" style="margin-top:8px;">
+          <li>"Join Priority List" popup — fires after 15 seconds or on exit intent</li>
+          <li>Form fields: Name · Email · Phone · Unit preference · Timeline</li>
+          <li>Automated confirmation email in brand voice on submit</li>
+          <li>3-email nurture drip: intro / floor plan delivery / private preview invite</li>
+          <li>CRM integration: all leads feed into FollowUpBoss as new contacts</li>
+          <li>Conversion event: "Request Private Preview" → immediate personal follow-up call</li>
+        </ul>
+      </div>
+      <div class="card">
+        <div class="card-title">Reservation Pathway</div>
+        <ul class="task-list" style="margin-top:8px;">
+          <li>Inquiry → personal follow-up within 24 hours</li>
+          <li>Private preview (virtual or in-person at site)</li>
+          <li>Floor plan + specification package delivered via email</li>
+          <li>Introduction to preferred lender for pre-qualification</li>
+          <li>Reservation agreement + refundable deposit to hold unit</li>
+          <li>PSA execution once financing is confirmed</li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ─── SECTION 7: PRESALE STRATEGY ──────────────── -->
+  <div class="section" id="presale">
+    <div class="section-header">
+      <div class="section-eyebrow">07 — Presale Strategy</div>
+      <div class="section-title">From follower<br>to reservation holder.</div>
+      <div class="section-desc">The funnel is five stages. Each stage has a distinct action, a distinct message, and a distinct definition of success.</div>
+    </div>
+
+    <div class="card" style="margin-bottom:24px;">
+      <div class="funnel-step">
+        <div class="funnel-num">01</div>
+        <div class="funnel-content">
+          <div class="funnel-stage">Awareness</div>
+          <div class="funnel-title">Discover The Row on Guadalupe</div>
+          <div class="funnel-desc">Instagram content, paid social, personal page cross-posts, PR, and word-of-mouth drive initial discovery. The teaser video already started this. Goal: brand recognition and emotional connection before any price or sales conversation.</div>
+        </div>
+      </div>
+      <div class="funnel-step">
+        <div class="funnel-num">02</div>
+        <div class="funnel-content">
+          <div class="funnel-stage">Interest</div>
+          <div class="funnel-title">Follow + Join Priority List</div>
+          <div class="funnel-desc">A follow converts a viewer to an audience. An email signup converts a follower to a lead. Website visits, DM inquiries, and email list signups are the key KPIs here. The priority list creates exclusivity — "you'll hear before the public does."</div>
+        </div>
+      </div>
+      <div class="funnel-step">
+        <div class="funnel-num">03</div>
+        <div class="funnel-content">
+          <div class="funnel-stage">Consideration</div>
+          <div class="funnel-title">Private Preview + Floor Plans</div>
+          <div class="funnel-desc">Qualified leads receive a private preview invitation — virtual walkthrough or on-site tour. Floor plans and specification packages are shared privately, not publicly. This meeting is where the sale happens. The preferred lender intro happens here too.</div>
+        </div>
+      </div>
+      <div class="funnel-step">
+        <div class="funnel-num">04</div>
+        <div class="funnel-content">
+          <div class="funnel-stage">Decision</div>
+          <div class="funnel-title">Reservation Deposit</div>
+          <div class="funnel-desc">Reservation holds the unit. Refundable deposit (suggest $5K–$10K) demonstrates intent and protects both parties. Financing pre-approval through preferred lender runs in parallel. The reservation converts to a PSA once financing is confirmed.</div>
+        </div>
+      </div>
+      <div class="funnel-step">
+        <div class="funnel-num">05</div>
+        <div class="funnel-content">
+          <div class="funnel-stage">Purchase</div>
+          <div class="funnel-title">PSA Execution + Construction Financing</div>
+          <div class="funnel-desc">All four end-buyer PSAs executed enables construction financing through the preferred partner lender. This is the commercial goal. Each signed PSA is a milestone — announce in brand voice on Instagram to reinforce scarcity and momentum for remaining units.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="grid-2">
+      <div class="card-gold">
+        <div class="card-title">Scarcity Framing (Brand-Faithful)</div>
+        <div style="font-size:13px;font-weight:300;line-height:1.7;color:var(--deep-taupe);margin-top:8px;">
+          There are genuinely only 4 homes. This is real scarcity — never manufactured. The brand voice handles it with restraint:<br><br>
+          <em style="font-family:var(--font-display);font-style:italic;font-size:15px;color:var(--charcoal);">"One home has found its owner. Three remain."</em><br><br>
+          Not: "ONLY 3 LEFT — ACT NOW!!" — that voice doesn't belong here and it never will.
+        </div>
+      </div>
+      <div class="card-gold">
+        <div class="card-title">Preferred Lender Integration</div>
+        <div style="font-size:13px;font-weight:300;line-height:1.7;color:var(--deep-taupe);margin-top:8px;">
+          The preferred lender is a marketing asset, not just a finance tool. Position it as: "We've done the work for you — a lender who understands new construction and has already underwritten this project." Feature them in one Instagram post and on the /reserve page. Their pre-approval process becomes the natural next step after every private preview.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ─── SECTION 8: PAID MEDIA ─────────────────────── -->
+  <div class="section" id="paid">
+    <div class="section-header">
+      <div class="section-eyebrow">08 — Paid Media</div>
+      <div class="section-title">Targeted reach.<br>Measured spend.</div>
+      <div class="section-desc">Organic content builds the brand. Paid media accelerates reach to the right buyers. Both must be on-brand — no discount-store creative, no generic real estate ads.</div>
+    </div>
+
+    <div class="grid-3" style="margin-bottom:24px;">
+      <div class="audience-card">
+        <div class="audience-tier">Primary Audience</div>
+        <div class="audience-name">Pittsburgh Affluent Professionals</div>
+        <div class="audience-detail">Age 35–60 · Pittsburgh MSA · HHI $150K+ · Interests: architecture, design, urban living, wellness, real estate. Lives in Shadyside, Squirrel Hill, or the suburbs and wants to move back to the city in style.</div>
+      </div>
+      <div class="audience-card">
+        <div class="audience-tier">Secondary Audience</div>
+        <div class="audience-name">Pittsburgh Diaspora</div>
+        <div class="audience-detail">Age 35–55 · Major metros (NYC, DC, Chicago, SF, LA) · Born in Pittsburgh or attended Pitt/CMU · Watching the city evolve from a distance. The right home at the right price could bring them back.</div>
+      </div>
+      <div class="audience-card">
+        <div class="audience-tier">Tertiary Audience</div>
+        <div class="audience-name">Design-Forward Investors</div>
+        <div class="audience-detail">Age 40–65 · National · Interests: real estate investment, architecture, new construction. Views this as a premium asset in an appreciating market — rental income or pied-à-terre with strong fundamentals.</div>
+      </div>
+    </div>
+
+    <div class="grid-2">
+      <div class="card">
+        <div class="card-title">Platform Strategy</div>
+        <div style="display:flex;flex-direction:column;gap:0;margin-top:8px;">
+          <div class="budget-row">
+            <div class="budget-label">Instagram / Facebook (Meta)</div>
+            <div style="font-size:12px;font-weight:500;color:var(--charcoal);">Primary · Lead Gen Ads</div>
+          </div>
+          <div class="budget-row">
+            <div class="budget-label">YouTube Pre-Roll</div>
+            <div style="font-size:12px;font-weight:500;color:var(--charcoal);">Secondary · Architecture content</div>
+          </div>
+          <div class="budget-row">
+            <div class="budget-label">LinkedIn</div>
+            <div style="font-size:12px;font-weight:500;color:var(--charcoal);">Executive targeting · Pittsburgh</div>
+          </div>
+          <div class="budget-row">
+            <div class="budget-label">Google Display</div>
+            <div style="font-size:12px;font-weight:500;color:var(--charcoal);">Retargeting only</div>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-title">Recommended Monthly Budget</div>
+        <div style="display:flex;flex-direction:column;gap:0;margin-top:8px;">
+          <div class="budget-row">
+            <div class="budget-label">Phase 1 (Foundation)</div>
+            <div class="budget-amt">$0</div>
+          </div>
+          <div class="budget-row">
+            <div class="budget-label">Phase 2 (Reveal)</div>
+            <div class="budget-amt">$300/mo</div>
+          </div>
+          <div class="budget-row">
+            <div class="budget-label">Phase 3 (Private Previews)</div>
+            <div class="budget-amt">$500/mo</div>
+          </div>
+          <div class="budget-row">
+            <div class="budget-label">Phase 4 (Public Presale)</div>
+            <div class="budget-amt">$1,000/mo</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card" style="margin-top:20px;">
+      <div class="card-title">Ad Creative Rules (Brand-Compliant)</div>
+      <div class="grid-2" style="margin-top:8px;">
+        <ul class="task-list">
+          <li>Use rendering images only — no stock photos, no lifestyle models</li>
+          <li>Headline in Cormorant Garamond — tagline or brand line only</li>
+          <li>No price in the creative — price belongs in the private conversation</li>
+          <li>Call-to-action: "Reserve Your Home" or "Request a Preview" — never "Buy Now"</li>
+        </ul>
+        <ul class="task-list">
+          <li>Brand colors only — no loud gradients or competing palettes</li>
+          <li>Rooftop + exterior images outperform interior for top-of-funnel reach</li>
+          <li>Video ads: the teaser reel works as-is with a lead gen button added</li>
+          <li>Retargeting ads: interior detail shots + "Three homes remain" copy</li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ─── SECTION 9: PR & PARTNERSHIPS ─────────────── -->
+  <div class="section" id="pr">
+    <div class="section-header">
+      <div class="section-eyebrow">09 — PR & Partnerships</div>
+      <div class="section-title">Earned coverage.<br>Strategic partners.</div>
+      <div class="section-desc">One well-placed editorial feature does more than months of paid ads. These are the outlets and partnerships worth pursuing proactively.</div>
+    </div>
+
+    <div class="card" style="margin-bottom:24px;">
+      <div class="card-title">Target Press & Editorial</div>
+      <div class="pr-item">
+        <div class="pr-outlet">Pittsburgh Magazine</div>
+        <div class="pr-angle">Architecture feature — "The private street Pittsburgh didn't know it had." Focus on the design story, the materials, and the Mexican War Streets context. Lifestyle editorial, not a real estate ad.</div>
+        <div class="pr-priority pr-high">High</div>
+      </div>
+      <div class="pr-item">
+        <div class="pr-outlet">Pittsburgh Business Times</div>
+        <div class="pr-angle">Development story — "New luxury townhomes target the discerning Pittsburgh buyer." Business angle: presale model, construction financing, SERHANT. in Pittsburgh market.</div>
+        <div class="pr-priority pr-high">High</div>
+      </div>
+      <div class="pr-item">
+        <div class="pr-outlet">Next Pittsburgh</div>
+        <div class="pr-angle">Urban development focus — "A private street gets its defining homes." Strong fit for their new-construction and urban revitalization coverage.</div>
+        <div class="pr-priority pr-high">High</div>
+      </div>
+      <div class="pr-item">
+        <div class="pr-outlet">Pittsburgh Post-Gazette</div>
+        <div class="pr-angle">Real estate section or architecture column — the story of a private street and four homes that honor the neighborhood's permanence.</div>
+        <div class="pr-priority pr-med">Medium</div>
+      </div>
+      <div class="pr-item">
+        <div class="pr-outlet">Curbed / Apartment Therapy</div>
+        <div class="pr-angle">National architecture/design audience — "Inside Pittsburgh's most considered new address." The renderings are strong enough for national design press.</div>
+        <div class="pr-priority pr-med">Medium</div>
+      </div>
+      <div class="pr-item">
+        <div class="pr-outlet">Architectural Digest / Dwell</div>
+        <div class="pr-angle">Long shot, high reward — pitch the rooftop sauna + brass detail story as a "what luxury looks like in the Rust Belt" editorial angle.</div>
+        <div class="pr-priority pr-med">Long Shot</div>
+      </div>
+    </div>
+
+    <div class="grid-2">
+      <div class="card">
+        <div class="card-title">Strategic Partnerships</div>
+        <ul class="task-list" style="margin-top:8px;">
+          <li><strong>Interior designer collaboration</strong> — feature them in content, they promote to their audience</li>
+          <li><strong>Local architect partnership</strong> — if architect is prominent, co-brand the reveal</li>
+          <li><strong>Pittsburgh wellness / sauna culture</strong> — cross-promote with local spas, fitness clubs</li>
+          <li><strong>SERHANT. national network</strong> — cross-post to SERHANT.'s own Instagram/YouTube</li>
+          <li><strong>Pittsburgh luxury market</strong> — co-promote with hospitality (Ace Hotel, The Grand) for lifestyle alignment</li>
+          <li><strong>University networks</strong> — CMU / Pitt alumni associations (strong diaspora reach)</li>
+        </ul>
+      </div>
+      <div class="card">
+        <div class="card-title">Instagram Account Outreach</div>
+        <ul class="task-list" style="margin-top:8px;">
+          <li><strong>@serhant</strong> — submit for feature on SERHANT.'s main feed or stories</li>
+          <li><strong>@pittsburghpa</strong> — tag on neighborhood and aerial content</li>
+          <li><strong>Pittsburgh architecture accounts</strong> — offer exclusive rendering previews</li>
+          <li><strong>Luxury real estate aggregators</strong> — @luxurylistings, @amazing_realestate</li>
+          <li><strong>Architecture/design accounts</strong> — @archilovers, @dezeen, @architecturalhunter</li>
+          <li><strong>Local lifestyle influencers</strong> — micro-influencers with Pittsburgh audiences (10K–50K followers)</li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ─── SECTION 10: METRICS ────────────────────────── -->
+  <div class="section" id="metrics">
+    <div class="section-header">
+      <div class="section-eyebrow">10 — Metrics & KPIs</div>
+      <div class="section-title">Four units sold.<br>Everything else is vanity.</div>
+      <div class="section-desc">The primary metric is reservations. Secondary metrics tell you whether the funnel is healthy. Track weekly.</div>
+    </div>
+
+    <div class="grid-4" style="margin-bottom:32px;">
+      <div class="kpi-card">
+        <div class="kpi-icon">🔑</div>
+        <div class="kpi-label">Reservation Deposits</div>
+        <div class="kpi-target">4 of 4</div>
+        <div class="kpi-timeline">Primary goal · all units</div>
+      </div>
+      <div class="kpi-card">
+        <div class="kpi-icon">📋</div>
+        <div class="kpi-label">Priority List Size</div>
+        <div class="kpi-target">100+</div>
+        <div class="kpi-timeline">Before public launch</div>
+      </div>
+      <div class="kpi-card">
+        <div class="kpi-icon">👥</div>
+        <div class="kpi-label">Instagram Followers</div>
+        <div class="kpi-target">1,000</div>
+        <div class="kpi-timeline">By end of Month 2</div>
+      </div>
+      <div class="kpi-card">
+        <div class="kpi-icon">🌐</div>
+        <div class="kpi-label">Website Visits</div>
+        <div class="kpi-target">500/mo</div>
+        <div class="kpi-timeline">By launch month</div>
+      </div>
+    </div>
+
+    <div class="grid-2" style="margin-bottom:32px;">
+      <div class="card">
+        <div class="card-title">Funnel Health Metrics</div>
+        <div style="display:flex;flex-direction:column;gap:0;">
+          <div class="budget-row">
+            <div class="budget-label">Story view rate</div>
+            <div style="font-size:13px;color:var(--charcoal);font-weight:400;">Target &gt; 20% of followers</div>
+          </div>
+          <div class="budget-row">
+            <div class="budget-label">Profile visit → website click rate</div>
+            <div style="font-size:13px;color:var(--charcoal);font-weight:400;">Target &gt; 10%</div>
+          </div>
+          <div class="budget-row">
+            <div class="budget-label">Website visit → form submit rate</div>
+            <div style="font-size:13px;color:var(--charcoal);font-weight:400;">Target &gt; 8%</div>
+          </div>
+          <div class="budget-row">
+            <div class="budget-label">Form submit → private preview request</div>
+            <div style="font-size:13px;color:var(--charcoal);font-weight:400;">Target &gt; 15%</div>
+          </div>
+          <div class="budget-row">
+            <div class="budget-label">Private preview → reservation</div>
+            <div style="font-size:13px;color:var(--charcoal);font-weight:400;">Target &gt; 25%</div>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-title">Weekly Review Checklist</div>
+        <ul class="task-list" style="margin-top:8px;">
+          <li>New priority list signups (website + DM + referrals)</li>
+          <li>Instagram: top-performing post of the week (replicate it)</li>
+          <li>New DM inquiries — respond same day, always</li>
+          <li>Verify preferred lender pipeline: any pre-approvals in progress?</li>
+          <li>Confirm next week's content is queued and on-brand</li>
+          <li>Any press opportunities or partnership follow-ups pending?</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="card-dark">
+      <div style="font-family:var(--font-display);font-size:28px;font-weight:300;font-style:italic;color:var(--warm-gold);margin-bottom:12px;">"This is not an investment in square footage.<br>It is an investment in how you intend to live."</div>
+      <div style="font-size:12px;font-weight:300;color:var(--stone);">The Row on Guadalupe · Brand &amp; Media Plan 2026 · Prepared by Jabel Warren, SERHANT.</div>
+    </div>
+
+  </div>
+
+</div><!-- /page -->
+
+<!-- ── FOOTER ────────────────────────────────────────── -->
+<div class="page-footer">
+  <div class="footer-brand">The Row on Guadalupe</div>
+  <div class="footer-detail">
+    Brand &amp; Media Plan · 2026<br>
+    Prepared by Jabel Warren · SERHANT. Fort Lauderdale<br>
+    brand@therowonguadalupe.com · therowonguadalupe.com
+  </div>
+</div>
+
+</body>
+</html>

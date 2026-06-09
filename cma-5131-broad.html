@@ -1,0 +1,1532 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CMA — 5131 Broad Street, Pittsburgh PA</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --navy: #0F2240;
+      --gold: #B8924A;
+      --gold-light: #D4AF6A;
+      --cream: #FAFAF7;
+      --white: #FFFFFF;
+      --text: #1A1A2E;
+      --muted: #6B7280;
+      --border: #E5E0D8;
+      --renovated: #1D5FA3;
+      --renovated-bg: #EBF3FC;
+      --partial: #B8924A;
+      --partial-bg: #FDF6EC;
+      --shell: #6B7280;
+      --shell-bg: #F3F4F6;
+      --green: #1E6B45;
+      --green-bg: #E8F5EE;
+      --active: #8B1A1A;
+      --active-bg: #FDF0F0;
+      --shadow: 0 2px 16px rgba(15,34,64,0.08);
+      --shadow-lg: 0 8px 40px rgba(15,34,64,0.12);
+    }
+
+    html { font-size: 16px; }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--cream);
+      color: var(--text);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ── HERO ─────────────────────────────── */
+    .hero {
+      background: linear-gradient(135deg, #0a1628 0%, #0F2240 55%, #1a3560 100%);
+      color: white;
+      padding: 0;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23B8924A' fill-opacity='0.04'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+      opacity: 1;
+    }
+    .hero-top-bar {
+      background: var(--gold);
+      padding: 10px 48px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--navy);
+      position: relative;
+      z-index: 1;
+    }
+    .hero-body {
+      padding: 56px 48px 52px;
+      position: relative;
+      z-index: 1;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 48px;
+      align-items: end;
+    }
+    .hero-label {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 10px;
+    }
+    .hero-address {
+      font-family: 'Playfair Display', serif;
+      font-size: 40px;
+      font-weight: 700;
+      line-height: 1.1;
+      color: white;
+      margin-bottom: 6px;
+    }
+    .hero-subaddress {
+      font-size: 16px;
+      color: rgba(255,255,255,0.65);
+      margin-bottom: 28px;
+      letter-spacing: 0.02em;
+    }
+    .hero-badges {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+    .hero-badge {
+      background: rgba(255,255,255,0.1);
+      border: 1px solid rgba(255,255,255,0.15);
+      border-radius: 20px;
+      padding: 5px 14px;
+      font-size: 12px;
+      font-weight: 500;
+      color: rgba(255,255,255,0.85);
+    }
+    .hero-price-box {
+      text-align: right;
+      padding: 24px 28px;
+      background: rgba(184,146,74,0.12);
+      border: 1px solid rgba(184,146,74,0.3);
+      border-radius: 12px;
+      min-width: 220px;
+    }
+    .hero-price-label {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 8px;
+    }
+    .hero-price {
+      font-family: 'Playfair Display', serif;
+      font-size: 34px;
+      font-weight: 700;
+      color: white;
+      line-height: 1;
+    }
+    .hero-price-sub {
+      font-size: 12px;
+      color: rgba(255,255,255,0.5);
+      margin-top: 6px;
+    }
+    .hero-footer {
+      padding: 20px 48px;
+      border-top: 1px solid rgba(255,255,255,0.08);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 12px;
+      color: rgba(255,255,255,0.5);
+      position: relative;
+      z-index: 1;
+    }
+    .agent-info { display: flex; flex-direction: column; gap: 2px; }
+    .agent-name { font-weight: 600; color: rgba(255,255,255,0.85); font-size: 13px; }
+    .agent-detail { color: rgba(255,255,255,0.45); }
+
+    /* ── LAYOUT ───────────────────────────── */
+    .page-body {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 48px 24px 80px;
+    }
+    .two-col {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+    }
+    .three-col {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    /* ── SECTION ──────────────────────────── */
+    .section { margin-bottom: 56px; }
+    .section-header {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 28px;
+    }
+    .section-number {
+      width: 32px;
+      height: 32px;
+      background: var(--navy);
+      color: white;
+      border-radius: 50%;
+      font-size: 12px;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .section-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 24px;
+      font-weight: 600;
+      color: var(--navy);
+    }
+    .section-line {
+      flex: 1;
+      height: 1px;
+      background: var(--border);
+    }
+
+    /* ── CARDS ────────────────────────────── */
+    .card {
+      background: var(--white);
+      border-radius: 12px;
+      box-shadow: var(--shadow);
+      border: 1px solid var(--border);
+      padding: 24px;
+    }
+    .card-title {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 8px;
+    }
+    .card-value {
+      font-family: 'Playfair Display', serif;
+      font-size: 28px;
+      font-weight: 600;
+      color: var(--navy);
+    }
+    .card-sub { font-size: 12px; color: var(--muted); margin-top: 4px; }
+
+    /* ── STATS GRID ───────────────────────── */
+    .stats-row {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+      margin-bottom: 24px;
+    }
+    .stat-card {
+      background: var(--white);
+      border-radius: 10px;
+      border: 1px solid var(--border);
+      padding: 18px 20px;
+      text-align: center;
+    }
+    .stat-label {
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 8px;
+    }
+    .stat-value {
+      font-family: 'Playfair Display', serif;
+      font-size: 22px;
+      font-weight: 600;
+      color: var(--navy);
+    }
+    .stat-sub { font-size: 11px; color: var(--muted); margin-top: 3px; }
+
+    /* ── SUBJECT TABLE ─────────────────────── */
+    .detail-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 14px;
+    }
+    .detail-table tr { border-bottom: 1px solid var(--border); }
+    .detail-table tr:last-child { border-bottom: none; }
+    .detail-table td {
+      padding: 11px 0;
+    }
+    .detail-table td:first-child {
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      width: 44%;
+    }
+    .detail-table td:last-child {
+      font-weight: 500;
+      color: var(--text);
+    }
+    .highlight-cell {
+      color: var(--gold) !important;
+      font-weight: 600 !important;
+    }
+    .confirm-cell {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: #FEF3CD;
+      color: #92660A;
+      padding: 3px 10px;
+      border-radius: 20px;
+      font-size: 11px;
+      font-weight: 600;
+    }
+
+    /* ── COMP CARDS ───────────────────────── */
+    .comps-section {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+    .tier-label {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      padding: 10px 0 8px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .tier-label::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: currentColor;
+      opacity: 0.2;
+    }
+    .tier-renovated { color: var(--renovated); }
+    .tier-partial { color: var(--partial); }
+    .tier-shell { color: var(--shell); }
+
+    .comp-card {
+      background: var(--white);
+      border-radius: 12px;
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow);
+      display: grid;
+      grid-template-columns: auto 1fr auto auto;
+      align-items: center;
+      gap: 0;
+      overflow: hidden;
+      transition: box-shadow 0.2s;
+    }
+    .comp-card:hover { box-shadow: var(--shadow-lg); }
+    .comp-card.tier-ren { border-left: 4px solid var(--renovated); }
+    .comp-card.tier-par { border-left: 4px solid var(--partial); opacity: 0.82; }
+    .comp-card.tier-she { border-left: 4px solid var(--shell); opacity: 0.7; }
+    .comp-card.is-active { border-left: 4px solid var(--active); }
+    .comp-card.is-subject { border-left: 4px solid var(--gold); background: linear-gradient(to right, #FFFBF3, var(--white)); }
+
+    .comp-rank {
+      width: 48px;
+      text-align: center;
+      padding: 20px 8px;
+      border-right: 1px solid var(--border);
+    }
+    .comp-rank-num {
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--navy);
+      opacity: 0.3;
+    }
+    .comp-rank-icon {
+      font-size: 20px;
+    }
+
+    .comp-main { padding: 18px 20px; }
+    .comp-address {
+      font-size: 16px;
+      font-weight: 600;
+      color: var(--navy);
+      margin-bottom: 4px;
+    }
+    .comp-address.subject-addr { color: var(--gold); }
+    .comp-badges { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 4px; }
+    .badge {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 3px 9px;
+      border-radius: 20px;
+    }
+    .badge-sold { background: var(--green-bg); color: var(--green); }
+    .badge-active { background: var(--active-bg); color: var(--active); }
+    .badge-subject { background: #FEF3CD; color: #92660A; }
+    .badge-ren { background: var(--renovated-bg); color: var(--renovated); }
+    .badge-par { background: var(--partial-bg); color: var(--partial); }
+    .badge-she { background: var(--shell-bg); color: var(--shell); }
+    .badge-closest { background: var(--navy); color: white; }
+    .comp-note {
+      font-size: 12px;
+      color: var(--muted);
+      line-height: 1.4;
+    }
+
+    .comp-stats {
+      padding: 18px 20px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px 20px;
+      border-left: 1px solid var(--border);
+      min-width: 260px;
+    }
+    .comp-stat-label {
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 2px;
+    }
+    .comp-stat-val {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--navy);
+    }
+    .comp-stat-val.price-val {
+      font-family: 'Playfair Display', serif;
+      font-size: 18px;
+      color: var(--navy);
+    }
+    .comp-stat-val.na { color: var(--muted); font-weight: 400; }
+
+    .comp-action {
+      padding: 18px 20px;
+      border-left: 1px solid var(--border);
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      align-items: center;
+      justify-content: center;
+      min-width: 100px;
+    }
+    .comp-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      font-size: 11px;
+      font-weight: 600;
+      text-decoration: none;
+      padding: 6px 12px;
+      border-radius: 6px;
+      transition: background 0.15s;
+      white-space: nowrap;
+    }
+    .comp-link-zillow {
+      background: #0074E4;
+      color: white;
+    }
+    .comp-link-zillow:hover { background: #005BB5; }
+    .comp-link-redfin {
+      background: #CC0000;
+      color: white;
+    }
+    .comp-link-redfin:hover { background: #aa0000; }
+    .comp-link-search {
+      background: var(--navy);
+      color: white;
+    }
+    .comp-link-search:hover { background: #1A3560; }
+
+    /* ── PRICING BAR ──────────────────────── */
+    .pricing-strategies {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin-bottom: 32px;
+    }
+    .strategy-card {
+      border-radius: 12px;
+      padding: 22px 20px;
+      border: 2px solid transparent;
+      text-align: center;
+    }
+    .strategy-card.conservative {
+      background: var(--shell-bg);
+      border-color: #D1D5DB;
+    }
+    .strategy-card.recommended {
+      background: linear-gradient(135deg, #EBF3FC, #DFEEFF);
+      border-color: var(--renovated);
+    }
+    .strategy-card.aggressive {
+      background: var(--partial-bg);
+      border-color: var(--partial);
+    }
+    .strategy-label {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 8px;
+    }
+    .strategy-card.recommended .strategy-label { color: var(--renovated); }
+    .strategy-price {
+      font-family: 'Playfair Display', serif;
+      font-size: 28px;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 8px;
+    }
+    .strategy-desc {
+      font-size: 12px;
+      color: var(--muted);
+      line-height: 1.5;
+    }
+    .strategy-rec-badge {
+      display: inline-block;
+      background: var(--renovated);
+      color: white;
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 3px 10px;
+      border-radius: 20px;
+      margin-bottom: 10px;
+    }
+
+    /* ── PRICE RANGE VISUAL ───────────────── */
+    .price-range-visual {
+      background: var(--white);
+      border-radius: 12px;
+      border: 1px solid var(--border);
+      padding: 28px;
+      margin-bottom: 24px;
+    }
+    .price-range-title {
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 20px;
+    }
+    .price-range-bar {
+      position: relative;
+      height: 12px;
+      background: linear-gradient(to right, #E5E7EB 0%, #EBF3FC 30%, #1D5FA3 50%, #EBF3FC 70%, #FDF6EC 85%, #E5E7EB 100%);
+      border-radius: 6px;
+      margin: 40px 0 56px;
+    }
+    .range-marker {
+      position: absolute;
+      transform: translateX(-50%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .range-marker-top {
+      font-size: 11px;
+      font-weight: 600;
+      white-space: nowrap;
+      margin-bottom: 4px;
+      transform: translateY(-100%);
+      position: absolute;
+      top: -8px;
+    }
+    .range-marker-dot {
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      border: 2px solid white;
+      margin-top: -1px;
+      position: absolute;
+      top: -1px;
+      transform: translateX(-50%);
+    }
+    .range-marker-label {
+      font-size: 10px;
+      font-weight: 500;
+      color: var(--muted);
+      white-space: nowrap;
+      position: absolute;
+      top: 22px;
+      transform: translateX(-50%);
+    }
+
+    .convergence-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 14px;
+    }
+    .convergence-table thead th {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--muted);
+      padding: 8px 12px;
+      text-align: left;
+      border-bottom: 2px solid var(--border);
+    }
+    .convergence-table tbody td {
+      padding: 12px 12px;
+      border-bottom: 1px solid var(--border);
+    }
+    .convergence-table tbody tr:last-child {
+      background: linear-gradient(to right, #EBF3FC, #FAFAF7);
+      font-weight: 700;
+    }
+    .convergence-table tbody tr:last-child td { border-bottom: none; font-size: 15px; }
+    .range-val {
+      font-family: 'Playfair Display', serif;
+      font-size: 16px;
+      font-weight: 600;
+      color: var(--navy);
+    }
+
+    /* ── MARKET CONTEXT ───────────────────── */
+    .context-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+    .context-item {
+      background: var(--white);
+      border-radius: 10px;
+      border: 1px solid var(--border);
+      padding: 20px;
+    }
+    .context-icon { font-size: 24px; margin-bottom: 10px; }
+    .context-label {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 6px;
+    }
+    .context-text { font-size: 14px; line-height: 1.6; color: var(--text); }
+    .callout-box {
+      background: linear-gradient(135deg, #0F2240, #1A3560);
+      color: white;
+      border-radius: 12px;
+      padding: 24px;
+      margin-top: 8px;
+    }
+    .callout-box p { font-size: 14px; line-height: 1.7; opacity: 0.88; }
+    .callout-box strong { color: var(--gold-light); opacity: 1; }
+
+    /* ── NET PROCEEDS ─────────────────────── */
+    .proceeds-table {
+      width: 100%;
+      font-size: 14px;
+      border-collapse: collapse;
+    }
+    .proceeds-table tr { border-bottom: 1px solid var(--border); }
+    .proceeds-table tr:last-child { border-bottom: none; border-top: 2px solid var(--navy); }
+    .proceeds-table td { padding: 11px 0; }
+    .proceeds-table td:last-child { text-align: right; font-weight: 600; color: var(--navy); }
+    .proceeds-table .total-row td {
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--navy);
+      padding-top: 14px;
+    }
+    .proceeds-input {
+      border: 1px dashed var(--border);
+      background: var(--cream);
+      color: var(--muted);
+      font-style: italic;
+      padding: 4px 8px;
+      border-radius: 4px;
+      font-size: 13px;
+      min-width: 120px;
+    }
+
+    /* ── TIMELINE ─────────────────────────── */
+    .timeline {
+      position: relative;
+      padding-left: 32px;
+    }
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 10px;
+      top: 8px;
+      bottom: 8px;
+      width: 2px;
+      background: var(--border);
+    }
+    .timeline-item {
+      position: relative;
+      margin-bottom: 20px;
+    }
+    .timeline-item::before {
+      content: '';
+      position: absolute;
+      left: -27px;
+      top: 6px;
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: var(--gold);
+      border: 2px solid white;
+      box-shadow: 0 0 0 2px var(--gold);
+    }
+    .timeline-phase {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 3px;
+    }
+    .timeline-title { font-weight: 600; color: var(--navy); margin-bottom: 4px; }
+    .timeline-desc { font-size: 13px; color: var(--muted); line-height: 1.5; }
+
+    /* ── NEXT STEPS ───────────────────────── */
+    .next-steps {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 14px;
+    }
+    .next-step-item {
+      background: var(--white);
+      border-radius: 10px;
+      border: 1px solid var(--border);
+      padding: 18px 20px;
+      display: flex;
+      gap: 14px;
+      align-items: flex-start;
+    }
+    .step-num {
+      width: 28px;
+      height: 28px;
+      background: var(--navy);
+      color: white;
+      border-radius: 50%;
+      font-size: 12px;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+    .step-text { font-size: 14px; line-height: 1.5; color: var(--text); }
+
+    /* ── DISCLAIMER ───────────────────────── */
+    .disclaimer {
+      background: var(--shell-bg);
+      border-top: 1px solid var(--border);
+      padding: 28px 48px;
+      font-size: 11px;
+      color: var(--muted);
+      line-height: 1.7;
+      margin-top: 40px;
+    }
+    .disclaimer strong { color: var(--navy); }
+
+    /* ── PRINT ────────────────────────────── */
+    @media print {
+      body { background: white; }
+      .hero-top-bar { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+      .hero { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+      .comp-card { break-inside: avoid; }
+      .section { break-inside: avoid; }
+      .comp-link { text-decoration: none; }
+    }
+
+    @media (max-width: 800px) {
+      .hero-body { grid-template-columns: 1fr; gap: 24px; }
+      .hero-address { font-size: 28px; }
+      .stats-row { grid-template-columns: repeat(2, 1fr); }
+      .pricing-strategies { grid-template-columns: 1fr; }
+      .comp-card { grid-template-columns: 1fr; }
+      .comp-stats { border-left: none; border-top: 1px solid var(--border); }
+      .comp-action { border-left: none; border-top: 1px solid var(--border); flex-direction: row; }
+      .two-col, .context-grid, .next-steps { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ─── HERO ───────────────────────────────────────────── -->
+<div class="hero">
+  <div class="hero-top-bar">
+    <span>Comparative Market Analysis</span>
+    <span>Prepared June 2026</span>
+  </div>
+  <div class="hero-body">
+    <div>
+      <div class="hero-label">Subject Property — Garfield, Pittsburgh PA</div>
+      <div class="hero-address">5131 Broad Street</div>
+      <div class="hero-subaddress">Pittsburgh, PA 15224 &nbsp;·&nbsp; Garfield</div>
+      <div class="hero-badges">
+        <span class="hero-badge">3 Bed · 4 Bath</span>
+        <span class="hero-badge">1,636 sqft</span>
+        <span class="hero-badge">Gut-Renovated 2022</span>
+        <span class="hero-badge">2 Off-Street Spaces</span>
+        <span class="hero-badge">Built 1900</span>
+      </div>
+    </div>
+    <div class="hero-price-box">
+      <div class="hero-price-label">Recommended List Price</div>
+      <div class="hero-price">$399,900</div>
+      <div class="hero-price-sub">Range: $390,000 – $409,900</div>
+    </div>
+  </div>
+  <div class="hero-footer">
+    <div class="agent-info">
+      <div class="agent-name">Connor [Last Name], REALTOR®</div>
+      <div class="agent-detail">[Brokerage Name] · [Phone] · [Email]</div>
+    </div>
+    <div>Preliminary · Subject to walkthrough condition review</div>
+  </div>
+</div>
+
+<!-- ─── PAGE BODY ───────────────────────────────────────── -->
+<div class="page-body">
+
+  <!-- 1. EXECUTIVE SUMMARY -->
+  <div class="section">
+    <div class="section-header">
+      <div class="section-number">1</div>
+      <div class="section-title">Executive Summary</div>
+      <div class="section-line"></div>
+    </div>
+
+    <div class="stats-row">
+      <div class="stat-card">
+        <div class="stat-label">Recommended List</div>
+        <div class="stat-value">$399,900</div>
+        <div class="stat-sub">Market-aligned</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-label">Renovated Comp Band</div>
+        <div class="stat-value">$402K–$425K</div>
+        <div class="stat-sub">Based on 2 closed sales</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-label">Current Zestimate</div>
+        <div class="stat-value">$382,800</div>
+        <div class="stat-sub">$234/sqft · Range $356K–$413K</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-label">Last Sale (Dec 2022)</div>
+        <div class="stat-value">$340,000</div>
+        <div class="stat-sub">After $435K → $360K reduction</div>
+      </div>
+    </div>
+
+    <div class="card" style="background: linear-gradient(to right, #FAFAF7, #F0F5FF);">
+      <p style="font-size:14px; line-height:1.75; color:var(--text);">
+        Garfield is a sharply bifurcated market — a fully renovated 3-bedroom and an un-renovated 3-bedroom can sell more than <strong>$250,000 apart</strong>. 5131 Broad was gut-renovated in 2022, placing it firmly in the upper, <strong style="color:var(--renovated);">renovated tier</strong>. The only comps that matter for pricing are other renovated sales.
+      </p>
+      <br>
+      <p style="font-size:14px; line-height:1.75; color:var(--text);">
+        Two anchors shape the recommendation: (1) this home listed at $435K in 2022, was reduced repeatedly, and sold for $340K — a signal that this specific layout and block has historically priced below raw $/sqft. (2) The renovated comps have since established a <strong>$402K–$425K band</strong>, anchored by 4815 Dearborn — a near-identical renovated 3-bed that sold for $402K in August 2025. Weighing both, the market-aligned target is the low-$400s.
+      </p>
+    </div>
+  </div>
+
+  <!-- 2. SUBJECT PROPERTY -->
+  <div class="section">
+    <div class="section-header">
+      <div class="section-number">2</div>
+      <div class="section-title">Subject Property</div>
+      <div class="section-line"></div>
+    </div>
+
+    <div class="two-col">
+      <div class="card">
+        <div class="card-title">Property Details</div>
+        <table class="detail-table">
+          <tr><td>Address</td><td>5131 Broad St, Pittsburgh, PA 15224</td></tr>
+          <tr><td>Neighborhood</td><td>Garfield</td></tr>
+          <tr><td>Property Type</td><td>Single-Family Detached</td></tr>
+          <tr><td>Bedrooms / Baths</td><td><strong>3 bed / 4 bath</strong> (3 full + 1 half)</td></tr>
+          <tr><td>Living Area</td><td><strong>1,636 sqft</strong></td></tr>
+          <tr><td>Lot Size</td><td>2,300 sqft</td></tr>
+          <tr><td>Year Built</td><td>1900 (gut-renovated 2022)</td></tr>
+          <tr><td>Parking</td><td>2 off-street spaces</td></tr>
+          <tr><td>Basement</td><td>Unfinished</td></tr>
+        </table>
+      </div>
+      <div class="card">
+        <div class="card-title">Financials & Systems</div>
+        <table class="detail-table">
+          <tr><td>Heating / Cooling</td><td>Forced-air gas / Central A/C</td></tr>
+          <tr><td>Flooring</td><td>Hardwood</td></tr>
+          <tr><td>Exterior / Roof</td><td>Vinyl on frame / Shingle</td></tr>
+          <tr><td>Parcel ID</td><td>0050K00132000000</td></tr>
+          <tr><td>2025 Assessment</td><td>$148,400</td></tr>
+          <tr><td>2025 Property Tax</td><td>$3,652/yr</td></tr>
+          <tr><td>Last Sale Price</td><td><span class="highlight-cell">$340,000 (Dec 2022)</span></td></tr>
+          <tr><td>Rent Zestimate</td><td>~$3,116/mo</td></tr>
+          <tr><td>Condition</td><td><span class="confirm-cell">⚠ To Confirm at Walkthrough</span></td></tr>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <!-- 3. COMPARABLE PROPERTIES -->
+  <div class="section">
+    <div class="section-header">
+      <div class="section-number">3</div>
+      <div class="section-title">Comparable Properties</div>
+      <div class="section-line"></div>
+    </div>
+
+    <div class="comps-section">
+
+      <!-- Subject -->
+      <div class="comp-card is-subject">
+        <div class="comp-rank"><div class="comp-rank-icon">🏠</div></div>
+        <div class="comp-main">
+          <div class="comp-address subject-addr">5131 Broad Street — Subject Property</div>
+          <div class="comp-badges">
+            <span class="badge badge-subject">Off-Market</span>
+            <span class="badge badge-ren">Gut-Renovated 2022</span>
+          </div>
+          <div class="comp-note">3 bed / 4 bath (3+1) · Bath-heavy layout · 2 off-street spaces</div>
+        </div>
+        <div class="comp-stats">
+          <div>
+            <div class="comp-stat-label">Price</div>
+            <div class="comp-stat-val na">—</div>
+          </div>
+          <div>
+            <div class="comp-stat-label">Bed / Bath</div>
+            <div class="comp-stat-val">3 / 4</div>
+          </div>
+          <div>
+            <div class="comp-stat-label">SqFt</div>
+            <div class="comp-stat-val">1,636</div>
+          </div>
+          <div>
+            <div class="comp-stat-label">$/SqFt</div>
+            <div class="comp-stat-val na">—</div>
+          </div>
+          <div>
+            <div class="comp-stat-label">Date</div>
+            <div class="comp-stat-val na">—</div>
+          </div>
+          <div>
+            <div class="comp-stat-label">Tier</div>
+            <div class="comp-stat-val" style="color:var(--gold)">Renovated</div>
+          </div>
+        </div>
+        <div class="comp-action">
+          <a class="comp-link comp-link-search" href="https://www.zillow.com/homes/5131-Broad-St-Pittsburgh-PA_rb/" target="_blank">View on Zillow ↗</a>
+        </div>
+      </div>
+
+      <!-- Renovated Tier -->
+      <div class="tier-label tier-renovated">★ Renovated Tier — Primary Comps</div>
+
+      <!-- 4815 Dearborn -->
+      <div class="comp-card tier-ren">
+        <div class="comp-rank"><div class="comp-rank-num">1</div></div>
+        <div class="comp-main">
+          <div class="comp-address">4815 Dearborn Street</div>
+          <div class="comp-badges">
+            <span class="badge badge-sold">Sold Aug 2025</span>
+            <span class="badge badge-ren">Renovated</span>
+            <span class="badge badge-closest">Closest Match</span>
+          </div>
+          <div class="comp-note">Full reno · 2 off-street spaces · Nearly identical size (1,712 sqft). <strong>Strongest pricing anchor.</strong></div>
+        </div>
+        <div class="comp-stats">
+          <div>
+            <div class="comp-stat-label">Sale Price</div>
+            <div class="comp-stat-val price-val">$402,000</div>
+          </div>
+          <div>
+            <div class="comp-stat-label">Bed / Bath</div>
+            <div class="comp-stat-val">3 / 3</div>
+          </div>
+          <div>
+            <div class="comp-stat-label">SqFt</div>
+            <div class="comp-stat-val">1,712</div>
+          </div>
+          <div>
+            <div class="comp-stat-label">$/SqFt</div>
+            <div class="comp-stat-val">$235</div>
+          </div>
+          <div>
+            <div class="comp-stat-label">DOM</div>
+            <div class="comp-stat-val na">—</div>
+          </div>
+          <div>
+            <div class="comp-stat-label">Distance</div>
+            <div class="comp-stat-val">0.1 mi</div>
+          </div>
+        </div>
+        <div class="comp-action">
+          <a class="comp-link comp-link-zillow" href="https://www.zillow.com/homedetails/4815-Dearborn-St-Pittsburgh-PA-15224/11519893_zpid/" target="_blank">Zillow ↗</a>
+          <a class="comp-link comp-link-redfin" href="https://www.realtor.com/realestateandhomes-detail/4815-Dearborn-St_Pittsburgh_PA_15224_M47874-54792" target="_blank">Realtor ↗</a>
+        </div>
+      </div>
+
+      <!-- 5010 Broad -->
+      <div class="comp-card tier-ren">
+        <div class="comp-rank"><div class="comp-rank-num">2</div></div>
+        <div class="comp-main">
+          <div class="comp-address">5010 Broad Street</div>
+          <div class="comp-badges">
+            <span class="badge badge-sold">Sold May 2025</span>
+            <span class="badge badge-ren">Renovated Flip</span>
+          </div>
+          <div class="comp-note">Same street · Flip · Sold in 0 days on market. Slightly smaller than subject.</div>
+        </div>
+        <div class="comp-stats">
+          <div>
+            <div class="comp-stat-label">Sale Price</div>
+            <div class="comp-stat-val price-val">$425,000</div>
+          </div>
+          <div>
+            <div class="comp-stat-label">Bed / Bath</div>
+            <div class="comp-stat-val">3 / 2.5</div>
+          </div>
+          <div>
+            <div class="comp-stat-label">SqFt</div>
+            <div class="comp-stat-val">1,482</div>
+          </div>
+          <div>
+            <div class="comp-stat-label">$/SqFt</div>
+            <div class="comp-stat-val">$287</div>
+          </div>
+          <div>
+            <div class="comp-stat-label">DOM</div>
+            <div class="comp-stat-val">0 days</div>
+          </div>
+          <div>
+            <div class="comp-stat-label">Distance</div>
+            <div class="comp-stat-val">Same St</div>
+          </div>
+        </div>
+        <div class="comp-action">
+          <a class="comp-link comp-link-zillow" href="https://www.zillow.com/homedetails/5010-Broad-St-Pittsburgh-PA-15224/11519958_zpid/" target="_blank">Zillow ↗</a>
+          <a class="comp-link comp-link-redfin" href="https://www.redfin.com/PA/Pittsburgh/5010-Broad-St-15224/home/74657606" target="_blank">Redfin ↗</a>
+        </div>
+      </div>
+
+      <!-- 232 N Aiken -->
+      <div class="comp-card tier-ren">
+        <div class="comp-rank"><div class="comp-rank-num">3</div></div>
+        <div class="comp-main">
+          <div class="comp-address">232 N Aiken Avenue</div>
+          <div class="comp-badges">
+            <span class="badge badge-sold">Sold Mar 2026</span>
+            <span class="badge badge-ren">Renovated</span>
+          </div>
+          <div class="comp-note">15206 (Friendship side) · Larger home, nicer block. Useful for top-of-range ceiling. <em>Note: larger homes trade at lower $/sqft.</em></div>
+        </div>
+        <div class="comp-stats">
+          <div>
+            <div class="comp-stat-label">Sale Price</div>
+            <div class="comp-stat-val price-val">$489,000</div>
+          </div>
+          <div>
+            <div class="comp-stat-label">Bed / Bath</div>
+            <div class="comp-stat-val">4 / 2</div>
+          </div>
+          <div>
+            <div class="comp-stat-label">SqFt</div>
+            <div class="comp-stat-val">2,326</div>
+          </div>
+          <div>
+            <div class="comp-stat-label">$/SqFt</div>
+            <div class="comp-stat-val">$210</div>
+          </div>
+          <div>
+            <div class="comp-stat-label">DOM</div>
+            <div class="comp-stat-val na">—</div>
+          </div>
+          <div>
+            <div class="comp-stat-label">Zip</div>
+            <div class="comp-stat-val">15206</div>
+          </div>
+        </div>
+        <div class="comp-action">
+          <a class="comp-link comp-link-zillow" href="https://www.zillow.com/homes/232-N-Aiken-Ave-Pittsburgh-PA_rb/" target="_blank">Zillow ↗</a>
+          <a class="comp-link comp-link-search" href="https://www.realtor.com/realestateandhomes-search/Pittsburgh_PA/type-single-family-home/price-na-489000/" target="_blank">Search ↗</a>
+        </div>
+      </div>
+
+      <!-- 5110 Dearborn ACTIVE -->
+      <div class="comp-card is-active">
+        <div class="comp-rank"><div class="comp-rank-num">4</div></div>
+        <div class="comp-main">
+          <div class="comp-address">5110 Dearborn Street</div>
+          <div class="comp-badges">
+            <span class="badge badge-active">Active Listing Apr 2026</span>
+            <span class="badge badge-ren">Renovated</span>
+          </div>
+          <div class="comp-note">Current competition. Larger 4-bed home. <strong>Asking price only</strong> — not a cleared sale. Verify current DOM and price cuts.</div>
+        </div>
+        <div class="comp-stats">
+          <div>
+            <div class="comp-stat-label">List Price</div>
+            <div class="comp-stat-val price-val" style="color:var(--active)">$444,900</div>
+          </div>
+          <div>
+            <div class="comp-stat-label">Bed / Bath</div>
+            <div class="comp-stat-val">4 / 2</div>
+          </div>
+          <div>
+            <div class="comp-stat-label">SqFt</div>
+            <div class="comp-stat-val">2,015</div>
+          </div>
+          <div>
+            <div class="comp-stat-label">$/SqFt</div>
+            <div class="comp-stat-val">$221</div>
+          </div>
+          <div>
+            <div class="comp-stat-label">Status</div>
+            <div class="comp-stat-val" style="color:var(--active)">Active</div>
+          </div>
+          <div>
+            <div class="comp-stat-label">Distance</div>
+            <div class="comp-stat-val">0.1 mi</div>
+          </div>
+        </div>
+        <div class="comp-action">
+          <a class="comp-link comp-link-zillow" href="https://www.zillow.com/homes/5110-Dearborn-St-Pittsburgh-PA_rb/" target="_blank">Zillow ↗</a>
+          <a class="comp-link comp-link-search" href="https://www.redfin.com/PA/Pittsburgh/5110-Dearborn-St-15224" target="_blank">Redfin ↗</a>
+        </div>
+      </div>
+
+      <!-- Context Tier -->
+      <div class="tier-label tier-partial">Context Only — Partial-Update Tier</div>
+
+      <!-- 5347 Broad -->
+      <div class="comp-card tier-par">
+        <div class="comp-rank"><div class="comp-rank-num">5</div></div>
+        <div class="comp-main">
+          <div class="comp-address">5347 Broad Street</div>
+          <div class="comp-badges">
+            <span class="badge badge-sold">Sold May 2025</span>
+            <span class="badge badge-par">Partial Update</span>
+          </div>
+          <div class="comp-note">Same street — partial-update tier. Not a valid comp for 5131 Broad, shown only to illustrate the bifurcation gap.</div>
+        </div>
+        <div class="comp-stats">
+          <div>
+            <div class="comp-stat-label">Sale Price</div>
+            <div class="comp-stat-val price-val">$275,000</div>
+          </div>
+          <div>
+            <div class="comp-stat-label">Bed / Bath</div>
+            <div class="comp-stat-val">3 / 1</div>
+          </div>
+          <div>
+            <div class="comp-stat-label">SqFt</div>
+            <div class="comp-stat-val">1,770</div>
+          </div>
+          <div>
+            <div class="comp-stat-label">$/SqFt</div>
+            <div class="comp-stat-val">$155</div>
+          </div>
+          <div>
+            <div class="comp-stat-label">DOM</div>
+            <div class="comp-stat-val na">—</div>
+          </div>
+          <div>
+            <div class="comp-stat-label">Tier</div>
+            <div class="comp-stat-val" style="color:var(--partial)">Partial</div>
+          </div>
+        </div>
+        <div class="comp-action">
+          <a class="comp-link comp-link-zillow" href="https://www.zillow.com/homes/5347-Broad-St-Pittsburgh-PA_rb/" target="_blank">Zillow ↗</a>
+        </div>
+      </div>
+
+      <!-- Shell Tier -->
+      <div class="tier-label tier-shell">Context Only — Un-Renovated / Shell Tier</div>
+
+      <!-- 5025 Rosetta -->
+      <div class="comp-card tier-she">
+        <div class="comp-rank"><div class="comp-rank-num">6</div></div>
+        <div class="comp-main">
+          <div class="comp-address">5025 Rosetta Street</div>
+          <div class="comp-badges">
+            <span class="badge badge-sold">Sold Jan 2025</span>
+            <span class="badge badge-she">Un-Renovated</span>
+          </div>
+          <div class="comp-note">Un-renovated tier — context only. $127K below the renovated band.</div>
+        </div>
+        <div class="comp-stats">
+          <div>
+            <div class="comp-stat-label">Sale Price</div>
+            <div class="comp-stat-val">$203,000</div>
+          </div>
+          <div>
+            <div class="comp-stat-label">Bed / Bath</div>
+            <div class="comp-stat-val">3 / 1</div>
+          </div>
+          <div>
+            <div class="comp-stat-label">SqFt</div>
+            <div class="comp-stat-val">1,388</div>
+          </div>
+          <div>
+            <div class="comp-stat-label">$/SqFt</div>
+            <div class="comp-stat-val">$146</div>
+          </div>
+          <div></div>
+          <div>
+            <div class="comp-stat-label">Tier</div>
+            <div class="comp-stat-val" style="color:var(--shell)">Shell</div>
+          </div>
+        </div>
+        <div class="comp-action">
+          <a class="comp-link comp-link-zillow" href="https://www.zillow.com/homes/5025-Rosetta-St-Pittsburgh-PA_rb/" target="_blank">Zillow ↗</a>
+        </div>
+      </div>
+
+      <!-- 5311 Kincaid -->
+      <div class="comp-card tier-she">
+        <div class="comp-rank"><div class="comp-rank-num">7</div></div>
+        <div class="comp-main">
+          <div class="comp-address">5311 Kincaid Street</div>
+          <div class="comp-badges">
+            <span class="badge badge-sold">Sold Nov 2025</span>
+            <span class="badge badge-she">Shell / Fixer</span>
+          </div>
+          <div class="comp-note">Shell / fixer tier — context only. $300K+ below the renovated band.</div>
+        </div>
+        <div class="comp-stats">
+          <div>
+            <div class="comp-stat-label">Sale Price</div>
+            <div class="comp-stat-val">$99,000</div>
+          </div>
+          <div>
+            <div class="comp-stat-label">Bed / Bath</div>
+            <div class="comp-stat-val">3 / 1</div>
+          </div>
+          <div>
+            <div class="comp-stat-label">SqFt</div>
+            <div class="comp-stat-val">1,200</div>
+          </div>
+          <div>
+            <div class="comp-stat-label">$/SqFt</div>
+            <div class="comp-stat-val">$82</div>
+          </div>
+          <div></div>
+          <div>
+            <div class="comp-stat-label">Tier</div>
+            <div class="comp-stat-val" style="color:var(--shell)">Shell</div>
+          </div>
+        </div>
+        <div class="comp-action">
+          <a class="comp-link comp-link-zillow" href="https://www.zillow.com/homes/5311-Kincaid-St-Pittsburgh-PA_rb/" target="_blank">Zillow ↗</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- 4. PRICING ANALYSIS -->
+  <div class="section">
+    <div class="section-header">
+      <div class="section-number">4</div>
+      <div class="section-title">Pricing Analysis</div>
+      <div class="section-line"></div>
+    </div>
+
+    <!-- Strategy Cards -->
+    <div class="pricing-strategies">
+      <div class="strategy-card conservative">
+        <div class="strategy-label">Conservative</div>
+        <div class="strategy-price">$375,000</div>
+        <div class="strategy-desc">Prices to move quickly. Likely to attract multiple offers and a fast close.</div>
+      </div>
+      <div class="strategy-card recommended">
+        <div class="strategy-rec-badge">★ Recommended</div>
+        <div class="strategy-label">Market-Aligned</div>
+        <div class="strategy-price">$399,900</div>
+        <div class="strategy-desc">Anchored to the closest renovated comps (4815 Dearborn, 5010 Broad). Balances price and time on market.</div>
+      </div>
+      <div class="strategy-card aggressive">
+        <div class="strategy-label">Aggressive</div>
+        <div class="strategy-price">$420,000</div>
+        <div class="strategy-desc">Tests the top of the renovated tier. Expect longer market time and possible price reduction.</div>
+      </div>
+    </div>
+
+    <!-- Convergence Table -->
+    <div class="card">
+      <div class="card-title" style="margin-bottom:16px;">Valuation Convergence — Three Methods</div>
+      <table class="convergence-table">
+        <thead>
+          <tr>
+            <th>Method</th>
+            <th>Calculation</th>
+            <th>Indicated Value</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Renovated comp $/sqft (size-adjusted)</td>
+            <td>1,636 sqft × ~$245</td>
+            <td class="range-val">~$401,000</td>
+          </tr>
+          <tr>
+            <td>Renovated comp sale-price bracket</td>
+            <td>4815 Dearborn $402K · 5010 Broad $425K</td>
+            <td class="range-val">$400K – $415K</td>
+          </tr>
+          <tr>
+            <td>Zestimate midpoint (Zillow)</td>
+            <td>Public AVM — range $356K–$413K</td>
+            <td class="range-val">~$383,000</td>
+          </tr>
+          <tr>
+            <td><strong>Converged Range</strong></td>
+            <td></td>
+            <td class="range-val" style="color:var(--renovated);font-size:18px;"><strong>$390K – $410K</strong></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Price Visual Bar -->
+    <div class="price-range-visual" style="margin-top:16px;">
+      <div class="price-range-title">Pricing Landscape — Garfield Renovated Tier</div>
+      <div style="position:relative; margin: 48px 24px 64px;">
+        <!-- Track -->
+        <div style="height:10px; border-radius:5px; background: linear-gradient(to right, #E5E7EB 0%, #EBF3FC 20%, #1D5FA3 45%, #1D5FA3 65%, #FDF6EC 80%, #FEF3CD 90%, #E5E7EB 100%);"></div>
+        <!-- Markers -->
+        <!-- $340K - last sale -->
+        <div style="position:absolute; left:8%; top:0; transform:translateX(-50%);">
+          <div style="font-size:10px;font-weight:600;color:#888;white-space:nowrap;text-align:center;transform:translateY(-130%);line-height:1.3;">$340K<br><span style="font-weight:400;font-size:9px;">Last sale '22</span></div>
+          <div style="width:10px;height:10px;border-radius:50%;background:#ccc;border:2px solid white;position:absolute;top:-0px;left:50%;transform:translateX(-50%) translateY(-50%);margin-top:5px;"></div>
+        </div>
+        <!-- $375K - conservative -->
+        <div style="position:absolute; left:28%; top:0; transform:translateX(-50%);">
+          <div style="font-size:10px;font-weight:600;color:var(--muted);white-space:nowrap;text-align:center;transform:translateY(-130%);line-height:1.3;">$375K<br><span style="font-weight:400;font-size:9px;">Conservative</span></div>
+          <div style="width:10px;height:10px;border-radius:50%;background:#9CA3AF;border:2px solid white;position:absolute;top:0;left:50%;transform:translateX(-50%) translateY(-50%);margin-top:5px;"></div>
+        </div>
+        <!-- $399.9K - recommended -->
+        <div style="position:absolute; left:52%; top:0; transform:translateX(-50%);">
+          <div style="font-size:11px;font-weight:700;color:var(--renovated);white-space:nowrap;text-align:center;transform:translateY(-130%);line-height:1.3;">$399,900<br><span style="font-weight:600;font-size:9px;">★ Recommended</span></div>
+          <div style="width:14px;height:14px;border-radius:50%;background:var(--renovated);border:2px solid white;box-shadow:0 0 0 2px var(--renovated);position:absolute;top:0;left:50%;transform:translateX(-50%) translateY(-50%);margin-top:5px;"></div>
+        </div>
+        <!-- $420K - aggressive -->
+        <div style="position:absolute; left:72%; top:0; transform:translateX(-50%);">
+          <div style="font-size:10px;font-weight:600;color:var(--partial);white-space:nowrap;text-align:center;transform:translateY(-130%);line-height:1.3;">$420K<br><span style="font-weight:400;font-size:9px;">Aggressive</span></div>
+          <div style="width:10px;height:10px;border-radius:50%;background:var(--partial);border:2px solid white;position:absolute;top:0;left:50%;transform:translateX(-50%) translateY(-50%);margin-top:5px;"></div>
+        </div>
+        <!-- $444.9K - active comp -->
+        <div style="position:absolute; left:88%; top:0; transform:translateX(-50%);">
+          <div style="font-size:10px;font-weight:600;color:var(--active);white-space:nowrap;text-align:center;transform:translateY(-130%);line-height:1.3;">$444,900<br><span style="font-weight:400;font-size:9px;">5110 Dearborn (Active)</span></div>
+          <div style="width:10px;height:10px;border-radius:50%;background:var(--active);border:2px solid white;position:absolute;top:0;left:50%;transform:translateX(-50%) translateY(-50%);margin-top:5px;"></div>
+        </div>
+
+        <!-- comp labels on bottom -->
+        <div style="position:absolute; left:40%; top:10px; transform:translateX(-50%);">
+          <div style="font-size:9px;color:var(--renovated);font-weight:500;white-space:nowrap;margin-top:6px;">4815 Dearborn: $402K ↑</div>
+        </div>
+        <div style="position:absolute; left:62%; top:10px; transform:translateX(-50%);">
+          <div style="font-size:9px;color:var(--renovated);font-weight:500;white-space:nowrap;margin-top:6px;">5010 Broad: $425K ↑</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- 5. MARKET CONTEXT -->
+  <div class="section">
+    <div class="section-header">
+      <div class="section-number">5</div>
+      <div class="section-title">Market Context — Garfield (15224)</div>
+      <div class="section-line"></div>
+    </div>
+
+    <div class="context-grid" style="margin-bottom:16px;">
+      <div class="context-item">
+        <div class="context-icon">🏘️</div>
+        <div class="context-label">Bifurcated Market</div>
+        <div class="context-text">Renovated flips trade at <strong>$270–$290/sqft</strong> while un-renovated shells trade at <strong>$80–$155/sqft</strong>. Condition, not location, drives most of the price spread.</div>
+      </div>
+      <div class="context-item">
+        <div class="context-icon">📍</div>
+        <div class="context-label">Location Drivers</div>
+        <div class="context-text">Borders Bloomfield, Friendship, Lawrenceville & East Liberty. Strong access to Bakery Square, Children's Hospital, universities, and downtown.</div>
+      </div>
+      <div class="context-item">
+        <div class="context-icon">🏢</div>
+        <div class="context-label">Investor Demand</div>
+        <div class="context-text">Rent Zestimate ~<strong>$3,116/mo</strong> keeps investor interest active alongside owner-occupant buyers, supporting steady demand for move-in-ready homes.</div>
+      </div>
+      <div class="context-item">
+        <div class="context-icon">📈</div>
+        <div class="context-label">Market Trend</div>
+        <div class="context-text">Garfield and Friendship have <strong>softened modestly</strong> over the trailing 12 months — argues for a confident but not aggressive list price.</div>
+      </div>
+    </div>
+
+    <div class="callout-box">
+      <p>
+        A clean, fully renovated home is exactly what this market rewards. Priced in the <strong>low-$400s</strong> with strong photography and a tight launch, 5131 Broad should draw the renovated-tier buyer pool that recently absorbed <strong>5010 Broad in zero days on market</strong>. The risk is not demand — it is over-reaching past the comp band and stalling, which is what happened to this home in 2022.
+      </p>
+    </div>
+  </div>
+
+  <!-- 6. NET PROCEEDS -->
+  <div class="section">
+    <div class="section-header">
+      <div class="section-number">6</div>
+      <div class="section-title">Estimated Net Proceeds Worksheet</div>
+      <div class="section-line"></div>
+    </div>
+    <div class="card">
+      <p style="font-size:12px;color:var(--muted);margin-bottom:18px;">Working framework — to be completed at your meeting with seller payoff figures.</p>
+      <table class="proceeds-table">
+        <tr>
+          <td>Estimated Sale Price</td>
+          <td><span class="proceeds-input">$______________</span></td>
+        </tr>
+        <tr>
+          <td>Less: Mortgage Payoff</td>
+          <td><span class="proceeds-input">($_____________)</span></td>
+        </tr>
+        <tr>
+          <td>Less: Listing Brokerage Fee</td>
+          <td><span class="proceeds-input">($_____________)</span></td>
+        </tr>
+        <tr>
+          <td>Less: Buyer-Agent Compensation (if offered)</td>
+          <td><span class="proceeds-input">($_____________)</span></td>
+        </tr>
+        <tr>
+          <td>Less: PA Transfer Tax (seller share, ~1%)</td>
+          <td><span class="proceeds-input">($_____________)</span></td>
+        </tr>
+        <tr>
+          <td>Less: Seller Concessions (if any)</td>
+          <td><span class="proceeds-input">($_____________)</span></td>
+        </tr>
+        <tr>
+          <td>Less: Pre-Sale Prep / Staging / Repairs</td>
+          <td><span class="proceeds-input">($_____________)</span></td>
+        </tr>
+        <tr>
+          <td>Less: Misc. Closing Costs</td>
+          <td><span class="proceeds-input">($_____________)</span></td>
+        </tr>
+        <tr class="total-row">
+          <td><strong>Estimated Net Proceeds</strong></td>
+          <td><span class="proceeds-input" style="font-size:15px;border-color:var(--navy);">$______________</span></td>
+        </tr>
+      </table>
+      <p style="font-size:11px;color:var(--muted);margin-top:14px;">* PA transfer tax is customarily split between buyer and seller (~1% each in Pittsburgh). Confirm exact local rate at listing.</p>
+    </div>
+  </div>
+
+  <!-- 7. TIMELINE -->
+  <div class="section">
+    <div class="section-header">
+      <div class="section-number">7</div>
+      <div class="section-title">Indicative Timeline</div>
+      <div class="section-line"></div>
+    </div>
+    <div class="card">
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-phase">Week 1</div>
+          <div class="timeline-title">Listing Agreement + Walkthrough</div>
+          <div class="timeline-desc">Sign listing agreement. Conduct in-person walkthrough and condition review. Pre-list prep: touch-ups, deep clean, declutter.</div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-phase">Week 2</div>
+          <div class="timeline-title">Photography + Listing Prep</div>
+          <div class="timeline-desc">Professional photography (interior, exterior, drone). Finalize listing copy. Prepare MLS listing and all marketing assets.</div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-phase">Week 3</div>
+          <div class="timeline-title">Go Live + First Open House</div>
+          <div class="timeline-desc">Launch on MLS + full syndication (Zillow, Realtor.com, Redfin, Trulia, Homes.com). First open house weekend.</div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-phase">Weeks 3–6</div>
+          <div class="timeline-title">Active Showings</div>
+          <div class="timeline-desc">Active showings. Weekly performance reports. Price and strategy check-ins as needed.</div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-phase">Weeks 4–8</div>
+          <div class="timeline-title">Offer & Negotiation</div>
+          <div class="timeline-desc">Review and negotiate offers. Accepted offer moves the property under contract.</div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-phase">Weeks 6–12</div>
+          <div class="timeline-title">Due Diligence → Closing</div>
+          <div class="timeline-desc">Inspection, appraisal, buyer financing. Coordinate all logistics through to closing.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 8. NEXT STEPS -->
+  <div class="section">
+    <div class="section-header">
+      <div class="section-number">8</div>
+      <div class="section-title">Next Steps</div>
+      <div class="section-line"></div>
+    </div>
+    <div class="next-steps">
+      <div class="next-step-item">
+        <div class="step-num">1</div>
+        <div class="step-text">Schedule <strong>walkthrough</strong> to confirm condition and document the renovation scope (kitchen, baths, mechanicals, flooring, windows, roof).</div>
+      </div>
+      <div class="next-step-item">
+        <div class="step-num">2</div>
+        <div class="step-text">Finalize <strong>list price</strong> within the recommended range based on walkthrough condition review.</div>
+      </div>
+      <div class="next-step-item">
+        <div class="step-num">3</div>
+        <div class="step-text">Complete the <strong>net proceeds worksheet</strong> with seller's mortgage payoff figures and closing cost estimates.</div>
+      </div>
+      <div class="next-step-item">
+        <div class="step-num">4</div>
+        <div class="step-text">Schedule <strong>professional photography</strong> and target a launch weekend with a broker + public open house.</div>
+      </div>
+    </div>
+  </div>
+
+</div><!-- /page-body -->
+
+<!-- DISCLAIMER -->
+<div class="disclaimer">
+  <strong>Disclaimer:</strong> This Comparative Market Analysis is not an appraisal. Values are estimates based on recent comparable sales, public records, and professional judgment. Actual sale price depends on market conditions at the time of listing, buyer demand, property condition, negotiation, and other factors. Source data: West Penn Multi-List, Allegheny County Office of Property Assessments, Zillow, and owner-provided information.
+  <br><br>
+  <strong>Prepared by:</strong> Connor [Last Name], REALTOR® &nbsp;|&nbsp; [Brokerage Name] &nbsp;|&nbsp; [Phone] &nbsp;|&nbsp; [Email]
+  &nbsp;·&nbsp; Prepared June 2026
+</div>
+
+</body>
+</html>
