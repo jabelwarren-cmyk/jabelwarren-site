@@ -760,9 +760,81 @@
       .comp-action { border-left: none; border-top: 1px solid var(--border); flex-direction: row; }
       .two-col, .context-grid, .next-steps { grid-template-columns: 1fr; }
     }
+  /* ── EDIT MODE TOOLBAR ──────────────────── */
+  #edit-toolbar {
+    position: fixed;
+    top: 16px;
+    right: 16px;
+    z-index: 9999;
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    background: var(--navy);
+    border: 1px solid rgba(184,146,74,0.35);
+    border-radius: 10px;
+    padding: 8px 14px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.35);
+    user-select: none;
+  }
+  #edit-toolbar-label {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--gold);
+    padding-right: 4px;
+    border-right: 1px solid rgba(255,255,255,0.1);
+    margin-right: 4px;
+  }
+  #edit-toolbar button {
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.18);
+    border-radius: 6px;
+    color: white;
+    font-family: 'Inter', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 6px 12px;
+    cursor: pointer;
+    transition: background 0.15s, border-color 0.15s;
+    white-space: nowrap;
+  }
+  #edit-toolbar button:hover { background: rgba(255,255,255,0.15); }
+  #edit-btn.active {
+    background: var(--gold) !important;
+    color: var(--navy) !important;
+    border-color: var(--gold) !important;
+  }
+  /* editable field highlight */
+  body.edit-mode [contenteditable="true"] {
+    outline: 1px dashed rgba(184,146,74,0.55);
+    border-radius: 3px;
+    padding: 1px 3px;
+    cursor: text;
+    min-width: 20px;
+  }
+  body.edit-mode [contenteditable="true"]:hover {
+    outline-color: var(--gold);
+    background: rgba(255,220,100,0.1) !important;
+  }
+  body.edit-mode [contenteditable="true"]:focus {
+    outline: 2px solid var(--gold);
+    background: rgba(255,220,100,0.18) !important;
+  }
+  @media print {
+    #edit-toolbar { display: none !important; }
+    [contenteditable] { outline: none !important; background: transparent !important; }
+  }
   </style>
 </head>
 <body>
+
+<!-- ─── EDIT TOOLBAR (hidden on print) ─────────────────── -->
+<div id="edit-toolbar">
+  <span id="edit-toolbar-label">CMA Editor</span>
+  <button id="edit-btn">✏️&nbsp; Edit Mode</button>
+  <button id="print-btn">🖨️&nbsp; Print / PDF</button>
+</div>
 
 <!-- ─── HERO ───────────────────────────────────────────── -->
 <div class="hero">
@@ -1283,5 +1355,88 @@
   &nbsp;·&nbsp; Prepared June 2026
 </div>
 
+<script>
+(function () {
+  var editBtn  = document.getElementById('edit-btn');
+  var printBtn = document.getElementById('print-btn');
+  var editing  = false;
+
+  /* Every selector whose text content should be directly editable */
+  var EDITABLE = [
+    '.hero-top-bar span',
+    '.hero-label',
+    '.hero-address',
+    '.hero-subaddress',
+    '.hero-badge',
+    '.hero-price-label',
+    '.hero-price',
+    '.hero-price-sub',
+    '.agent-name',
+    '.agent-detail',
+    '.hero-footer > div:last-child',
+    '.stat-label',
+    '.stat-value',
+    '.stat-sub',
+    '.section-title',
+    '.card-title',
+    '.card-value',
+    '.card-sub',
+    '.card > p',
+    'table.detail-table td',
+    '.comp-address',
+    '.comp-note',
+    '.comp-stat-label',
+    '.comp-stat-val',
+    '.tier-label',
+    '.strategy-label',
+    '.strategy-price',
+    '.strategy-desc',
+    '.strategy-rec-badge',
+    'table.convergence-table th',
+    'table.convergence-table td',
+    '.context-icon',
+    '.context-label',
+    '.context-text',
+    '.callout-box p',
+    '.timeline-phase',
+    '.timeline-title',
+    '.timeline-desc',
+    '.step-text',
+    '.disclaimer'
+  ];
+
+  function setEditable(on) {
+    EDITABLE.forEach(function (sel) {
+      document.querySelectorAll(sel).forEach(function (el) {
+        if (on) {
+          el.setAttribute('contenteditable', 'true');
+          el.setAttribute('spellcheck', 'false');
+        } else {
+          el.removeAttribute('contenteditable');
+        }
+      });
+    });
+  }
+
+  editBtn.addEventListener('click', function () {
+    editing = !editing;
+    document.body.classList.toggle('edit-mode', editing);
+    setEditable(editing);
+    if (editing) {
+      editBtn.textContent = '✅  Done Editing';
+      editBtn.classList.add('active');
+    } else {
+      editBtn.textContent = '✏️\u00a0 Edit Mode';
+      editBtn.classList.remove('active');
+    }
+  });
+
+  printBtn.addEventListener('click', function () {
+    /* Always exit edit mode before printing so outlines don't show */
+    if (editing) { editBtn.click(); }
+    setTimeout(function () { window.print(); }, 120);
+  });
+})();
+</script>
 </body>
 </html>
